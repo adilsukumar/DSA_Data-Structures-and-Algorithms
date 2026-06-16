@@ -1,0 +1,72 @@
+# LeetCode 1. Two Sum
+
+## Problem Statement
+
+Given an array of integers `nums` and an integer `target`, return the indices of the two numbers such that they add up to `target`.
+
+---
+
+## Approach
+
+This solution uses a **brute-force approach** to check every possible pair of numbers in the array.
+
+### Algorithm
+
+1. Traverse the array using the first loop.
+2. For each element, iterate through all subsequent elements.
+3. Check whether the sum of the current pair equals the target.
+4. If a valid pair is found, return their indices immediately.
+
+Since every possible pair is examined, the solution guarantees a correct result whenever a valid answer exists.
+
+---
+
+## Complexity Analysis
+
+| Metric           | Complexity |
+| ---------------- | ---------- |
+| Time Complexity  | **O(n²)**  |
+| Space Complexity | **O(1)**   |
+
+### Explanation
+
+* The nested loops result in checking all possible pairs of elements.
+* No additional data structures are used, resulting in constant extra space usage.
+
+---
+
+## Solution
+
+```cpp
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for(int i = 0; i < nums.size(); i++){
+            for(int j = i + 1; j < nums.size(); j++){
+                if(nums[i] + nums[j] == target){
+                    return {i, j};
+                }
+            }
+        }
+        return {};
+    }
+};
+```
+
+---
+
+## Learning Outcomes
+
+Through this problem, I practiced:
+
+* Array traversal techniques
+* Nested loop implementation
+* Brute-force problem-solving strategies
+* Understanding and analyzing time complexity
+* Returning results efficiently once a condition is met
+
+---
+
+## Key Takeaway
+
+While the brute-force solution is simple and easy to understand, it has a time complexity of **O(n²)**. A more optimized approach using a hash map can solve the problem in **O(n)** time, making it more suitable for larger inputs.
