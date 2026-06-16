@@ -4,8 +4,17 @@
 
 ### Solving Data Structures & Algorithms Problems Daily
 
-<p>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=700&lines=Consistency+beats+intensity.;One+problem+at+a+time.;Building+strong+problem-solving+skills.;LeetCode+%7C+CodeChef+%7C+Competitive+Programming" alt="Typing SVG" />
+<p><div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=🚀+Consistency+beats+intensity." />
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=🧩+One+problem+at+a+time." />
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=📈+Building+strong+problem-solving+skills." />
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=💻+LeetCode+%7C+CodeChef+%7C+Competitive+Programming" />
+
+</div>
 </p>
 
 <p>
