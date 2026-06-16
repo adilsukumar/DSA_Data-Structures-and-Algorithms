@@ -1,36 +1,35 @@
 <div align="center">
 
-# 🚀 DSA Journey
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=DSA%20Journey&fontSize=60&fontAlignY=40&desc=LeetCode%20•%20CodeChef%20•%20Competitive%20Programming&descAlignY=58"/>
 
-### Solving Data Structures & Algorithms Problems Daily
+# 🚀 Data Structures & Algorithms Journey
 
-<p><div align="center">
+### Building Consistency • Strengthening Problem Solving • Preparing For Technical Interviews
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=🚀+Consistency+beats+intensity." />
+<br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=🧩+One+problem+at+a+time." />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=🚀+Consistency+beats+intensity." />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=📈+Building+strong+problem-solving+skills." />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=🧩+One+problem+at+a+time." />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=999999&width=500&lines=💻+LeetCode+%7C+CodeChef+%7C+Competitive+Programming" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=📈+Building+strong+problem-solving+skills." />
 
-</div>
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=💻+C%2B%2B+%7C+Python+%7C+Competitive+Programming" />
 
-<p>
-  <img src="https://img.shields.io/badge/Problems_Solved-84-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=cplusplus" />
-  <img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python" />
-</p>
+<br><br>
 
-<p>
-  <a href="https://leetcode.com/">
-    <img src="https://img.shields.io/badge/LeetCode-Active-orange?style=for-the-badge&logo=leetcode" />
-  </a>
-  <a href="https://www.codechef.com/">
-    <img src="https://img.shields.io/badge/CodeChef-Active-brown?style=for-the-badge" />
-  </a>
-</p>
+<img src="https://img.shields.io/badge/Problems%20Solved-84-blue?style=for-the-badge&logo=github" />
+<img src="https://img.shields.io/badge/LeetCode-13-orange?style=for-the-badge&logo=leetcode" />
+<img src="https://img.shields.io/badge/CodeChef-71-brown?style=for-the-badge" />
+
+<br><br>
+
+<img src="https://img.shields.io/badge/C++-Primary%20Language-00599C?style=for-the-badge&logo=cplusplus" />
+<img src="https://img.shields.io/badge/Python-Secondary%20Language-3776AB?style=for-the-badge&logo=python" />
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=adilsukumar&label=Repository+Views&style=for-the-badge" />
 
 </div>
 
@@ -38,41 +37,39 @@
 
 # 📖 About This Repository
 
-This repository documents my journey through **Data Structures & Algorithms**.
+Welcome to my DSA repository.
 
-The goal is not only to solve problems, but also to:
+This repository serves as a structured archive of my journey through:
 
-* Develop strong problem-solving skills
-* Improve coding efficiency
-* Master core DSA concepts
-* Prepare for technical interviews
-* Maintain coding consistency
+* Data Structures
+* Algorithms
+* Competitive Programming
+* Interview Preparation
+* Problem Solving
 
-Problems are solved from platforms such as:
+The goal is simple:
 
-* LeetCode
-* CodeChef
-* Other Competitive Programming Platforms
+> Solve problems consistently and become a better engineer every day.
 
 ---
 
-# 📊 Progress Tracker
+# 📊 Progress Dashboard
 
-| Platform | Problems Solved |
-| -------- | --------------- |
-| LeetCode | 13              |
-| CodeChef | 71              |
-| Total    | 84              |
-
-> Updating these numbers periodically as my journey progresses.
+| Platform    | Solved |
+| ----------- | ------ |
+| 🟧 LeetCode | 13     |
+| 🍫 CodeChef | 71     |
+| 🚀 Total    | 84     |
 
 ---
 
-# 🛠 Languages Used
+# 🛠 Languages & Technologies
 
-<p>
-  <img src="https://skillicons.dev/icons?i=cpp,python" />
-</p>
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=cpp,python,git,github,vscode" />
+
+</div>
 
 ---
 
@@ -88,7 +85,7 @@ DSA/
 │
 ├── CodeChef/
 │   ├── Starters/
-│   ├── Long Challenge/
+│   ├── LongChallenge/
 │   └── Practice/
 │
 └── README.md
@@ -96,15 +93,17 @@ DSA/
 
 ---
 
-# 📈 GitHub Statistics
+# 📈 GitHub Analytics
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=adilsukumar\&show_icons=true)
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=adilsukumar&show_icons=true&theme=tokyonight"/>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=adilsukumar)
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adilsukumar&layout=compact&theme=tokyonight"/>
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=adilsukumar\&layout=compact)
+<br>
+
+<img src="https://streak-stats.demolab.com?user=adilsukumar&theme=tokyonight"/>
 
 </div>
 
@@ -115,8 +114,8 @@ DSA/
 * Arrays
 * Strings
 * Hash Maps
+* Binary Search
 * Stacks & Queues
-* Linked Lists
 * Trees
 * Graphs
 * Dynamic Programming
@@ -125,7 +124,7 @@ DSA/
 
 # 🏆 Milestones
 
-* [×] First 50 Problems
+* [x] First 50 Problems
 * [ ] First 100 Problems
 * [ ] First 250 Problems
 * [ ] First 500 Problems
@@ -133,18 +132,28 @@ DSA/
 
 ---
 
-# 💡 Philosophy
+# 🔥 Daily Coding Philosophy
 
-> "Success is the sum of small efforts, repeated day in and day out."
+```text
+Small progress every day
+=
+Massive growth over time
+```
 
-Every problem solved is one step closer to becoming a better engineer.
+---
+
+# ⭐ Goal
+
+Reach **1000+ solved problems** while developing strong fundamentals in algorithms, competitive programming, and software engineering.
 
 ---
 
 <div align="center">
 
-### ⭐ If you find this repository useful, consider starring it.
+### Thanks for visiting!
 
-#### Happy Coding! 🚀
+⭐ Star the repository if you find it useful.
+
+🚀 Happy Coding!
 
 </div>
