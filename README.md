@@ -9,7 +9,7 @@
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Problems_Solved-0-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Problems_Solved-84-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=cplusplus" />
   <img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python" />
 </p>
