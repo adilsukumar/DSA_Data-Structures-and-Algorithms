@@ -6,7 +6,7 @@
 
 ### Building Consistency • Strengthening Problem Solving • Preparing for Technical Interviews
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1200&center=true&vCenter=true&width=900&lines=🚀+Consistency+beats+intensity.;🧩+One+problem+at+a+time.;📈+Building+strong+problem-solving+skills.;💻+C%2B%2B+%7C+Python+%7C+Competitive+Programming" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&center=true&vCenter=true&width=900&lines=Consistency+beats+intensity;One+problem+at+a+time;Building+strong+problem-solving+skills" />
 
 <br>
 
