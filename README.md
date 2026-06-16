@@ -1,20 +1,17 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=DSA%20Journey&fontSize=60&fontAlignY=40&desc=LeetCode%20•%20CodeChef%20•%20Competitive%20Programming&descAlignY=58"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=280&color=gradient&text=DSA%20Journey&fontSize=55&fontAlignY=38&desc=LeetCode%20•%20CodeChef%20•%20Competitive%20Programming&descAlignY=58"/>
 
 # 🚀 Data Structures & Algorithms Journey
 
-### Building Consistency • Strengthening Problem Solving • Preparing For Technical Interviews
+### Building Consistency • Strengthening Problem Solving • Preparing for Technical Interviews
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1200&center=true&vCenter=true&width=900&lines=🚀+Consistency+beats+intensity.;🧩+One+problem+at+a+time.;📈+Building+strong+problem-solving+skills.;💻+C%2B%2B+%7C+Python+%7C+Competitive+Programming" />
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=🚀+Consistency+beats+intensity." />
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=🧩+One+problem+at+a+time." />
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=📈+Building+strong+problem-solving+skills." />
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=999999&center=true&vCenter=true&width=800&lines=💻+C%2B%2B+%7C+Python+%7C+Competitive+Programming" />
+<img src="https://img.shields.io/badge/🔥%20Daily%20Practice-Active-success?style=for-the-badge" />
+<img src="https://img.shields.io/badge/💻%20Languages-C++%20%7C%20Python-blue?style=for-the-badge" />
 
 <br><br>
 
@@ -37,19 +34,15 @@
 
 # 📖 About This Repository
 
-Welcome to my DSA repository.
+This repository documents my journey through Data Structures & Algorithms.
 
-This repository serves as a structured archive of my journey through:
+I use this repository to:
 
-* Data Structures
-* Algorithms
-* Competitive Programming
-* Interview Preparation
-* Problem Solving
-
-The goal is simple:
-
-> Solve problems consistently and become a better engineer every day.
+* Practice DSA consistently
+* Strengthen problem-solving skills
+* Prepare for coding interviews
+* Track progress over time
+* Build a strong programming foundation
 
 ---
 
@@ -63,13 +56,55 @@ The goal is simple:
 
 ---
 
-# 🛠 Languages & Technologies
+# 🛠 Languages Used
 
 <div align="center">
 
 <img src="https://skillicons.dev/icons?i=cpp,python,git,github,vscode" />
 
 </div>
+
+---
+
+# 📈 GitHub Analytics
+
+<div align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=adilsukumar&show_icons=true&theme=tokyonight"/>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adilsukumar&layout=compact&theme=tokyonight"/>
+
+<br>
+
+<img src="https://streak-stats.demolab.com?user=adilsukumar&theme=tokyonight"/>
+
+</div>
+
+---
+
+# 🧠 Topics Covered
+
+* Arrays
+* Strings
+* Hash Maps
+* Linked Lists
+* Stacks
+* Queues
+* Trees
+* Graphs
+* Dynamic Programming
+* Greedy Algorithms
+* Binary Search
+
+---
+
+# 🏆 Milestones
+
+* [x] First 50 Problems
+* [ ] First 100 Problems
+* [ ] First 250 Problems
+* [ ] First 500 Problems
+* [ ] First 1000 Problems
 
 ---
 
@@ -93,66 +128,23 @@ DSA/
 
 ---
 
-# 📈 GitHub Analytics
+# 🎯 Goal
 
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=adilsukumar&show_icons=true&theme=tokyonight"/>
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adilsukumar&layout=compact&theme=tokyonight"/>
-
-<br>
-
-<img src="https://streak-stats.demolab.com?user=adilsukumar&theme=tokyonight"/>
-
-</div>
+Reach **1000+ solved problems** while building strong foundations in algorithms, competitive programming, and software engineering.
 
 ---
 
-# 🎯 Current Focus
+# 💡 Philosophy
 
-* Arrays
-* Strings
-* Hash Maps
-* Binary Search
-* Stacks & Queues
-* Trees
-* Graphs
-* Dynamic Programming
-
----
-
-# 🏆 Milestones
-
-* [x] First 50 Problems
-* [ ] First 100 Problems
-* [ ] First 250 Problems
-* [ ] First 500 Problems
-* [ ] First 1000 Problems
-
----
-
-# 🔥 Daily Coding Philosophy
-
-```text
-Small progress every day
-=
-Massive growth over time
-```
-
----
-
-# ⭐ Goal
-
-Reach **1000+ solved problems** while developing strong fundamentals in algorithms, competitive programming, and software engineering.
+> Success is the sum of small efforts, repeated day in and day out.
 
 ---
 
 <div align="center">
 
-### Thanks for visiting!
+### ⭐ Thanks for visiting!
 
-⭐ Star the repository if you find it useful.
+If you find this repository useful, consider giving it a star.
 
 🚀 Happy Coding!
 
