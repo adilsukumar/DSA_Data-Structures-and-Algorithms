@@ -71,7 +71,42 @@ Problems are solved from:
 
 <!-- STATS_START -->
 
-🚀 Statistics will appear here automatically.
+## 📊 Live Statistics
+
+| Metric | Count |
+|---------|---------|
+| 🚀 Total Problems | 13 |
+| 🟧 LeetCode | 11 |
+| 🍫 CodeChef | 1 |
+| 💙 C++ Solutions | 8 |
+| 🐍 Python Solutions | 5 |
+
+### Problems by Platform
+
+```mermaid
+pie title Problems by Platform
+    "LeetCode" : 11
+    "CodeChef" : 1
+```
+
+### Languages Used
+
+```mermaid
+pie title Languages Used
+    "C++" : 8
+    "Python" : 5
+```
+
+### Goal Progress
+
+```mermaid
+xychart-beta
+    title "Progress to 1000 Problems"
+    x-axis ["Solved","Goal"]
+    y-axis "Problems" 0 --> 1000
+    bar [13,1000]
+```
+
 
 <!-- STATS_END -->
 
