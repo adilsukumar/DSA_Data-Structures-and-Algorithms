@@ -18,6 +18,7 @@
 <a href="#"><img src="https://img.shields.io/badge/Goal-13%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
 
+
 <img src="https://komarev.com/ghpvc/?username=adilsukumar&label=Repository+Views&style=for-the-badge" />
 
 </div>
