@@ -10,15 +10,30 @@ py_count = 0
 leetcode_count = 0
 codechef_count = 0
 
-easy_count = 0
-medium_count = 0
-hard_count = 0
+# LeetCode stats
+lc_easy = 0
+lc_medium = 0
+lc_hard = 0
+
+# CodeChef stats
+cc_500 = 0
+cc_500_1000 = 0
+cc_1000_1400 = 0
+cc_1400_1600 = 0
+cc_1600_1800 = 0
+cc_1800_2000 = 0
+cc_2000_2500 = 0
 
 for file in ROOT.rglob("*"):
     if file.suffix not in [".cpp", ".py"]:
         continue
 
     path = str(file)
+    path_lower = path.lower()
+    
+    # Exclude files that are not in LeetCode or CodeChef folders
+    if "leetcode" not in path_lower and "codechef" not in path_lower:
+        continue
 
     # Language
     if file.suffix == ".cpp":
@@ -27,24 +42,31 @@ for file in ROOT.rglob("*"):
         py_count += 1
 
     # Platform & Difficulty
-    path_lower = path.lower()
     if "leetcode" in path_lower:
         leetcode_count += 1
         if "easy" in path_lower:
-            easy_count += 1
+            lc_easy += 1
         elif "medium" in path_lower:
-            medium_count += 1
+            lc_medium += 1
         elif "hard" in path_lower:
-            hard_count += 1
+            lc_hard += 1
 
     if "codechef" in path_lower:
         codechef_count += 1
         if "500_difficulty_rating" in path_lower:
-            easy_count += 1
+            cc_500 += 1
         elif "500_to_1000" in path_lower:
-            medium_count += 1
-        else:
-            hard_count += 1
+            cc_500_1000 += 1
+        elif "1000_to_1400" in path_lower:
+            cc_1000_1400 += 1
+        elif "1400_to_1600" in path_lower:
+            cc_1400_1600 += 1
+        elif "1600_to_1800" in path_lower:
+            cc_1600_1800 += 1
+        elif "1800_to_2000" in path_lower:
+            cc_1800_2000 += 1
+        elif "2000_to_2500" in path_lower:
+            cc_2000_2500 += 1
 
 total = cpp_count + py_count
 
@@ -54,9 +76,9 @@ progress_percent = int((total / milestone) * 100) if milestone > 0 else 0
 
 # --- Beautiful Charts generation using quickchart.io ---
 
-def get_quickchart_url(chart_config):
+def get_quickchart_url(chart_config, width=500, height=300):
     encoded = urllib.parse.quote(json.dumps(chart_config))
-    return f"https://quickchart.io/chart?c={encoded}&bkg=white"
+    return f"https://quickchart.io/chart?c={encoded}&w={width}&h={height}&bkg=transparent"
 
 # 1. Platform Pie Chart
 platforms_config = {
@@ -65,7 +87,12 @@ platforms_config = {
         "labels": ["LeetCode", "CodeChef"],
         "datasets": [{"data": [leetcode_count, codechef_count], "backgroundColor": ["#FFA116", "#5B4638"]}]
     },
-    "options": {"plugins": {"legend": {"position": "bottom"}}, "title": {"display": True, "text": "Platforms"}}
+    "options": {
+        "plugins": {
+            "legend": {"position": "right", "labels": {"fontColor": "#ffffff", "fontSize": 14}}
+        },
+        "title": {"display": True, "text": "Platforms", "fontColor": "#ffffff", "fontSize": 18}
+    }
 }
 platforms_url = get_quickchart_url(platforms_config)
 
@@ -76,28 +103,14 @@ languages_config = {
         "labels": ["C++", "Python"],
         "datasets": [{"data": [cpp_count, py_count], "backgroundColor": ["#00599C", "#3776AB"]}]
     },
-    "options": {"plugins": {"legend": {"position": "bottom"}}, "title": {"display": True, "text": "Languages"}}
-}
-languages_url = get_quickchart_url(languages_config)
-
-# 3. Difficulty Bar Chart
-difficulty_config = {
-    "type": "bar",
-    "data": {
-        "labels": ["Easy", "Medium", "Hard"],
-        "datasets": [{
-            "label": "Problems Solved",
-            "data": [easy_count, medium_count, hard_count],
-            "backgroundColor": ["#00b8a3", "#ffc01e", "#ff375f"]
-        }]
-    },
     "options": {
-        "plugins": {"legend": {"display": False}},
-        "title": {"display": True, "text": "Difficulty"},
-        "scales": {"y": {"beginAtZero": True, "ticks": {"stepSize": 1}}}
+        "plugins": {
+            "legend": {"position": "right", "labels": {"fontColor": "#ffffff", "fontSize": 14}}
+        },
+        "title": {"display": True, "text": "Languages", "fontColor": "#ffffff", "fontSize": 18}
     }
 }
-difficulty_url = get_quickchart_url(difficulty_config)
+languages_url = get_quickchart_url(languages_config)
 
 
 # --- Update BADGES ---
@@ -117,30 +130,44 @@ badges_str = f"""
 generated = f"""
 ## 📊 Live Statistics & Insights
 
-| Metric | Count |
-|---------|---------|
-| 🚀 Total Problems | **{total}** |
-| 🟧 LeetCode | {leetcode_count} |
-| 🍫 CodeChef | {codechef_count} |
-| 💙 C++ Solutions | {cpp_count} |
-| 🐍 Python Solutions | {py_count} |
-| 🟢 Easy | {easy_count} |
-| 🟡 Medium | {medium_count} |
-| 🔴 Hard | {hard_count} |
+| 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
+| :---: | :---: | :---: |
+| **{total}** | **{cpp_count}** | **{py_count}** |
 
 ### 🏆 Milestone Progress: {total} / {milestone}
 
-![Milestone Progress](https://quickchart.io/chart?c={{type:'progressBar',data:{{datasets:[{{data:[{progress_percent}],backgroundColor:'green'}}]}}}}&w=600&h=50)
+![Milestone Progress](https://quickchart.io/chart?c={{type:'progressBar',data:{{datasets:[{{data:[{progress_percent}],backgroundColor:'green'}}]}}}}&w=800&h=50)
 
 > 🎉 Only **{milestone - total}** problems left to reach the next big milestone of {milestone}!
 
-### 📈 Breakdown
+---
 
 <div align="center">
-  <img src="{platforms_url}" width="30%" alt="Platforms Chart" />
-  <img src="{languages_url}" width="30%" alt="Languages Chart" />
-  <img src="{difficulty_url}" width="30%" alt="Difficulty Chart" />
+  <img src="{platforms_url}" alt="Platforms Chart" />
+  <img src="{languages_url}" alt="Languages Chart" />
 </div>
+
+---
+
+### 🟧 LeetCode Breakdown
+
+| Difficulty | Count |
+| :--- | :---: |
+| 🟢 Easy | {lc_easy} |
+| 🟡 Medium | {lc_medium} |
+| 🔴 Hard | {lc_hard} |
+
+### 🍫 CodeChef Breakdown
+
+| Difficulty Rating | Count |
+| :--- | :---: |
+| 🔹 500 Rating | {cc_500} |
+| 🔹 500 to 1000 | {cc_500_1000} |
+| 🔹 1000 to 1400 | {cc_1000_1400} |
+| 🔹 1400 to 1600 | {cc_1400_1600} |
+| 🔹 1600 to 1800 | {cc_1600_1800} |
+| 🔹 1800 to 2000 | {cc_1800_2000} |
+| 🔹 2000 to 2500 | {cc_2000_2500} |
 """
 
 readme = Path("README.md")

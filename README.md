@@ -11,11 +11,11 @@
 <br>
 
 <!-- BADGES_START -->
-<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-13-blueviolet?style=for-the-badge&logo=codeforces" /></a>
+<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-12-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-11-FFA116?style=for-the-badge&logo=leetcode" /></a>
 <a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-1-5B4638?style=for-the-badge&logo=codechef" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Milestone_50-26%25-success?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Goal-13%2F1000-orange?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Milestone_50-24%25-success?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Goal-12%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
 
 
@@ -79,30 +79,44 @@ Problems are solved from:
 
 ## 📊 Live Statistics & Insights
 
-| Metric | Count |
-|---------|---------|
-| 🚀 Total Problems | **13** |
-| 🟧 LeetCode | 11 |
-| 🍫 CodeChef | 1 |
-| 💙 C++ Solutions | 8 |
-| 🐍 Python Solutions | 5 |
-| 🟢 Easy | 12 |
+| 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
+| :---: | :---: | :---: |
+| **12** | **8** | **4** |
+
+### 🏆 Milestone Progress: 12 / 50
+
+![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[24],backgroundColor:'green'}]}}&w=800&h=50)
+
+> 🎉 Only **38** problems left to reach the next big milestone of 50!
+
+---
+
+<div align="center">
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B11%2C%201%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B8%2C%204%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
+</div>
+
+---
+
+### 🟧 LeetCode Breakdown
+
+| Difficulty | Count |
+| :--- | :---: |
+| 🟢 Easy | 11 |
 | 🟡 Medium | 0 |
 | 🔴 Hard | 0 |
 
-### 🏆 Milestone Progress: 13 / 50
+### 🍫 CodeChef Breakdown
 
-![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[26],backgroundColor:'green'}]}}&w=600&h=50)
-
-> 🎉 Only **37** problems left to reach the next big milestone of 50!
-
-### 📈 Breakdown
-
-<div align="center">
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B11%2C%201%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22bottom%22%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%7D%7D%7D&bkg=white" width="30%" alt="Platforms Chart" />
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B8%2C%205%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22bottom%22%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%7D%7D%7D&bkg=white" width="30%" alt="Languages Chart" />
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22bar%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Easy%22%2C%20%22Medium%22%2C%20%22Hard%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Problems%20Solved%22%2C%20%22data%22%3A%20%5B12%2C%200%2C%200%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300b8a3%22%2C%20%22%23ffc01e%22%2C%20%22%23ff375f%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22display%22%3A%20false%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Difficulty%22%7D%2C%20%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%2C%20%22ticks%22%3A%20%7B%22stepSize%22%3A%201%7D%7D%7D%7D%7D&bkg=white" width="30%" alt="Difficulty Chart" />
-</div>
+| Difficulty Rating | Count |
+| :--- | :---: |
+| 🔹 500 Rating | 1 |
+| 🔹 500 to 1000 | 0 |
+| 🔹 1000 to 1400 | 0 |
+| 🔹 1400 to 1600 | 0 |
+| 🔹 1600 to 1800 | 0 |
+| 🔹 1800 to 2000 | 0 |
+| 🔹 2000 to 2500 | 0 |
 
 <!-- STATS_END -->
 
@@ -163,7 +177,7 @@ DSA_Data-Structures-and-Algorithms
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=adilsukumar&theme=tokyonight&row=1&column=6" />
+[![Trophies](https://github-profile-trophy.vercel.app/?username=adilsukumar&theme=tokyonight&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
@@ -173,7 +187,7 @@ DSA_Data-Structures-and-Algorithms
 
 <div align="center">
 
-![Snake Animation](https://raw.githubusercontent.com/adilsukumar/DSA_Data-Structures-and-Algorithms/output/github-contribution-grid-snake.svg)
+![Snake Animation](https://raw.githubusercontent.com/adilsukumar/DSA_Data-Structures-and-Algorithms/output/github-contribution-grid-snake-dark.svg)
 
 </div>
 
