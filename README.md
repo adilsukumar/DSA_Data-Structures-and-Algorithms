@@ -178,7 +178,7 @@ DSA_Data-Structures-and-Algorithms
 
 <div align="center">
 
-[![Trophies](https://github-profile-trophy.vercel.app/?username=adilsukumar&theme=tokyonight&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
+[![Trophies](https://github-profile-trophy.vercel.app/?username=adilsukumar&theme=dracula&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
