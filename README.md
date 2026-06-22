@@ -98,9 +98,8 @@ DSA_Data-Structures-and-Algorithms
 │   └── Hard
 │
 ├── CodeChef
-│   ├── Starters
-│   ├── Practice
-│   └── LongChallenge
+│   ├── 500_Difficulty_Rating
+│   ├── 500_to_1000_Difficulty_Rating
 │
 ├── scripts
 │
@@ -112,73 +111,6 @@ DSA_Data-Structures-and-Algorithms
 
 ---
 
-## 📚 Topics Covered
-
-| Topic               | Status |
-| ------------------- | ------ |
-| Arrays              | ✅      |
-| Strings             | ✅      |
-| Hash Maps           | ✅      |
-| Linked Lists        | ✅      |
-| Stacks              | ✅      |
-| Queues              | ✅      |
-| Binary Search       | ✅      |
-| Trees               | 🔄     |
-| Graphs              | 🔄     |
-| Dynamic Programming | 🔄     |
-| Greedy Algorithms   | 🔄     |
-| Recursion           | 🔄     |
-| Backtracking        | 🔄     |
-
----
-
-## 🔥 Current Focus
-
-Currently working on:
-
-* Trees
-* Graphs
-* Dynamic Programming
-* Competitive Programming Contests
-
----
-
-## 🏆 Milestones
-
-* [x] First 50 Problems
-* [ ] First 100 Problems
-* [ ] First 250 Problems
-* [ ] First 500 Problems
-* [ ] First 1000 Problems
-
----
-
-## 📅 Roadmap
-
-### Phase 1
-
-* [x] Create Repository
-* [x] Solve First 50 Problems
-* [ ] Reach 100 Problems
-
-### Phase 2
-
-* [ ] Reach 250 Problems
-* [ ] Complete Trees
-* [ ] Complete Graphs
-
-### Phase 3
-
-* [ ] Reach 500 Problems
-* [ ] Advanced Dynamic Programming
-* [ ] Regular Contest Participation
-
-### Phase 4
-
-* [ ] Reach 1000 Problems
-* [ ] Interview Ready
-
----
 
 ## 📈 GitHub Analytics
 
