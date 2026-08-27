@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**12 problems solved** - **CodeChef** 1 / **LeetCode** 11
+**31 problems solved** - **CodeChef** 1 / **LeetCode** 30
 
 
 ---
@@ -12,20 +12,39 @@
 
 ## 🗂 All Problems
 
-| # | Problem | Platform | Difficulty | Topics | Pattern | Lang | Solution |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | [Cricket World Cup Qualifier](https://www.codechef.com/practice) | CodeChef | 🔹 500 | Implementation, Conditionals, Basic I/O | Single Threshold Comparison | C++ | [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp) |
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | LeetCode | 🟢 Easy | Array, Hash Table | Brute-Force Pair Scan | C++ | [code](LeetCode/Easy/1.Two_Sum.cpp) |
-| 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | LeetCode | 🟢 Easy | Math | Digit Reversal | C++ | [code](LeetCode/Easy/9.Palindrome_Number.cpp) |
-| 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | LeetCode | 🟢 Easy | Hash Table, Math, String | Explicit Subtractive-Pair Casework | C++ | [code](LeetCode/Easy/13.Roman_to_Integer.cpp) |
-| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | LeetCode | 🟢 Easy | String, Trie | Vertical Scanning | Python | [code](LeetCode/Easy/14.Longest_Common_Prefix.py) |
-| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | LeetCode | 🟢 Easy | Stack, String, Hash Table | Stack Matching (LIFO) | C++ | [code](LeetCode/Easy/20.Valid_Parentheses.cpp) |
-| 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | LeetCode | 🟢 Easy | Linked List, Recursion, Two Pointers | Dummy Head + Two Pointers | Python | [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py) |
-| 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | LeetCode | 🟢 Easy | Array, Two Pointers | In-Place Compaction (via std::unique) | C++ | [code](LeetCode/Easy/26.Remove_Duplicates_From_Sorted_Array.cpp) |
-| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | LeetCode | 🟢 Easy | Array, Two Pointers | Fast / Slow Read-Write Pointers | C++ | [code](LeetCode/Easy/27.Remove_Element.cpp) |
-| 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | LeetCode | 🟢 Easy | String, Two Pointers, String Matching | Sliding Window / Naive Substring Search | Python | [code](LeetCode/Easy/28.Find_the_Index_of_the_First_Occurrence_in_a_String.py) |
-| 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | LeetCode | 🟢 Easy | Array, Binary Search | Linear Scan (should be Binary Search) | C++ | [code](LeetCode/Easy/35.Search_Insert_Position.cpp) |
-| 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | LeetCode | 🟢 Easy | String | Tokenise and Take Last | Python | [code](LeetCode/Easy/58.Length_of_Last_Word.py) |
+| # | Problem | Platform | Difficulty | Topics | Pattern | Lang | Solved | Solution |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | [Cricket World Cup Qualifier](https://www.codechef.com/practice) | CodeChef | 🔹 500 | Implementation, Conditionals, Basic I/O | Single Threshold Comparison | C++ | - | [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp) |
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | LeetCode | 🟢 Easy | Array, Hash Table | Brute-Force Pair Scan | C++ | 2026-06-04 | [code](LeetCode/Easy/1.Two_Sum.cpp) |
+| 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | LeetCode | 🟢 Easy | Math | Digit Reversal | C++ | 2026-06-05 | [code](LeetCode/Easy/9.Palindrome_Number.cpp) |
+| 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | LeetCode | 🟢 Easy | Hash Table, Math, String | Explicit Subtractive-Pair Casework | C++ | 2026-06-06 | [code](LeetCode/Easy/13.Roman_to_Integer.cpp) |
+| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | LeetCode | 🟢 Easy | String, Trie | Vertical Scanning | Python | 2026-06-07 | [code](LeetCode/Easy/14.Longest_Common_Prefix.py) |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | LeetCode | 🟢 Easy | Stack, String, Hash Table | Stack Matching (LIFO) | C++ | 2026-06-08 | [code](LeetCode/Easy/20.Valid_Parentheses.cpp) |
+| 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | LeetCode | 🟢 Easy | Linked List, Recursion, Two Pointers | Dummy Head + Two Pointers | Python | 2026-06-09 | [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py) |
+| 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | LeetCode | 🟢 Easy | Array, Two Pointers | In-Place Compaction (via std::unique) | C++ | 2026-06-10 | [code](LeetCode/Easy/26.Remove_Duplicates_From_Sorted_Array.cpp) |
+| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | LeetCode | 🟢 Easy | Array, Two Pointers | Fast / Slow Read-Write Pointers | C++ | 2026-06-11 | [code](LeetCode/Easy/27.Remove_Element.cpp) |
+| 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | LeetCode | 🟢 Easy | String, Two Pointers, String Matching | Sliding Window / Naive Substring Search | Python | 2026-06-12 | [code](LeetCode/Easy/28.Find_the_Index_of_the_First_Occurrence_in_a_String.py) |
+| 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | LeetCode | 🟢 Easy | Array, Binary Search | Linear Scan (should be Binary Search) | C++ | 2026-06-13 | [code](LeetCode/Easy/35.Search_Insert_Position.cpp) |
+| 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | LeetCode | 🟢 Easy | String | Tokenise and Take Last | Python | 2026-06-14 | [code](LeetCode/Easy/58.Length_of_Last_Word.py) |
+| 66 | [Plus One](https://leetcode.com/problems/plus-one/) | LeetCode | 🟢 Easy | Array, Math | Reverse Carry Propagation | Python | 2026-06-15 | [code](LeetCode/Easy/66.Plus_One.py) |
+| 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | LeetCode | 🟢 Easy | Math, Binary Search | Library sqrt() truncated to int | C++ | 2026-06-16 | [code](LeetCode/Easy/69.Sqrtx.cpp) |
+| 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | LeetCode | 🟢 Easy | Math, Dynamic Programming, Memoization | Bottom-Up DP (Fibonacci) | C++ | 2026-06-17 | [code](LeetCode/Easy/70.Climbing_Stairs.cpp) |
+| 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | LeetCode | 🟢 Easy | Linked List | In-Place Pointer Skip | C++ | 2026-06-18 | [code](LeetCode/Easy/83.Remove_Duplicates_from_Sorted_List.cpp) |
+| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | LeetCode | 🟢 Easy | Array, Two Pointers, Sorting | Concatenate then full sort | C++ | 2026-06-19 | [code](LeetCode/Easy/88.Merge_Sorted_Array.cpp) |
+| 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | LeetCode | 🟢 Easy | Array, Dynamic Programming | Zero-Padded Row Convolution | Python | 2026-06-20 | [code](LeetCode/Easy/118.Pascals_Triangle.py) |
+| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | LeetCode | 🟢 Easy | Array, Dynamic Programming | Single-Pass Min Tracking | Python | 2026-06-21 | [code](LeetCode/Easy/121.Best_Time_to_Buy_and_Sell_Stock.py) |
+| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | LeetCode | 🟢 Easy | Two Pointers, String | Converging Two Pointers | C++ | 2026-06-22 | [code](LeetCode/Easy/125.Valid_Palindrome.cpp) |
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | LeetCode | 🟢 Easy | Array, Bit Manipulation | XOR Accumulation | C++ | 2026-06-23 | [code](LeetCode/Easy/136.Single_Number.cpp) |
+| 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | LeetCode | 🟢 Easy | Hash Table, Linked List, Two Pointers | Two-Pointer Length Equalization | C++ | 2026-06-27 | [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp) |
+| 168 | [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) | LeetCode | 🟢 Easy | Math, String | Bijective Base-26 Conversion | C++ | 2026-06-25 | [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp) |
+| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | LeetCode | 🟢 Easy | Array, Hash Table, Divide and Conquer, Sorting, Counting | Sort + Middle Element | C++ | 2026-06-24 | [code](LeetCode/Easy/169.Majority_Element.cpp) |
+| 171 | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | LeetCode | 🟢 Easy | Math, String | Base-26 Positional Decoding (Horner) | C++ | 2026-06-26 | [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp) |
+| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | LeetCode | 🟢 Easy | Array, Hash Table, Sorting | Hash set size comparison | C++ | 2026-07-27 | [code](LeetCode/Easy/217.Contains_Duplicate.cpp) |
+| 500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/) | LeetCode | 🟢 Easy | Array, Hash Table, String | Row Membership Flag Elimination | C++ | 2026-06-28 | [code](LeetCode/Easy/500.Keyboard_Row.cpp) |
+| 1295 | [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | LeetCode | 🟢 Easy | Array, Math | Digit Counting via Division | C++ | 2026-07-27 | [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp) |
+| 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | LeetCode | 🟢 Easy | Array, Prefix Sum | In-Place Prefix Sum | C++ | 2026-07-26 | [code](LeetCode/Easy/1480.Running_Sum_of_1d_Array.cpp) |
+| 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | LeetCode | 🟢 Easy | Array, Matrix | Row-Sum Running Maximum | C++ | 2026-07-26 | [code](LeetCode/Easy/1672.Richest_Customer_Wealth.cpp) |
+| 2011 | [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) | LeetCode | 🟢 Easy | Array, String, Simulation | Linear Scan Counter | C++ | 2026-07-27 | [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp) |
 
 ---
 
@@ -36,62 +55,135 @@ The same problems grouped by the data structure or technique they
 exercise. Use this to drill one pattern instead of working in ID order.
 
 
-### String (5)
+### Array (16)
+
+- **LeetCode 1** - [Two Sum](https://leetcode.com/problems/two-sum/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1.Two_Sum.cpp)
+- **LeetCode 26** - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/26.Remove_Duplicates_From_Sorted_Array.cpp)
+- **LeetCode 27** - [Remove Element](https://leetcode.com/problems/remove-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/27.Remove_Element.cpp)
+- **LeetCode 35** - [Search Insert Position](https://leetcode.com/problems/search-insert-position/) (🟢 Easy, C++) -> [code](LeetCode/Easy/35.Search_Insert_Position.cpp)
+- **LeetCode 66** - [Plus One](https://leetcode.com/problems/plus-one/) (🟢 Easy, Python) -> [code](LeetCode/Easy/66.Plus_One.py)
+- **LeetCode 88** - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/88.Merge_Sorted_Array.cpp)
+- **LeetCode 118** - [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) (🟢 Easy, Python) -> [code](LeetCode/Easy/118.Pascals_Triangle.py)
+- **LeetCode 121** - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (🟢 Easy, Python) -> [code](LeetCode/Easy/121.Best_Time_to_Buy_and_Sell_Stock.py)
+- **LeetCode 136** - [Single Number](https://leetcode.com/problems/single-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/136.Single_Number.cpp)
+- **LeetCode 169** - [Majority Element](https://leetcode.com/problems/majority-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/169.Majority_Element.cpp)
+- **LeetCode 217** - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (🟢 Easy, C++) -> [code](LeetCode/Easy/217.Contains_Duplicate.cpp)
+- **LeetCode 500** - [Keyboard Row](https://leetcode.com/problems/keyboard-row/) (🟢 Easy, C++) -> [code](LeetCode/Easy/500.Keyboard_Row.cpp)
+- **LeetCode 1295** - [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp)
+- **LeetCode 1480** - [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1480.Running_Sum_of_1d_Array.cpp)
+- **LeetCode 1672** - [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1672.Richest_Customer_Wealth.cpp)
+- **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
+
+### String (10)
 
 - **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
 - **LeetCode 14** - [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) (🟢 Easy, Python) -> [code](LeetCode/Easy/14.Longest_Common_Prefix.py)
 - **LeetCode 20** - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (🟢 Easy, C++) -> [code](LeetCode/Easy/20.Valid_Parentheses.cpp)
 - **LeetCode 28** - [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) (🟢 Easy, Python) -> [code](LeetCode/Easy/28.Find_the_Index_of_the_First_Occurrence_in_a_String.py)
 - **LeetCode 58** - [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) (🟢 Easy, Python) -> [code](LeetCode/Easy/58.Length_of_Last_Word.py)
+- **LeetCode 125** - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (🟢 Easy, C++) -> [code](LeetCode/Easy/125.Valid_Palindrome.cpp)
+- **LeetCode 168** - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) (🟢 Easy, C++) -> [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp)
+- **LeetCode 171** - [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp)
+- **LeetCode 500** - [Keyboard Row](https://leetcode.com/problems/keyboard-row/) (🟢 Easy, C++) -> [code](LeetCode/Easy/500.Keyboard_Row.cpp)
+- **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
 
-### Array (4)
+### Math (8)
+
+- **LeetCode 9** - [Palindrome Number](https://leetcode.com/problems/palindrome-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/9.Palindrome_Number.cpp)
+- **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
+- **LeetCode 66** - [Plus One](https://leetcode.com/problems/plus-one/) (🟢 Easy, Python) -> [code](LeetCode/Easy/66.Plus_One.py)
+- **LeetCode 69** - [Sqrt(x)](https://leetcode.com/problems/sqrtx/) (🟢 Easy, C++) -> [code](LeetCode/Easy/69.Sqrtx.cpp)
+- **LeetCode 70** - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (🟢 Easy, C++) -> [code](LeetCode/Easy/70.Climbing_Stairs.cpp)
+- **LeetCode 168** - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) (🟢 Easy, C++) -> [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp)
+- **LeetCode 171** - [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp)
+- **LeetCode 1295** - [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp)
+
+### Hash Table (7)
 
 - **LeetCode 1** - [Two Sum](https://leetcode.com/problems/two-sum/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1.Two_Sum.cpp)
-- **LeetCode 26** - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/26.Remove_Duplicates_From_Sorted_Array.cpp)
-- **LeetCode 27** - [Remove Element](https://leetcode.com/problems/remove-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/27.Remove_Element.cpp)
-- **LeetCode 35** - [Search Insert Position](https://leetcode.com/problems/search-insert-position/) (🟢 Easy, C++) -> [code](LeetCode/Easy/35.Search_Insert_Position.cpp)
+- **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
+- **LeetCode 20** - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (🟢 Easy, C++) -> [code](LeetCode/Easy/20.Valid_Parentheses.cpp)
+- **LeetCode 160** - [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (🟢 Easy, C++) -> [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp)
+- **LeetCode 169** - [Majority Element](https://leetcode.com/problems/majority-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/169.Majority_Element.cpp)
+- **LeetCode 217** - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (🟢 Easy, C++) -> [code](LeetCode/Easy/217.Contains_Duplicate.cpp)
+- **LeetCode 500** - [Keyboard Row](https://leetcode.com/problems/keyboard-row/) (🟢 Easy, C++) -> [code](LeetCode/Easy/500.Keyboard_Row.cpp)
 
-### Two Pointers (4)
+### Two Pointers (7)
 
 - **LeetCode 21** - [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (🟢 Easy, Python) -> [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py)
 - **LeetCode 26** - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/26.Remove_Duplicates_From_Sorted_Array.cpp)
 - **LeetCode 27** - [Remove Element](https://leetcode.com/problems/remove-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/27.Remove_Element.cpp)
 - **LeetCode 28** - [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) (🟢 Easy, Python) -> [code](LeetCode/Easy/28.Find_the_Index_of_the_First_Occurrence_in_a_String.py)
+- **LeetCode 88** - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/88.Merge_Sorted_Array.cpp)
+- **LeetCode 125** - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (🟢 Easy, C++) -> [code](LeetCode/Easy/125.Valid_Palindrome.cpp)
+- **LeetCode 160** - [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (🟢 Easy, C++) -> [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp)
 
-### Hash Table (3)
+### Dynamic Programming (3)
 
-- **LeetCode 1** - [Two Sum](https://leetcode.com/problems/two-sum/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1.Two_Sum.cpp)
-- **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
-- **LeetCode 20** - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (🟢 Easy, C++) -> [code](LeetCode/Easy/20.Valid_Parentheses.cpp)
+- **LeetCode 70** - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (🟢 Easy, C++) -> [code](LeetCode/Easy/70.Climbing_Stairs.cpp)
+- **LeetCode 118** - [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) (🟢 Easy, Python) -> [code](LeetCode/Easy/118.Pascals_Triangle.py)
+- **LeetCode 121** - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (🟢 Easy, Python) -> [code](LeetCode/Easy/121.Best_Time_to_Buy_and_Sell_Stock.py)
 
-### Math (2)
+### Linked List (3)
 
-- **LeetCode 9** - [Palindrome Number](https://leetcode.com/problems/palindrome-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/9.Palindrome_Number.cpp)
-- **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
+- **LeetCode 21** - [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (🟢 Easy, Python) -> [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py)
+- **LeetCode 83** - [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) (🟢 Easy, C++) -> [code](LeetCode/Easy/83.Remove_Duplicates_from_Sorted_List.cpp)
+- **LeetCode 160** - [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (🟢 Easy, C++) -> [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp)
+
+### Sorting (3)
+
+- **LeetCode 88** - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/88.Merge_Sorted_Array.cpp)
+- **LeetCode 169** - [Majority Element](https://leetcode.com/problems/majority-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/169.Majority_Element.cpp)
+- **LeetCode 217** - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (🟢 Easy, C++) -> [code](LeetCode/Easy/217.Contains_Duplicate.cpp)
+
+### Binary Search (2)
+
+- **LeetCode 35** - [Search Insert Position](https://leetcode.com/problems/search-insert-position/) (🟢 Easy, C++) -> [code](LeetCode/Easy/35.Search_Insert_Position.cpp)
+- **LeetCode 69** - [Sqrt(x)](https://leetcode.com/problems/sqrtx/) (🟢 Easy, C++) -> [code](LeetCode/Easy/69.Sqrtx.cpp)
 
 ### Basic I/O (1)
 
 - **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
 
-### Binary Search (1)
+### Bit Manipulation (1)
 
-- **LeetCode 35** - [Search Insert Position](https://leetcode.com/problems/search-insert-position/) (🟢 Easy, C++) -> [code](LeetCode/Easy/35.Search_Insert_Position.cpp)
+- **LeetCode 136** - [Single Number](https://leetcode.com/problems/single-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/136.Single_Number.cpp)
 
 ### Conditionals (1)
 
 - **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
 
+### Counting (1)
+
+- **LeetCode 169** - [Majority Element](https://leetcode.com/problems/majority-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/169.Majority_Element.cpp)
+
+### Divide and Conquer (1)
+
+- **LeetCode 169** - [Majority Element](https://leetcode.com/problems/majority-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/169.Majority_Element.cpp)
+
 ### Implementation (1)
 
 - **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
 
-### Linked List (1)
+### Matrix (1)
 
-- **LeetCode 21** - [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (🟢 Easy, Python) -> [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py)
+- **LeetCode 1672** - [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1672.Richest_Customer_Wealth.cpp)
+
+### Memoization (1)
+
+- **LeetCode 70** - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (🟢 Easy, C++) -> [code](LeetCode/Easy/70.Climbing_Stairs.cpp)
+
+### Prefix Sum (1)
+
+- **LeetCode 1480** - [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1480.Running_Sum_of_1d_Array.cpp)
 
 ### Recursion (1)
 
 - **LeetCode 21** - [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (🟢 Easy, Python) -> [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py)
+
+### Simulation (1)
+
+- **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
 
 ### Stack (1)
 

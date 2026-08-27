@@ -11,11 +11,11 @@
 <br>
 
 <!-- BADGES_START -->
-<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-13-blueviolet?style=for-the-badge&logo=codeforces" /></a>
-<a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-12-FFA116?style=for-the-badge&logo=leetcode" /></a>
+<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-31-blueviolet?style=for-the-badge&logo=codeforces" /></a>
+<a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-30-FFA116?style=for-the-badge&logo=leetcode" /></a>
 <a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-1-5B4638?style=for-the-badge&logo=codechef" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Milestone_50-26%25-success?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Goal-13%2F1000-orange?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Milestone_50-62%25-success?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Goal-31%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
 
 
@@ -84,19 +84,19 @@ Problems are solved from:
 
 | 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
 | :---: | :---: | :---: |
-| **13** | **8** | **5** |
+| **31** | **24** | **7** |
 
-### 🏆 Milestone Progress: 13 / 50
+### 🏆 Milestone Progress: 31 / 50
 
-![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[26],backgroundColor:'green'}]}}&w=800&h=50)
+![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[62],backgroundColor:'green'}]}}&w=800&h=50)
 
-> 🎉 Only **37** problems left to reach the next big milestone of 50!
+> 🎉 Only **19** problems left to reach the next big milestone of 50!
 
 ---
 
 <div align="center">
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B12%2C%201%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B8%2C%205%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%201%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B24%2C%207%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
 </div>
 
 ---
@@ -105,7 +105,7 @@ Problems are solved from:
 
 | Difficulty | Count |
 | :--- | :---: |
-| 🟢 Easy | 11 |
+| 🟢 Easy | 30 |
 | 🟡 Medium | 0 |
 | 🔴 Hard | 0 |
 
@@ -129,17 +129,26 @@ Problems are solved from:
 
 | Topic | Problems |
 | :--- | :---: |
-| String | 5 |
-| Array | 4 |
-| Two Pointers | 4 |
-| Hash Table | 3 |
-| Math | 2 |
+| Array | 16 |
+| String | 10 |
+| Math | 8 |
+| Hash Table | 7 |
+| Two Pointers | 7 |
+| Dynamic Programming | 3 |
+| Linked List | 3 |
+| Sorting | 3 |
+| Binary Search | 2 |
 | Basic I/O | 1 |
-| Binary Search | 1 |
+| Bit Manipulation | 1 |
 | Conditionals | 1 |
+| Counting | 1 |
+| Divide and Conquer | 1 |
 | Implementation | 1 |
-| Linked List | 1 |
+| Matrix | 1 |
+| Memoization | 1 |
+| Prefix Sum | 1 |
 | Recursion | 1 |
+| Simulation | 1 |
 | Stack | 1 |
 | String Matching | 1 |
 | Trie | 1 |
@@ -250,13 +259,19 @@ If a file cannot be processed it stays in `inbox/` — nothing is ever lost.
 To pull solutions that were only ever submitted on the site:
 
 ```bash
-python scripts/import_leetcode.py --limit 20   # writes into inbox/
-python scripts/process_inbox.py                # explains and files them
+python scripts/import_leetcode.py --dry-run    # list what it finds
+python scripts/import_leetcode.py              # writes raw code into inbox/
+python scripts/process_inbox.py --workers 3    # explains, files, commits
 ```
 
 This needs a `LEETCODE_SESSION` cookie in a local `.env` (see `.env.example`),
 because LeetCode exposes no public API for your own submissions. `.env` is
-gitignored.
+gitignored, as is everything in `inbox/` — raw code never reaches a commit
+until it has been explained and filed.
+
+LeetCode throttles hard. The importer paces itself and backs off on a 403,
+and if it still gets refused it keeps whatever it already fetched — re-running
+resumes, since problems already in the repo are skipped.
 
 ---
 
