@@ -9,6 +9,7 @@
  @topics     String
  @pattern    Tokenise and Take Last
  @url        https://leetcode.com/problems/length-of-last-word/
+ @solved     2026-06-14
 ─────────────────────────────────────────────────────────────────────────────
 
  PROBLEM

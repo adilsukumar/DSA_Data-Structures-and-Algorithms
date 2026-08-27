@@ -9,6 +9,7 @@
  *  @topics     Array, Hash Table
  *  @pattern    Brute-Force Pair Scan
  *  @url        https://leetcode.com/problems/two-sum/
+ *  @solved     2026-06-04
  * ─────────────────────────────────────────────────────────────────────────────
  *
  *  PROBLEM

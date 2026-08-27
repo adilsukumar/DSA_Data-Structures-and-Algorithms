@@ -32,7 +32,11 @@ LANG_NAMES = {
 
 DIFFICULTY_ICON = {"easy": "\U0001F7E2", "medium": "\U0001F7E1", "hard": "\U0001F534"}
 
-TAG_RE = re.compile(r"@(\w+)\s+(.*?)\s*$")
+# Accepts both "@topics Array, Math" and "@topics : Array, Math". The colon
+# form is what the generator sometimes emits, and without tolerating it the
+# colon ends up glued to every value -- producing links like "(: https://...)"
+# and a difficulty of ": Easy".
+TAG_RE = re.compile(r"@(\w+)\s*:?\s+(.*?)\s*$")
 DECORATION_RE = re.compile(r"^(\*|#|//|/\*)+\s*")
 STEM_RE = re.compile(r"^(\d+)[.\-_ ]+(.*)$")
 
@@ -89,6 +93,7 @@ def collect():
                 "difficulty": meta.get("difficulty", ""),
                 "topics": topics or ["Uncategorised"],
                 "pattern": meta.get("pattern", ""),
+                "solved": meta.get("solved", ""),
                 "url": meta.get("url", ""),
                 "lang": LANG_NAMES.get(path.suffix, path.suffix.lstrip(".")),
                 "path": rel,
@@ -142,10 +147,10 @@ def build_index(records):
 
     # ---------------- Master table ----------------
     out.append("\n## \U0001F5C2 All Problems\n")
-    out.append("| # | Problem | Platform | Difficulty | Topics | Pattern | Lang | Solution |")
-    out.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
+    out.append("| # | Problem | Platform | Difficulty | Topics | Pattern | Lang | Solved | Solution |")
+    out.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
     for record in sorted(records, key=sort_key):
-        out.append("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | [code]({7}) |".format(
+        out.append("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | [code]({8}) |".format(
             record["id"] or "-",
             md_link(record["title"], record["url"]),
             record["platform"],
@@ -153,6 +158,7 @@ def build_index(records):
             ", ".join(record["topics"]),
             record["pattern"] or "-",
             record["lang"],
+            record["solved"] or "-",
             record["path"],
         ))
 

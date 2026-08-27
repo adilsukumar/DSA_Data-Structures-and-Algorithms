@@ -9,6 +9,7 @@
  @topics     String, Trie
  @pattern    Vertical Scanning
  @url        https://leetcode.com/problems/longest-common-prefix/
+ @solved     2026-06-07
 ─────────────────────────────────────────────────────────────────────────────
 
  PROBLEM

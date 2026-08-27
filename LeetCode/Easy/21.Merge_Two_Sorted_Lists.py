@@ -9,6 +9,7 @@
  @topics     Linked List, Recursion, Two Pointers
  @pattern    Dummy Head + Two Pointers
  @url        https://leetcode.com/problems/merge-two-sorted-lists/
+ @solved     2026-06-09
 ─────────────────────────────────────────────────────────────────────────────
 
  PROBLEM

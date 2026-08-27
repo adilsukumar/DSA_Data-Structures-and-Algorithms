@@ -9,6 +9,7 @@
  @topics     String, Two Pointers, String Matching
  @pattern    Sliding Window / Naive Substring Search
  @url        https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+ @solved     2026-06-12
 ─────────────────────────────────────────────────────────────────────────────
 
  PROBLEM

@@ -156,7 +156,18 @@ def get_with_retry(session, url, params=None, attempts=6, first_request=False):
     """
     delay = REQUEST_PAUSE
     for attempt in range(1, attempts + 1):
-        response = session.get(url, params=params, timeout=30)
+        # Network faults deserve the same backoff as HTTP throttling. Paging a
+        # long submission history means dozens of requests, and a single read
+        # timeout two thirds of the way through used to abort the whole run.
+        try:
+            response = session.get(url, params=params, timeout=30)
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            if attempt == attempts:
+                raise RateLimited("network error: {0}".format(exc))
+            delay = min(delay * 2, 60)
+            print("    network error, retrying in {0:.0f}s...".format(delay))
+            time.sleep(delay)
+            continue
 
         if response.status_code in (403, 429):
             if first_request and attempt == 1:

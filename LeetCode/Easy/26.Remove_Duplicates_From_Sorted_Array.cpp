@@ -9,6 +9,7 @@
  *  @topics     Array, Two Pointers
  *  @pattern    In-Place Compaction (via std::unique)
  *  @url        https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ *  @solved     2026-06-10
  * ─────────────────────────────────────────────────────────────────────────────
  *
  *  PROBLEM

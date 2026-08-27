@@ -9,6 +9,7 @@
  *  @topics     Array, Two Pointers
  *  @pattern    Fast / Slow Read-Write Pointers
  *  @url        https://leetcode.com/problems/remove-element/
+ *  @solved     2026-06-11
  * ─────────────────────────────────────────────────────────────────────────────
  *
  *  PROBLEM

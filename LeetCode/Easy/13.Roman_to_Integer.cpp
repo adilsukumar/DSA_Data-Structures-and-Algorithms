@@ -9,6 +9,7 @@
  *  @topics     Hash Table, Math, String
  *  @pattern    Explicit Subtractive-Pair Casework
  *  @url        https://leetcode.com/problems/roman-to-integer/
+ *  @solved     2026-06-06
  * ─────────────────────────────────────────────────────────────────────────────
  *
  *  PROBLEM

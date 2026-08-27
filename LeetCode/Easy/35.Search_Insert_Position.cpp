@@ -9,6 +9,7 @@
  *  @topics     Array, Binary Search
  *  @pattern    Linear Scan (should be Binary Search)
  *  @url        https://leetcode.com/problems/search-insert-position/
+ *  @solved     2026-06-13
  * ─────────────────────────────────────────────────────────────────────────────
  *
  *  PROBLEM

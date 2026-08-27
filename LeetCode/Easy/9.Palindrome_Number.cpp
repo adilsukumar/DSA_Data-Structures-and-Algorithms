@@ -9,6 +9,7 @@
  *  @topics     Math
  *  @pattern    Digit Reversal
  *  @url        https://leetcode.com/problems/palindrome-number/
+ *  @solved     2026-06-05
  * ─────────────────────────────────────────────────────────────────────────────
  *
  *  PROBLEM

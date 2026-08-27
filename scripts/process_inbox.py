@@ -34,6 +34,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -104,8 +105,15 @@ The header must be a complete comment block in {lang}'s comment syntax \
 exactly, matching the style of the existing files in this repo:
 
   - A ruled title line: "{platform_placeholder} <id> - <title>" and difficulty
-  - The @tag metadata block: @platform @id @title @difficulty @topics \
-@pattern @url  (aligned, one per line)
+  - The @tag metadata block, one tag per line, values aligned in a column, \
+and with NO colon after the tag name. Exactly this shape:
+        @platform   LeetCode
+        @id         217
+        @title      Contains Duplicate
+        @difficulty Easy
+        @topics     Array, Hash Table
+        @pattern    Hash Set Membership
+        @url        https://leetcode.com/problems/contains-duplicate/
   - PROBLEM      : restate it plainly, with a small worked example
   - INTUITION    : the key idea, and WHY it works
   - WALKTHROUGH  : step through THIS code line by line, then a dry run on a \
@@ -142,6 +150,22 @@ def claude_executable():
     return None
 
 
+_ISOLATED_DIR = None
+
+
+def isolated_cwd():
+    """An empty scratch directory to run the Claude subprocess in.
+
+    Kept outside the repo so the subprocess finds no CLAUDE.md, no slash
+    commands and no source tree to explore -- it should answer the prompt it
+    was handed, nothing else.
+    """
+    global _ISOLATED_DIR
+    if _ISOLATED_DIR is None:
+        _ISOLATED_DIR = Path(tempfile.mkdtemp(prefix="dsa-explain-"))
+    return _ISOLATED_DIR
+
+
 def run_claude(prompt, timeout=420):
     """Call the headless Claude CLI. Returns stdout text, or None on failure."""
     exe = claude_executable()
@@ -149,17 +173,21 @@ def run_claude(prompt, timeout=420):
         log("  ! `claude` CLI not found on PATH. Install Claude Code or add it.")
         return None
 
-    cmd = [
-        exe, "-p", prompt,
-        # No tools needed for a pure text transform, and an empty allow-list
-        # means the call can never block on a permission prompt -- essential
-        # for an unattended scheduled run.
-        "--allowedTools", "",
-    ]
+    # The prompt goes in on STDIN, not as an argv element. On Windows the PATH
+    # entry is a .CMD shim routed through cmd.exe, which caps a command line at
+    # 8191 characters -- and prompt + solution code blows past that, which made
+    # calls die with a bare "exited 1" and no stderr.
+    #
+    # cwd is an EMPTY scratch directory rather than the repo. Run inside the
+    # repo, the subprocess auto-discovers CLAUDE.md and the /solved command,
+    # decides it is being asked to help with the project, and replies "which
+    # solution do you want documented?" instead of doing the transform. With no
+    # project around it, the prompt is all there is to respond to.
     try:
         proc = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=timeout,
-            encoding="utf-8", errors="replace", cwd=str(ROOT),
+            [exe, "-p"], input=prompt,
+            capture_output=True, text=True, timeout=timeout,
+            encoding="utf-8", errors="replace", cwd=str(isolated_cwd()),
         )
     except FileNotFoundError:
         log("  ! could not execute {0}".format(exe))
@@ -216,6 +244,27 @@ def parse_response(text):
     return meta, (header.strip() if header else None)
 
 
+def ensure_solved_tag(header, date_str):
+    """Add `@solved <date>` to the header's tag block if it is missing.
+
+    Done here rather than asked of the model: the date a problem was filed is a
+    fact this script already knows, and generated metadata is one more thing
+    that can come back wrong. The value column is kept aligned with @url.
+    """
+    if re.search(r"@solved\s", header):
+        return header
+
+    match = re.search(r"^([^\S\n]*\S*\s*)@url(\s+)(\S*)[^\n]*$", header, re.M)
+    if not match:
+        return header
+
+    prefix, gap = match.group(1), match.group(2)
+    # "@url" is 3 characters shorter than "@solved", so trim the gap to match.
+    solved_gap = gap[:-3] if len(gap) > 3 else " "
+    insertion = "\n{0}@solved{1}{2}".format(prefix, solved_gap, date_str)
+    return header[:match.end()] + insertion + header[match.end():]
+
+
 def slugify(title):
     """'Two Sum' -> 'Two_Sum' (matches this repo's existing file naming)."""
     cleaned = re.sub(r"[^\w\s-]", "", title).strip()
@@ -264,8 +313,20 @@ def destination(meta, suffix):
 
 
 def process_one(path, dry_run=False):
-    """Explain one inbox file and move it into place. Returns dest Path or None."""
-    log("\n-> {0}".format(path.name))
+    """Explain one inbox file and move it into place.
+
+    Returns the destination Path, or None on failure. Output is collected in a
+    local buffer and flushed as one block, so parallel workers cannot
+    interleave half-lines of each other's progress.
+    """
+    out = ["-> {0}".format(path.name)]
+
+    def log(msg):
+        out.append(msg)
+
+    def flush():
+        with PRINT_LOCK:
+            print("\n" + "\n".join(out), flush=True)
 
     code = path.read_text(encoding="utf-8", errors="replace").strip()
     if not code:
@@ -310,6 +371,8 @@ def process_one(path, dry_run=False):
         flush()
         return None
 
+    header = ensure_solved_tag(header, datetime.now().strftime("%Y-%m-%d"))
+
     dest = destination(data, suffix)
     if dest.exists():
         log("  ! {0} already exists; leaving file in inbox".format(dest.name))
@@ -352,7 +415,18 @@ def refresh_generated_files():
 
 
 def commit_and_push(added, push=True):
-    git("add", "-A")
+    # Stage ONLY what this run produced: the solution files it filed, plus the
+    # two generated files. `git add -A` would sweep in whatever else happened
+    # to be in the working tree -- half-finished edits, scratch files -- and
+    # bury them inside a "solve:" commit. An unattended nightly job must never
+    # commit work the user did not hand it.
+    paths = [p.relative_to(ROOT).as_posix() for p in added]
+    for generated in ("INDEX.md", "README.md"):
+        if (ROOT / generated).exists():
+            paths.append(generated)
+
+    git("add", "--", *paths)
+
     if not git("diff", "--staged", "--quiet", check=False).returncode:
         log("\nNothing staged -- no commit made.")
         return

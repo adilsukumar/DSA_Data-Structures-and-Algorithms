@@ -24,16 +24,23 @@ cc_1600_1800 = 0
 cc_1800_2000 = 0
 cc_2000_2500 = 0
 
-for file in ROOT.rglob("*"):
+# Only walk the two solution trees. The previous version scanned the whole repo
+# and kept any path merely CONTAINING "leetcode" or "codechef", which counted
+# scripts/import_leetcode.py as a solved Python problem and inflated every
+# figure by one.
+SOLUTION_ROOTS = [ROOT / "LeetCode", ROOT / "CodeChef"]
+
+solution_files = []
+for base in SOLUTION_ROOTS:
+    if base.is_dir():
+        solution_files.extend(sorted(base.rglob("*")))
+
+for file in solution_files:
     if file.suffix not in [".cpp", ".py"]:
         continue
 
     path = str(file)
     path_lower = path.lower()
-    
-    # Exclude files that are not in LeetCode or CodeChef folders
-    if "leetcode" not in path_lower and "codechef" not in path_lower:
-        continue
 
     # Language
     if file.suffix == ".cpp":

@@ -9,6 +9,7 @@
  *  @topics     Stack, String, Hash Table
  *  @pattern    Stack Matching (LIFO)
  *  @url        https://leetcode.com/problems/valid-parentheses/
+ *  @solved     2026-06-08
  * ─────────────────────────────────────────────────────────────────────────────
  *
  *  PROBLEM
