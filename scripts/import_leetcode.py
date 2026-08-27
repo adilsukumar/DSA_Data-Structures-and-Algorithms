@@ -82,30 +82,59 @@ query getQuestionDetail($titleSlug: String!) {
 """
 
 
-def load_session():
-    """Read LEETCODE_SESSION from the environment or the .env file."""
-    token = os.environ.get("LEETCODE_SESSION", "").strip()
-    if token:
-        return token
+DEFAULT_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
+
+
+def load_env(key, default=""):
+    """Read a value from the environment, falling back to the .env file."""
+    value = os.environ.get(key, "").strip()
+    if value:
+        return value
 
     if ENV_FILE.exists():
         for line in ENV_FILE.read_text(encoding="utf-8").splitlines():
             line = line.strip()
             if line.startswith("#") or "=" not in line:
                 continue
-            key, _, value = line.partition("=")
-            if key.strip() == "LEETCODE_SESSION":
-                return value.strip().strip('"').strip("'")
-    return ""
+            name, _, raw = line.partition("=")
+            if name.strip() == key:
+                return raw.strip().strip('"').strip("'")
+    return default
 
 
 def make_session(token):
+    """Build an authenticated session.
+
+    LEETCODE_SESSION alone is normally enough. The other two are optional and
+    only matter if Cloudflare starts challenging the requests:
+
+      CSRF_TOKEN    -- required by some POST endpoints
+      CF_CLEARANCE  -- Cloudflare's "you are not a bot" cookie. It is bound to
+                       the exact User-Agent and IP that earned it, so if you
+                       supply it you should also set USER_AGENT to the string
+                       your browser reports (check at whatismybrowser.com).
+                       A mismatch is worse than not sending it at all.
+    """
     session = requests.Session()
-    session.cookies.set("LEETCODE_SESSION", token, domain="leetcode.com")
+    session.cookies.set("LEETCODE_SESSION", token, domain=".leetcode.com")
+
+    csrf = load_env("CSRF_TOKEN")
+    if csrf:
+        session.cookies.set("csrftoken", csrf, domain=".leetcode.com")
+        session.headers["x-csrftoken"] = csrf
+
+    clearance = load_env("CF_CLEARANCE")
+    if clearance:
+        session.cookies.set("cf_clearance", clearance, domain=".leetcode.com")
+
     session.headers.update({
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "User-Agent": load_env("USER_AGENT", DEFAULT_UA),
         "Referer": "https://leetcode.com/submissions/",
         "Accept": "application/json",
+        "Accept-Language": "en-US,en;q=0.9",
     })
     return session
 
@@ -190,7 +219,7 @@ def main():
                         help="list what would be imported, write nothing")
     args = parser.parse_args()
 
-    token = load_session()
+    token = load_env("LEETCODE_SESSION")
     if not token:
         print("No LEETCODE_SESSION found.\n")
         print("Create a .env file at the repo root containing:\n")
