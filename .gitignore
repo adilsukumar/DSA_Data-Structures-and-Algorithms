@@ -3,9 +3,14 @@
 .env.*
 !.env.example
 
-# Inbox working files
-inbox/_failed/
-inbox/*.response.txt
+# Inbox working files.
+# Everything staged here is raw, unexplained code waiting to be processed.
+# It must never reach a commit -- the pipeline deletes each file only once it
+# has been explained and filed into LeetCode/ or CodeChef/. Without this, a
+# `git add -A` during a failed run would commit the bare solution with no
+# write-up, which is exactly what this repo exists to avoid.
+inbox/*
+!inbox/README.md
 
 # Python
 __pycache__/

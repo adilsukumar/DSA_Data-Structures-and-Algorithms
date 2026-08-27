@@ -60,7 +60,7 @@ ENV_FILE = ROOT / ".env"
 SUBMISSIONS_URL = "https://leetcode.com/api/submissions/"
 GRAPHQL_URL = "https://leetcode.com/graphql"
 PAGE_SIZE = 20
-REQUEST_PAUSE = 1.0          # be polite; LeetCode throttles aggressively
+REQUEST_PAUSE = 2.5          # LeetCode throttles hard; 1s reliably trips a 403
 
 LANG_EXT = {
     "cpp": ".cpp", "c": ".c", "python": ".py", "python3": ".py",
@@ -139,20 +139,57 @@ def make_session(token):
     return session
 
 
+class RateLimited(Exception):
+    """Raised when LeetCode keeps refusing us even after backing off."""
+
+
+def get_with_retry(session, url, params=None, attempts=6, first_request=False):
+    """GET with exponential backoff on LeetCode's aggressive rate limiting.
+
+    A 403 means two very different things depending on when it arrives:
+
+      - on the FIRST request  -> the session cookie is bad or expired
+      - after successful ones -> we are being throttled, and backing off works
+
+    Conflating the two sends you hunting for a new cookie when all you needed
+    was to wait a few seconds, so they are reported separately.
+    """
+    delay = REQUEST_PAUSE
+    for attempt in range(1, attempts + 1):
+        response = session.get(url, params=params, timeout=30)
+
+        if response.status_code in (403, 429):
+            if first_request and attempt == 1:
+                raise SystemExit(
+                    "LeetCode returned {0} on the very first request, which means\n"
+                    "the LEETCODE_SESSION cookie is missing, wrong or expired.\n"
+                    "Log in again and copy a fresh one into .env.".format(
+                        response.status_code)
+                )
+            if attempt == attempts:
+                raise RateLimited(
+                    "still rate limited after {0} attempts".format(attempts))
+            delay = min(delay * 2, 60)
+            print("    rate limited ({0}), waiting {1:.0f}s...".format(
+                response.status_code, delay))
+            time.sleep(delay)
+            continue
+
+        response.raise_for_status()
+        return response
+
+    raise RateLimited("exhausted retries")
+
+
 def fetch_submissions(session, max_pages=200):
     """Page through the submission history, newest first."""
     offset, seen_pages = 0, 0
     while seen_pages < max_pages:
-        response = session.get(
-            SUBMISSIONS_URL, params={"offset": offset, "limit": PAGE_SIZE},
-            timeout=30,
+        response = get_with_retry(
+            session, SUBMISSIONS_URL,
+            params={"offset": offset, "limit": PAGE_SIZE},
+            first_request=(seen_pages == 0),
         )
-        if response.status_code == 403:
-            raise SystemExit(
-                "LeetCode returned 403. Your LEETCODE_SESSION is expired or wrong.\n"
-                "Log in again and copy a fresh cookie into .env."
-            )
-        response.raise_for_status()
 
         try:
             payload = response.json()
@@ -177,18 +214,29 @@ def fetch_submissions(session, max_pages=200):
         time.sleep(REQUEST_PAUSE)
 
 
-def fetch_question(session, slug):
+def fetch_question(session, slug, attempts=4):
     """Difficulty and official topic tags for a problem (no auth needed)."""
-    try:
-        response = session.post(
-            GRAPHQL_URL,
-            json={"query": QUESTION_QUERY, "variables": {"titleSlug": slug}},
-            timeout=30,
-        )
-        response.raise_for_status()
-        return response.json().get("data", {}).get("question") or {}
-    except Exception:
-        return {}
+    delay = REQUEST_PAUSE
+    for attempt in range(1, attempts + 1):
+        try:
+            response = session.post(
+                GRAPHQL_URL,
+                json={"query": QUESTION_QUERY, "variables": {"titleSlug": slug}},
+                timeout=30,
+            )
+            if response.status_code in (403, 429):
+                if attempt == attempts:
+                    return {}
+                delay = min(delay * 2, 60)
+                time.sleep(delay)
+                continue
+            response.raise_for_status()
+            return response.json().get("data", {}).get("question") or {}
+        except Exception:
+            if attempt == attempts:
+                return {}
+            time.sleep(delay)
+    return {}
 
 
 def existing_problem_ids():
@@ -234,8 +282,10 @@ def main():
     INBOX.mkdir(exist_ok=True)
 
     imported, skipped, seen_slugs = 0, 0, set()
+    stopped_early = ""
 
-    for sub in fetch_submissions(session):
+    try:
+      for sub in fetch_submissions(session):
         if sub.get("status_display") != "Accepted":
             continue
 
@@ -285,11 +335,25 @@ def main():
             print("\nReached --limit {0}.".format(args.limit))
             break
 
-    print("\n{0} new problem(s) written to inbox/, {1} already present.".format(
-        imported, skipped))
-    if imported and not args.dry_run:
-        print("\nNext:  python scripts/process_inbox.py")
-        print("(that is one Claude call per problem -- consider batches of ~20)")
+    except RateLimited as exc:
+        # Anything already written to inbox/ is kept. Re-running resumes,
+        # because problems already filed in the repo are skipped.
+        stopped_early = str(exc)
+
+    if stopped_early:
+        print("\nStopped early: {0}".format(stopped_early))
+        print("LeetCode is throttling. What was fetched is kept -- wait a")
+        print("few minutes and re-run; filed problems are skipped.")
+
+    if args.dry_run:
+        print("\n{0} new problem(s) found, {1} already in the repo. "
+              "Nothing was written (--dry-run).".format(imported, skipped))
+    else:
+        print("\n{0} new problem(s) written to inbox/, {1} already present.".format(
+            imported, skipped))
+        if imported:
+            print("\nNext:  python scripts/process_inbox.py")
+            print("(that is one Claude call per problem -- consider batches of ~20)")
     return 0
 
 

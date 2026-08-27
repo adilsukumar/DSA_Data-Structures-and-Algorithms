@@ -14,10 +14,15 @@ Drop a raw solution file into inbox/. This script then, for each file:
 
 Usage
 -----
-    python scripts/process_inbox.py              # process inbox/, commit, push
-    python scripts/process_inbox.py --dry-run    # show what would happen
-    python scripts/process_inbox.py --no-push    # commit locally only
-    python scripts/process_inbox.py --file x.cpp # process one specific file
+    python scripts/process_inbox.py               # process inbox/, commit, push
+    python scripts/process_inbox.py --dry-run     # show what would happen
+    python scripts/process_inbox.py --no-push     # commit locally only
+    python scripts/process_inbox.py --file x.cpp  # process one specific file
+    python scripts/process_inbox.py --workers 5   # 5 Claude calls at a time
+
+Each solution costs one Claude call, and a call takes a couple of minutes, so
+a large backfill runs them in parallel (default 3 at a time). Use --workers 1
+to force serial execution when debugging.
 
 A file is left in inbox/ untouched if anything about it fails, so nothing is
 ever lost. Re-run the script after fixing the problem.
@@ -29,8 +34,16 @@ import re
 import shutil
 import subprocess
 import sys
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+
+# Serialises the "pick a destination path and write to it" step. Claude calls
+# run in parallel, but CodeChef filenames are numbered by scanning the target
+# folder, so two threads landing there at once would pick the same number.
+PLACEMENT_LOCK = threading.Lock()
+PRINT_LOCK = threading.Lock()
 
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "inbox"
@@ -257,6 +270,7 @@ def process_one(path, dry_run=False):
     code = path.read_text(encoding="utf-8", errors="replace").strip()
     if not code:
         log("  ! empty file, skipping")
+        flush()
         return None
 
     suffix = path.suffix.lower()
@@ -278,6 +292,7 @@ def process_one(path, dry_run=False):
 
     if dry_run:
         log("  (dry run) would call claude and file this solution")
+        flush()
         return None
 
     log("  asking claude for an explanation...")
@@ -292,6 +307,7 @@ def process_one(path, dry_run=False):
             dump = FAILED / (path.stem + ".response.txt")
             dump.write_text(raw, encoding="utf-8")
             log("    raw reply saved to {0}".format(dump.relative_to(ROOT).as_posix()))
+        flush()
         return None
 
     dest = destination(data, suffix)
@@ -308,6 +324,7 @@ def process_one(path, dry_run=False):
     log("  ok  {0}".format(dest.relative_to(ROOT).as_posix()))
     log("      {0} {1} | {2}".format(
         data.get("platform", "?"), data.get("difficulty", "?"), topics))
+    flush()
     return dest
 
 
@@ -369,6 +386,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="show actions only")
     parser.add_argument("--no-push", action="store_true", help="commit but do not push")
     parser.add_argument("--file", help="process a single file instead of the inbox")
+    parser.add_argument("--workers", type=int, default=3,
+                        help="parallel Claude calls (default 3; 1 = serial)")
     args = parser.parse_args()
 
     INBOX.mkdir(exist_ok=True)
@@ -393,15 +412,35 @@ def main():
 
     log("Found {0} solution(s) to process.".format(len(pending)))
 
-    added = []
-    for path in pending:
+    workers = max(1, min(args.workers, len(pending)))
+    if workers > 1:
+        log("Running {0} Claude calls in parallel.".format(workers))
+
+    def safely(path):
+        """One file's work, isolated so a single failure cannot stop the batch."""
         try:
-            dest = process_one(path, dry_run=args.dry_run)
-        except Exception as exc:                      # keep going on one bad file
-            log("  ! unexpected error on {0}: {1}".format(path.name, exc))
-            dest = None
-        if dest:
-            added.append(dest)
+            return process_one(path, dry_run=args.dry_run)
+        except Exception as exc:
+            with PRINT_LOCK:
+                print("  ! unexpected error on {0}: {1}".format(path.name, exc),
+                      flush=True)
+            return None
+
+    added = []
+    if workers == 1:
+        for path in pending:
+            dest = safely(path)
+            if dest:
+                added.append(dest)
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            futures = {pool.submit(safely, path): path for path in pending}
+            for future in as_completed(futures):
+                dest = future.result()
+                if dest:
+                    added.append(dest)
+
+    added.sort()
 
     if args.dry_run:
         return 0
