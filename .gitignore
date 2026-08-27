@@ -1,0 +1,21 @@
+# Secrets -- LEETCODE_SESSION lives here. Never commit this.
+.env
+.env.*
+!.env.example
+
+# Inbox working files
+inbox/_failed/
+inbox/*.response.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store

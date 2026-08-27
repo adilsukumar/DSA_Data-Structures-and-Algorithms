@@ -178,7 +178,11 @@ badges_start = "<!-- BADGES_START -->"
 badges_end = "<!-- BADGES_END -->"
 b_before = content.split(badges_start)[0]
 b_after = content.split(badges_end)[1]
-content = b_before + badges_str.strip() + "\n" + b_after
+# NOTE: b_after already begins with whatever newline followed BADGES_END in
+# the source, so do NOT append another "\n" here. Doing so inserted one extra
+# blank line on every run -- which is what produced 66 daily "Auto Update
+# Stats" commits whose entire content was a growing pile of blank lines.
+content = b_before + badges_str.strip() + b_after
 
 # Replace stats
 stats_start = "<!-- STATS_START -->"
