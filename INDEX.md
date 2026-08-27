@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**32 problems solved** - **CodeChef** 2 / **LeetCode** 30
+**52 problems solved** - **CodeChef** 22 / **LeetCode** 30
 
 
 ---
@@ -16,6 +16,26 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) | CodeChef | 🔹 584 | Basic Programming, Basic Math, Comparisons | Threshold check on max of two values | C++ | 2026-06-23 | [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp) |
 | 1 | [Cricket World Cup Qualifier](https://www.codechef.com/practice) | CodeChef | 🔹 500 | Implementation, Conditionals, Basic I/O | Single Threshold Comparison | C++ | - | [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp) |
+| AGEING | [Ageing](https://www.codechef.com/problems/AGEING) | CodeChef | 🔹 299 | Basic Math, Implementation | Constant Offset Per Query | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/4.Ageing.cpp) |
+| AUDIBLE | [Audible Range](https://www.codechef.com/problems/AUDIBLE) | CodeChef | 🔹 279 | Basic Math, Implementation | Range Membership Check | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/3.Audible_Range.cpp) |
+| BATH | [Bath In Winters](https://www.codechef.com/problems/BATH) | CodeChef | 🔹 643 | Math, Implementation, Integer Division | Count how many times 2Y fits in X | C++ | 2026-07-26 | [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp) |
+| BTRYHLTH | [Battery Health](https://www.codechef.com/problems/BTRYHLTH) | CodeChef | 🔹 296 | Conditional Statements, Implementation | Single Threshold Comparison | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/7.Battery_Health.cpp) |
+| BESTOFTWO | [Best Of Two](https://www.codechef.com/problems/BESTOFTWO) | CodeChef | 🔹 284 | Implementation, Basics | Max Of Two Values | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/6.Best_Of_Two.cpp) |
+| BIRYANI | [Biryani Classes](https://www.codechef.com/problems/BIRYANI) | CodeChef | 🔹 257 | Basic Programming, Implementation, Math | Per-test multiply two integers | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/5.Biryani_Classes.cpp) |
+| BNE_APT | [Bone Appetit](https://www.codechef.com/problems/BNE_APT) | CodeChef | 🔹 280 | Math, Implementation | Weighted Sum (two-item linear combination) | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/8.Bone_Appetit.cpp) |
+| BULLBEAR | [Bull Or Bear](https://www.codechef.com/problems/BULLBEAR) | CodeChef | 🔹 300 | Implementation, Conditionals, Basic Programming | Three-way comparison per query | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/9.Bull_Or_Bear.cpp) |
+| CANDIVIDE | [Candy Division](https://www.codechef.com/problems/CANDIVIDE) | CodeChef | 🔹 289 | Conditional Statements, Basic Math | Divisibility Check (N mod 3) | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/11.Candy_Division.cpp) |
+| CHAIRS_ | [Chairs Requirement](https://www.codechef.com/problems/CHAIRS_) | CodeChef | 🔹 305 | Basic Math, Implementation | Clamped Difference max(X-Y, 0) | C++ | 2026-06-12 | [code](CodeChef/500_Difficulty_Rating/10.Chairs_Requirement.cpp) |
+| CHEFCAND | [Chef And Candies](https://www.codechef.com/problems/CHEFCAND) | CodeChef | 🔹 570 | Basic Math, Math | Ceiling division of a shortfall | C++ | 2026-06-17 | [code](CodeChef/500_to_1000_Difficulty_Rating/6.Chef_And_Candies.cpp) |
+| CHEFONDATE | [Chef On Date](https://www.codechef.com/problems/CHEFONDATE) | CodeChef | 🔹 294 | Basic Programming, Conditionals, Implementation | Direct Conditional Comparison | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/13.Chef_On_Date.cpp) |
+| CHEFGAMES | [Chefland Games](https://www.codechef.com/problems/CHEFGAMES) | CodeChef | 🔹 550 | Basic Programming, Implementation, Conditionals | All-Equal Check via Conditional | C++ | 2026-06-14 | [code](CodeChef/500_to_1000_Difficulty_Rating/5.Chefland_Games.cpp) |
+| CLEARDAY | [Clear Day](https://www.codechef.com/problems/CLEARDAY) | CodeChef | 🔹 233 | Math, Implementation, Basic Programming | Constant-time arithmetic (7 - X - Y) | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/12.Clear_Day.cpp) |
+| CNTWRD | [Counting Words](https://www.codechef.com/problems/CNTWRD) | CodeChef | 🔹 296 | Basic Programming Concepts, Basic Math | Per-test read two ints, print product | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp) |
+| CREDCOINS | [CRED Coins](https://www.codechef.com/problems/CREDCOINS) | CodeChef | 🔹 539 | Math, Basic Programming, Implementation | Integer Division (floor total/100) | C++ | 2026-06-10 | [code](CodeChef/500_to_1000_Difficulty_Rating/8.CRED_Coins.cpp) |
+| AVGPROBLEM | [Greater Average](https://www.codechef.com/problems/AVGPROBLEM) | CodeChef | 🔹 500 | Basic Math, Implementation | Avoid-division integer comparison | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/2.Greater_Average.cpp) |
+| AMR15A | [Mahasena](https://www.codechef.com/problems/AMR15A) | CodeChef | 🔹 533 | Conditional Statements, Basic Math, Implementation | Parity of Sum via Odd Count (BUGGY here) | C++ | 2026-06-09 | [code](CodeChef/500_to_1000_Difficulty_Rating/2.Mahasena.cpp) |
+| BULLET | [Mario And Bullet](https://www.codechef.com/problems/BULLET) | CodeChef | 🔹 650 | Math, Implementation | Time = distance / speed | C++ | 2026-07-27 | [code](CodeChef/500_to_1000_Difficulty_Rating/4.Mario_And_Bullet.cpp) |
+| CHEFSCORE | [Test Score](https://www.codechef.com/problems/CHEFSCORE) | CodeChef | 🔹 610 | Math, Basic Programming | Divisibility + Range Check | C++ | 2026-06-30 | [code](CodeChef/500_to_1000_Difficulty_Rating/7.Test_Score.cpp) |
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | LeetCode | 🟢 Easy | Array, Hash Table | Brute-Force Pair Scan | C++ | 2026-06-04 | [code](LeetCode/Easy/1.Two_Sum.cpp) |
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | LeetCode | 🟢 Easy | Math | Digit Reversal | C++ | 2026-06-05 | [code](LeetCode/Easy/9.Palindrome_Number.cpp) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | LeetCode | 🟢 Easy | Hash Table, Math, String | Explicit Subtractive-Pair Casework | C++ | 2026-06-06 | [code](LeetCode/Easy/13.Roman_to_Integer.cpp) |
@@ -56,6 +76,26 @@ The same problems grouped by the data structure or technique they
 exercise. Use this to drill one pattern instead of working in ID order.
 
 
+### Implementation (17)
+
+- **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
+- **CodeChef AGEING** - [Ageing](https://www.codechef.com/problems/AGEING) (🔹 299, C++) -> [code](CodeChef/500_Difficulty_Rating/4.Ageing.cpp)
+- **CodeChef AUDIBLE** - [Audible Range](https://www.codechef.com/problems/AUDIBLE) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/3.Audible_Range.cpp)
+- **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
+- **CodeChef BTRYHLTH** - [Battery Health](https://www.codechef.com/problems/BTRYHLTH) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/7.Battery_Health.cpp)
+- **CodeChef BESTOFTWO** - [Best Of Two](https://www.codechef.com/problems/BESTOFTWO) (🔹 284, C++) -> [code](CodeChef/500_Difficulty_Rating/6.Best_Of_Two.cpp)
+- **CodeChef BIRYANI** - [Biryani Classes](https://www.codechef.com/problems/BIRYANI) (🔹 257, C++) -> [code](CodeChef/500_Difficulty_Rating/5.Biryani_Classes.cpp)
+- **CodeChef BNE_APT** - [Bone Appetit](https://www.codechef.com/problems/BNE_APT) (🔹 280, C++) -> [code](CodeChef/500_Difficulty_Rating/8.Bone_Appetit.cpp)
+- **CodeChef BULLBEAR** - [Bull Or Bear](https://www.codechef.com/problems/BULLBEAR) (🔹 300, C++) -> [code](CodeChef/500_Difficulty_Rating/9.Bull_Or_Bear.cpp)
+- **CodeChef CHAIRS_** - [Chairs Requirement](https://www.codechef.com/problems/CHAIRS_) (🔹 305, C++) -> [code](CodeChef/500_Difficulty_Rating/10.Chairs_Requirement.cpp)
+- **CodeChef CHEFONDATE** - [Chef On Date](https://www.codechef.com/problems/CHEFONDATE) (🔹 294, C++) -> [code](CodeChef/500_Difficulty_Rating/13.Chef_On_Date.cpp)
+- **CodeChef CHEFGAMES** - [Chefland Games](https://www.codechef.com/problems/CHEFGAMES) (🔹 550, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/5.Chefland_Games.cpp)
+- **CodeChef CLEARDAY** - [Clear Day](https://www.codechef.com/problems/CLEARDAY) (🔹 233, C++) -> [code](CodeChef/500_Difficulty_Rating/12.Clear_Day.cpp)
+- **CodeChef CREDCOINS** - [CRED Coins](https://www.codechef.com/problems/CREDCOINS) (🔹 539, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/8.CRED_Coins.cpp)
+- **CodeChef AVGPROBLEM** - [Greater Average](https://www.codechef.com/problems/AVGPROBLEM) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/2.Greater_Average.cpp)
+- **CodeChef AMR15A** - [Mahasena](https://www.codechef.com/problems/AMR15A) (🔹 533, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/2.Mahasena.cpp)
+- **CodeChef BULLET** - [Mario And Bullet](https://www.codechef.com/problems/BULLET) (🔹 650, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/4.Mario_And_Bullet.cpp)
+
 ### Array (16)
 
 - **LeetCode 1** - [Two Sum](https://leetcode.com/problems/two-sum/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1.Two_Sum.cpp)
@@ -75,6 +115,25 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 1672** - [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1672.Richest_Customer_Wealth.cpp)
 - **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
 
+### Math (16)
+
+- **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
+- **CodeChef BIRYANI** - [Biryani Classes](https://www.codechef.com/problems/BIRYANI) (🔹 257, C++) -> [code](CodeChef/500_Difficulty_Rating/5.Biryani_Classes.cpp)
+- **CodeChef BNE_APT** - [Bone Appetit](https://www.codechef.com/problems/BNE_APT) (🔹 280, C++) -> [code](CodeChef/500_Difficulty_Rating/8.Bone_Appetit.cpp)
+- **CodeChef CHEFCAND** - [Chef And Candies](https://www.codechef.com/problems/CHEFCAND) (🔹 570, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/6.Chef_And_Candies.cpp)
+- **CodeChef CLEARDAY** - [Clear Day](https://www.codechef.com/problems/CLEARDAY) (🔹 233, C++) -> [code](CodeChef/500_Difficulty_Rating/12.Clear_Day.cpp)
+- **CodeChef CREDCOINS** - [CRED Coins](https://www.codechef.com/problems/CREDCOINS) (🔹 539, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/8.CRED_Coins.cpp)
+- **CodeChef BULLET** - [Mario And Bullet](https://www.codechef.com/problems/BULLET) (🔹 650, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/4.Mario_And_Bullet.cpp)
+- **CodeChef CHEFSCORE** - [Test Score](https://www.codechef.com/problems/CHEFSCORE) (🔹 610, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/7.Test_Score.cpp)
+- **LeetCode 9** - [Palindrome Number](https://leetcode.com/problems/palindrome-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/9.Palindrome_Number.cpp)
+- **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
+- **LeetCode 66** - [Plus One](https://leetcode.com/problems/plus-one/) (🟢 Easy, Python) -> [code](LeetCode/Easy/66.Plus_One.py)
+- **LeetCode 69** - [Sqrt(x)](https://leetcode.com/problems/sqrtx/) (🟢 Easy, C++) -> [code](LeetCode/Easy/69.Sqrtx.cpp)
+- **LeetCode 70** - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (🟢 Easy, C++) -> [code](LeetCode/Easy/70.Climbing_Stairs.cpp)
+- **LeetCode 168** - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) (🟢 Easy, C++) -> [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp)
+- **LeetCode 171** - [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp)
+- **LeetCode 1295** - [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp)
+
 ### String (10)
 
 - **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
@@ -88,16 +147,28 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 500** - [Keyboard Row](https://leetcode.com/problems/keyboard-row/) (🟢 Easy, C++) -> [code](LeetCode/Easy/500.Keyboard_Row.cpp)
 - **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
 
-### Math (8)
+### Basic Math (9)
 
-- **LeetCode 9** - [Palindrome Number](https://leetcode.com/problems/palindrome-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/9.Palindrome_Number.cpp)
-- **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
-- **LeetCode 66** - [Plus One](https://leetcode.com/problems/plus-one/) (🟢 Easy, Python) -> [code](LeetCode/Easy/66.Plus_One.py)
-- **LeetCode 69** - [Sqrt(x)](https://leetcode.com/problems/sqrtx/) (🟢 Easy, C++) -> [code](LeetCode/Easy/69.Sqrtx.cpp)
-- **LeetCode 70** - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (🟢 Easy, C++) -> [code](LeetCode/Easy/70.Climbing_Stairs.cpp)
-- **LeetCode 168** - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) (🟢 Easy, C++) -> [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp)
-- **LeetCode 171** - [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp)
-- **LeetCode 1295** - [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp)
+- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
+- **CodeChef AGEING** - [Ageing](https://www.codechef.com/problems/AGEING) (🔹 299, C++) -> [code](CodeChef/500_Difficulty_Rating/4.Ageing.cpp)
+- **CodeChef AUDIBLE** - [Audible Range](https://www.codechef.com/problems/AUDIBLE) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/3.Audible_Range.cpp)
+- **CodeChef CANDIVIDE** - [Candy Division](https://www.codechef.com/problems/CANDIVIDE) (🔹 289, C++) -> [code](CodeChef/500_Difficulty_Rating/11.Candy_Division.cpp)
+- **CodeChef CHAIRS_** - [Chairs Requirement](https://www.codechef.com/problems/CHAIRS_) (🔹 305, C++) -> [code](CodeChef/500_Difficulty_Rating/10.Chairs_Requirement.cpp)
+- **CodeChef CHEFCAND** - [Chef And Candies](https://www.codechef.com/problems/CHEFCAND) (🔹 570, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/6.Chef_And_Candies.cpp)
+- **CodeChef CNTWRD** - [Counting Words](https://www.codechef.com/problems/CNTWRD) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp)
+- **CodeChef AVGPROBLEM** - [Greater Average](https://www.codechef.com/problems/AVGPROBLEM) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/2.Greater_Average.cpp)
+- **CodeChef AMR15A** - [Mahasena](https://www.codechef.com/problems/AMR15A) (🔹 533, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/2.Mahasena.cpp)
+
+### Basic Programming (8)
+
+- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
+- **CodeChef BIRYANI** - [Biryani Classes](https://www.codechef.com/problems/BIRYANI) (🔹 257, C++) -> [code](CodeChef/500_Difficulty_Rating/5.Biryani_Classes.cpp)
+- **CodeChef BULLBEAR** - [Bull Or Bear](https://www.codechef.com/problems/BULLBEAR) (🔹 300, C++) -> [code](CodeChef/500_Difficulty_Rating/9.Bull_Or_Bear.cpp)
+- **CodeChef CHEFONDATE** - [Chef On Date](https://www.codechef.com/problems/CHEFONDATE) (🔹 294, C++) -> [code](CodeChef/500_Difficulty_Rating/13.Chef_On_Date.cpp)
+- **CodeChef CHEFGAMES** - [Chefland Games](https://www.codechef.com/problems/CHEFGAMES) (🔹 550, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/5.Chefland_Games.cpp)
+- **CodeChef CLEARDAY** - [Clear Day](https://www.codechef.com/problems/CLEARDAY) (🔹 233, C++) -> [code](CodeChef/500_Difficulty_Rating/12.Clear_Day.cpp)
+- **CodeChef CREDCOINS** - [CRED Coins](https://www.codechef.com/problems/CREDCOINS) (🔹 539, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/8.CRED_Coins.cpp)
+- **CodeChef CHEFSCORE** - [Test Score](https://www.codechef.com/problems/CHEFSCORE) (🔹 610, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/7.Test_Score.cpp)
 
 ### Hash Table (7)
 
@@ -118,6 +189,19 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 88** - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/88.Merge_Sorted_Array.cpp)
 - **LeetCode 125** - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (🟢 Easy, C++) -> [code](LeetCode/Easy/125.Valid_Palindrome.cpp)
 - **LeetCode 160** - [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (🟢 Easy, C++) -> [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp)
+
+### Conditionals (4)
+
+- **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
+- **CodeChef BULLBEAR** - [Bull Or Bear](https://www.codechef.com/problems/BULLBEAR) (🔹 300, C++) -> [code](CodeChef/500_Difficulty_Rating/9.Bull_Or_Bear.cpp)
+- **CodeChef CHEFONDATE** - [Chef On Date](https://www.codechef.com/problems/CHEFONDATE) (🔹 294, C++) -> [code](CodeChef/500_Difficulty_Rating/13.Chef_On_Date.cpp)
+- **CodeChef CHEFGAMES** - [Chefland Games](https://www.codechef.com/problems/CHEFGAMES) (🔹 550, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/5.Chefland_Games.cpp)
+
+### Conditional Statements (3)
+
+- **CodeChef BTRYHLTH** - [Battery Health](https://www.codechef.com/problems/BTRYHLTH) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/7.Battery_Health.cpp)
+- **CodeChef CANDIVIDE** - [Candy Division](https://www.codechef.com/problems/CANDIVIDE) (🔹 289, C++) -> [code](CodeChef/500_Difficulty_Rating/11.Candy_Division.cpp)
+- **CodeChef AMR15A** - [Mahasena](https://www.codechef.com/problems/AMR15A) (🔹 533, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/2.Mahasena.cpp)
 
 ### Dynamic Programming (3)
 
@@ -146,13 +230,13 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 - **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
 
-### Basic Math (1)
+### Basic Programming Concepts (1)
 
-- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
+- **CodeChef CNTWRD** - [Counting Words](https://www.codechef.com/problems/CNTWRD) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp)
 
-### Basic Programming (1)
+### Basics (1)
 
-- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
+- **CodeChef BESTOFTWO** - [Best Of Two](https://www.codechef.com/problems/BESTOFTWO) (🔹 284, C++) -> [code](CodeChef/500_Difficulty_Rating/6.Best_Of_Two.cpp)
 
 ### Bit Manipulation (1)
 
@@ -162,10 +246,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 - **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 
-### Conditionals (1)
-
-- **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
-
 ### Counting (1)
 
 - **LeetCode 169** - [Majority Element](https://leetcode.com/problems/majority-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/169.Majority_Element.cpp)
@@ -174,9 +254,9 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 - **LeetCode 169** - [Majority Element](https://leetcode.com/problems/majority-element/) (🟢 Easy, C++) -> [code](LeetCode/Easy/169.Majority_Element.cpp)
 
-### Implementation (1)
+### Integer Division (1)
 
-- **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
+- **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
 
 ### Matrix (1)
 

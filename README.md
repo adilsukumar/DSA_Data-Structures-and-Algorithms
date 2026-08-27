@@ -11,11 +11,11 @@
 <br>
 
 <!-- BADGES_START -->
-<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-32-blueviolet?style=for-the-badge&logo=codeforces" /></a>
+<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-52-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-30-FFA116?style=for-the-badge&logo=leetcode" /></a>
-<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-2-5B4638?style=for-the-badge&logo=codechef" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Milestone_50-64%25-success?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Goal-32%2F1000-orange?style=for-the-badge" /></a>
+<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-22-5B4638?style=for-the-badge&logo=codechef" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Milestone_100-52%25-success?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Goal-52%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
 
 
@@ -84,19 +84,19 @@ Problems are solved from:
 
 | 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
 | :---: | :---: | :---: |
-| **32** | **25** | **7** |
+| **52** | **45** | **7** |
 
-### 🏆 Milestone Progress: 32 / 50
+### 🏆 Milestone Progress: 52 / 100
 
-![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[64],backgroundColor:'green'}]}}&w=800&h=50)
+![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[52],backgroundColor:'green'}]}}&w=800&h=50)
 
-> 🎉 Only **18** problems left to reach the next big milestone of 50!
+> 🎉 Only **48** problems left to reach the next big milestone of 100!
 
 ---
 
 <div align="center">
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%202%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B25%2C%207%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%2022%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B45%2C%207%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
 </div>
 
 ---
@@ -113,8 +113,8 @@ Problems are solved from:
 
 | Difficulty Rating | Count |
 | :--- | :---: |
-| 🔹 500 Rating | 1 |
-| 🔹 500 to 1000 | 1 |
+| 🔹 500 Rating | 14 |
+| 🔹 500 to 1000 | 8 |
 | 🔹 1000 to 1400 | 0 |
 | 🔹 1400 to 1600 | 0 |
 | 🔹 1600 to 1800 | 0 |
@@ -129,24 +129,28 @@ Problems are solved from:
 
 | Topic | Problems |
 | :--- | :---: |
+| Implementation | 17 |
 | Array | 16 |
+| Math | 16 |
 | String | 10 |
-| Math | 8 |
+| Basic Math | 9 |
+| Basic Programming | 8 |
 | Hash Table | 7 |
 | Two Pointers | 7 |
+| Conditionals | 4 |
+| Conditional Statements | 3 |
 | Dynamic Programming | 3 |
 | Linked List | 3 |
 | Sorting | 3 |
 | Binary Search | 2 |
 | Basic I/O | 1 |
-| Basic Math | 1 |
-| Basic Programming | 1 |
+| Basic Programming Concepts | 1 |
+| Basics | 1 |
 | Bit Manipulation | 1 |
 | Comparisons | 1 |
-| Conditionals | 1 |
 | Counting | 1 |
 | Divide and Conquer | 1 |
-| Implementation | 1 |
+| Integer Division | 1 |
 | Matrix | 1 |
 | Memoization | 1 |
 | Prefix Sum | 1 |
