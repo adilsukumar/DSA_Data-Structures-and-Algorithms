@@ -371,7 +371,14 @@ def process_one(path, dry_run=False):
         flush()
         return None
 
-    header = ensure_solved_tag(header, datetime.now().strftime("%Y-%m-%d"))
+    # A backfilled problem was solved long before it was filed. When the
+    # importer recorded the real date in the hint, use that; only a genuinely
+    # new solution gets today's date.
+    solved_on = datetime.now().strftime("%Y-%m-%d")
+    hint_date = re.search(r"^Solved:\s*(\d{4}-\d{2}-\d{2})", hint, re.M) if hint else None
+    if hint_date:
+        solved_on = hint_date.group(1)
+    header = ensure_solved_tag(header, solved_on)
 
     dest = destination(data, suffix)
     if dest.exists():
