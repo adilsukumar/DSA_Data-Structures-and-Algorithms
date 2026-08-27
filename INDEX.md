@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**31 problems solved** - **CodeChef** 1 / **LeetCode** 30
+**32 problems solved** - **CodeChef** 2 / **LeetCode** 30
 
 
 ---
@@ -14,6 +14,7 @@
 
 | # | Problem | Platform | Difficulty | Topics | Pattern | Lang | Solved | Solution |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) | CodeChef | 🔹 584 | Basic Programming, Basic Math, Comparisons | Threshold check on max of two values | C++ | 2026-06-23 | [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp) |
 | 1 | [Cricket World Cup Qualifier](https://www.codechef.com/practice) | CodeChef | 🔹 500 | Implementation, Conditionals, Basic I/O | Single Threshold Comparison | C++ | - | [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp) |
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | LeetCode | 🟢 Easy | Array, Hash Table | Brute-Force Pair Scan | C++ | 2026-06-04 | [code](LeetCode/Easy/1.Two_Sum.cpp) |
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | LeetCode | 🟢 Easy | Math | Digit Reversal | C++ | 2026-06-05 | [code](LeetCode/Easy/9.Palindrome_Number.cpp) |
@@ -145,9 +146,21 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 - **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
 
+### Basic Math (1)
+
+- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
+
+### Basic Programming (1)
+
+- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
+
 ### Bit Manipulation (1)
 
 - **LeetCode 136** - [Single Number](https://leetcode.com/problems/single-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/136.Single_Number.cpp)
+
+### Comparisons (1)
+
+- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 
 ### Conditionals (1)
 
