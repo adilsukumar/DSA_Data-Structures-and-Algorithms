@@ -262,12 +262,15 @@ platform and difficulty, rebuilds the index and stats, commits and pushes.
 
 ### 2. Automatically, once a night
 
-Save the accepted code into `inbox/` under any filename. A scheduled task sweeps
-the folder daily and does the same job unattended:
+The scheduled task first checks the LeetCode and CodeChef accounts for new
+Accepted submissions. It downloads their code into `inbox/`, then explains,
+files, indexes, commits and pushes them. You can also drop a solution into
+`inbox/` manually under any filename; it enters the same pipeline:
 
 ```bash
 python scripts/process_inbox.py             # run the sweep now
 python scripts/process_inbox.py --dry-run   # preview without changing anything
+python scripts/daily_sync.py                 # run the full website sync now
 ```
 
 Register the nightly task on Windows (defaults to 21:00, catches up if the

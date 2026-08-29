@@ -1,11 +1,12 @@
 <#
 .SYNOPSIS
-    Registers (or removes) the nightly DSA inbox sweep in Windows Task Scheduler.
+    Registers (or removes) the nightly DSA website sync in Windows Task Scheduler.
 
 .DESCRIPTION
-    Creates a scheduled task that runs scripts/process_inbox.py once a day. The
-    sweep explains anything sitting in inbox/, files it, rebuilds the index and
-    stats, then commits and pushes as you.
+    Creates a scheduled task that runs scripts/daily_sync.py once a day. It first
+    imports new Accepted submissions from LeetCode and CodeChef, then explains
+    anything sitting in inbox/, files it, rebuilds the index and stats, and
+    commits and pushes as you.
 
     The task runs as the CURRENT USER and only while you are logged on. That is
     deliberate: `claude -p` needs your Claude Code credentials, and `git push`
@@ -38,7 +39,7 @@ $ErrorActionPreference = "Stop"
 
 $TaskName = "DSA-Daily-Solution-Sweep"
 $RepoRoot = Split-Path -Parent $PSScriptRoot
-$Script   = Join-Path $RepoRoot "scripts\process_inbox.py"
+$Script   = Join-Path $RepoRoot "scripts\daily_sync.py"
 
 # ---------------------------------------------------------------- remove ----
 if ($Remove) {
@@ -103,7 +104,7 @@ Register-ScheduledTask `
     -Trigger $trigger `
     -Settings $settings `
     -Principal $principal `
-    -Description "Explains, files, commits and pushes DSA solutions dropped in inbox/." `
+    -Description "Imports, explains, files, indexes, commits and pushes LeetCode and CodeChef solutions." `
     -Force | Out-Null
 
 Write-Host ""
