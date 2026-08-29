@@ -218,6 +218,8 @@ def main():
     parser.add_argument("--user", required=True, help="your CodeChef handle")
     parser.add_argument("--limit", type=int, default=0, help="stop after N new problems")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--audit-only", action="store_true",
+                        help="report verdict counts without downloading code")
     parser.add_argument("--max-pages", type=int, default=0, help="0 = all pages")
     args = parser.parse_args()
 
@@ -235,11 +237,15 @@ def main():
 
     # problem code -> {latest accepted id, earliest accepted time, lang}
     best = {}
+    verdicts_by_problem = {}
     for page in range(0, max_page):
         payload = first if page == 0 else fetch_page(sess, args.user, page)
         if not payload:
             continue
         for row in parse_rows(payload.get("content", "")):
+            if row["problem"]:
+                verdicts_by_problem.setdefault(row["problem"], set()).add(
+                    row["verdict"] or "unknown")
             if row["verdict"] != "accepted" or not row["problem"]:
                 continue
             code = row["problem"]
@@ -256,7 +262,20 @@ def main():
                 page, max_page, len(best)))
         time.sleep(REQUEST_PAUSE)
 
-    print("\n{0} distinct problems accepted.".format(len(best)))
+    partial_only = sorted(
+        code for code, verdicts in verdicts_by_problem.items()
+        if "partially accepted" in verdicts and "accepted" not in verdicts
+    )
+    attempted_only = sorted(set(verdicts_by_problem) - set(best) - set(partial_only))
+    print("\n{0} distinct problems fully accepted.".format(len(best)))
+    print("{0} distinct problems partially accepted only.".format(len(partial_only)))
+    print("{0} other distinct problems attempted but never accepted.".format(
+        len(attempted_only)))
+    if partial_only:
+        print("Partial-only codes: {0}".format(", ".join(partial_only)))
+
+    if args.audit_only:
+        return 0
 
     already = existing_titles()
     imported, skipped = 0, 0

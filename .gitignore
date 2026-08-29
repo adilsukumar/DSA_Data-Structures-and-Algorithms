@@ -12,6 +12,9 @@
 inbox/*
 !inbox/README.md
 
+# Nightly sync logs and local authentication alerts
+sync_status/
+
 # Python
 __pycache__/
 *.py[cod]

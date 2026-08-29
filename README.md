@@ -298,6 +298,10 @@ because LeetCode exposes no public API for your own submissions. `.env` is
 gitignored, as is everything in `inbox/` — raw code never reaches a commit
 until it has been explained and filed.
 
+When that cookie expires, the nightly task attempts a Windows popup and writes
+`sync_status/LEETCODE_LOGIN_REQUIRED.txt` with refresh instructions. Full run
+output is retained locally in `sync_status/daily_sync.log`; both are gitignored.
+
 LeetCode throttles hard. The importer paces itself and backs off on a 403,
 and if it still gets refused it keeps whatever it already fetched — re-running
 resumes, since problems already in the repo are skipped.
