@@ -11,11 +11,11 @@
 <br>
 
 <!-- BADGES_START -->
-<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-90-blueviolet?style=for-the-badge&logo=codeforces" /></a>
+<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-109-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-30-FFA116?style=for-the-badge&logo=leetcode" /></a>
-<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-60-5B4638?style=for-the-badge&logo=codechef" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Milestone_100-90%25-success?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Goal-90%2F1000-orange?style=for-the-badge" /></a>
+<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-79-5B4638?style=for-the-badge&logo=codechef" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Milestone_150-72%25-success?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Goal-109%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
 
 
@@ -84,19 +84,19 @@ Problems are solved from:
 
 | 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
 | :---: | :---: | :---: |
-| **90** | **83** | **7** |
+| **109** | **101** | **8** |
 
-### 🏆 Milestone Progress: 90 / 100
+### 🏆 Milestone Progress: 109 / 150
 
-![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[90],backgroundColor:'green'}]}}&w=800&h=50)
+![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[72],backgroundColor:'green'}]}}&w=800&h=50)
 
-> 🎉 Only **10** problems left to reach the next big milestone of 100!
+> 🎉 Only **41** problems left to reach the next big milestone of 150!
 
 ---
 
 <div align="center">
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%2060%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B83%2C%207%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%2079%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B101%2C%208%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
 </div>
 
 ---
@@ -113,8 +113,8 @@ Problems are solved from:
 
 | Difficulty Rating | Count |
 | :--- | :---: |
-| 🔹 500 Rating | 31 |
-| 🔹 500 to 1000 | 29 |
+| 🔹 500 Rating | 39 |
+| 🔹 500 to 1000 | 40 |
 | 🔹 1000 to 1400 | 0 |
 | 🔹 1400 to 1600 | 0 |
 | 🔹 1600 to 1800 | 0 |
@@ -129,24 +129,25 @@ Problems are solved from:
 
 | Topic | Problems |
 | :--- | :---: |
-| Implementation | 51 |
+| Implementation | 53 |
+| Basic Math | 31 |
 | Math | 26 |
-| Basic Math | 24 |
 | Basic Programming | 19 |
 | Array | 16 |
+| Conditional Statements | 13 |
 | String | 10 |
 | Conditionals | 9 |
-| Conditional Statements | 8 |
 | Hash Table | 7 |
 | Two Pointers | 7 |
+| Basic Programming Concepts | 4 |
 | Dynamic Programming | 3 |
 | Linked List | 3 |
 | Sorting | 3 |
 | Arithmetic | 2 |
-| Basic Programming Concepts | 2 |
 | Binary Search | 2 |
 | Integer Division | 2 |
 | Ad-hoc | 1 |
+| Arrays | 1 |
 | Basic I/O | 1 |
 | Basics | 1 |
 | Bit Manipulation | 1 |
@@ -157,9 +158,11 @@ Problems are solved from:
 | Division | 1 |
 | Inbuilt Functions | 1 |
 | Loops | 1 |
+| Mathematics | 1 |
 | Matrix | 1 |
 | Memoization | 1 |
 | Modular Arithmetic | 1 |
+| Observation | 1 |
 | Prefix Sum | 1 |
 | Recursion | 1 |
 | Simulation | 1 |
@@ -167,6 +170,14 @@ Problems are solved from:
 | String Matching | 1 |
 | Strings | 1 |
 | Trie | 1 |
+| admin | 1 |
+| arjunarul_adm | 1 |
+| largesecond | 1 |
+| lavish_adm | 1 |
+| math | 1 |
+| sorting | 1 |
+| start36 | 1 |
+| start92 | 1 |
 
 > Full breakdown with links: **[INDEX.md](INDEX.md)**
 
@@ -276,7 +287,7 @@ To pull solutions that were only ever submitted on the site:
 ```bash
 python scripts/import_leetcode.py --dry-run    # list what it finds
 python scripts/import_leetcode.py              # writes raw code into inbox/
-python scripts/process_inbox.py --workers 3    # explains, files, commits
+python scripts/process_inbox.py --workers 2    # explains, files, commits
 ```
 
 This needs a `LEETCODE_SESSION` cookie in a local `.env` (see `.env.example`),

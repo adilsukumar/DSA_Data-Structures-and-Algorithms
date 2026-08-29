@@ -21,7 +21,7 @@ Usage
     python scripts/process_inbox.py --workers 5   # 5 Claude calls at a time
 
 Each solution costs one Claude call, and a call takes a couple of minutes, so
-a large backfill runs them in parallel (default 3 at a time). Use --workers 1
+a large backfill runs them in parallel (default 2 at a time). Use --workers 1
 to force serial execution when debugging.
 
 A file is left in inbox/ untouched if anything about it fails, so nothing is
@@ -35,6 +35,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -197,9 +198,35 @@ def run_claude(prompt, timeout=420):
         return None
 
     if proc.returncode != 0:
-        log("  ! claude exited {0}: {1}".format(proc.returncode, proc.stderr[:400]))
+        # Report BOTH streams. A rate-limited CLI exits 1 with an empty stderr,
+        # which on its own tells you nothing about what went wrong.
+        detail = (proc.stderr or "").strip() or (proc.stdout or "").strip()
+        log("  ! claude exited {0}: {1}".format(
+            proc.returncode, detail[:300] or "(no output)"))
         return None
     return proc.stdout
+
+
+def run_claude_with_retry(prompt, log, attempts=4):
+    """run_claude, but resilient to the transient failures that actually happen.
+
+    Sustained parallel calls trip a rate limit, and the CLI signals that as
+    exit 1 with no stderr at all. Without a retry a single blip silently drops
+    that solution for the whole run -- which is how 57 of 77 problems failed in
+    one batch while the CLI was working perfectly a minute later.
+    """
+    delay = 20
+    for attempt in range(1, attempts + 1):
+        result = run_claude(prompt)
+        if result and result.strip():
+            return result
+        if attempt == attempts:
+            return result
+        log("    attempt {0}/{1} failed, retrying in {2}s...".format(
+            attempt, attempts, delay))
+        time.sleep(delay)
+        delay = min(delay * 2, 300)
+    return None
 
 
 def parse_response(text):
@@ -263,6 +290,27 @@ def ensure_solved_tag(header, date_str):
     solved_gap = gap[:-3] if len(gap) > 3 else " "
     insertion = "\n{0}@solved{1}{2}".format(prefix, solved_gap, date_str)
     return header[:match.end()] + insertion + header[match.end():]
+
+
+def ensure_problem_id(header, hint):
+    """Fill an empty `@id` with the CodeChef problem code from the hint.
+
+    CodeChef problems have no numeric id, so the model leaves @id blank. The
+    short code (ACTEMP, FLOW007) is the real identifier -- it is what the URL
+    uses and what the importer matches on to avoid re-importing a problem that
+    is already filed.
+    """
+    if not hint:
+        return header
+    match = re.search(r"CodeChef problem\s+([A-Z0-9_]+)", hint)
+    if not match:
+        return header
+    code = match.group(1)
+
+    # Only fill a blank one; never overwrite an id the model got right.
+    return re.sub(r"^(\s*\S*\s*@id)([^\S\n]*)$",
+                  lambda m: "{0}{1}{2}".format(m.group(1), "         "[:9], code),
+                  header, count=1, flags=re.M)
 
 
 def slugify(title):
@@ -357,7 +405,7 @@ def process_one(path, dry_run=False):
         return None
 
     log("  asking claude for an explanation...")
-    raw = run_claude(prompt)
+    raw = run_claude_with_retry(prompt, log)
     data, header = parse_response(raw)
 
     if not data or not header:
@@ -379,6 +427,7 @@ def process_one(path, dry_run=False):
     if hint_date:
         solved_on = hint_date.group(1)
     header = ensure_solved_tag(header, solved_on)
+    header = ensure_problem_id(header, hint)
 
     dest = destination(data, suffix)
     if dest.exists():
@@ -467,8 +516,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="show actions only")
     parser.add_argument("--no-push", action="store_true", help="commit but do not push")
     parser.add_argument("--file", help="process a single file instead of the inbox")
-    parser.add_argument("--workers", type=int, default=3,
-                        help="parallel Claude calls (default 3; 1 = serial)")
+    parser.add_argument("--workers", type=int, default=2,
+                        help="parallel Claude calls (default 2; higher trips rate limits)")
     args = parser.parse_args()
 
     INBOX.mkdir(exist_ok=True)

@@ -315,7 +315,7 @@ def main():
         print("\n{0} new problem(s) written to inbox/, {1} already filed.".format(
             imported, skipped))
         if imported:
-            print("\nNext:  python scripts/process_inbox.py --workers 4")
+            print("\nNext:  python scripts/process_inbox.py --workers 2")
             print("(one Claude call per problem -- consider batches)")
     return 0
 
