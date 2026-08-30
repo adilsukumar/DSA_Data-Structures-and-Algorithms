@@ -9,6 +9,10 @@ py_count = 0
 
 leetcode_count = 0
 codechef_count = 0
+attempt_count = sum(
+    1 for f in (ROOT / "Attempts").rglob("*")
+    if f.is_file() and f.suffix.lower() in {".cpp", ".py", ".c", ".java", ".js", ".ts", ".go", ".rs", ".kt", ".cs", ".txt"}
+) if (ROOT / "Attempts").is_dir() else 0
 
 # LeetCode stats
 lc_easy = 0
@@ -127,6 +131,7 @@ badges_str = f"""
 <a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-{total}-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-{leetcode_count}-FFA116?style=for-the-badge&logo=leetcode" /></a>
 <a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-{codechef_count}-5B4638?style=for-the-badge&logo=codechef" /></a>
+<a href="#attempt-history"><img src="https://img.shields.io/badge/Attempts-{attempt_count}-6c757d?style=for-the-badge" /></a>
 <a href="#"><img src="https://img.shields.io/badge/Milestone_{milestone}-{progress_percent}%25-success?style=for-the-badge" /></a>
 <a href="#"><img src="https://img.shields.io/badge/Goal-{total}%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
@@ -140,6 +145,11 @@ generated = f"""
 | 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
 | :---: | :---: | :---: |
 | **{total}** | **{cpp_count}** | **{py_count}** |
+
+### Attempt History
+
+**{attempt_count} unsuccessful submissions archived** in [`Attempts/`](Attempts/).
+These are tracked separately and do not count as solved problems.
 
 ### 🏆 Milestone Progress: {total} / {milestone}
 

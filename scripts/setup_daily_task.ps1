@@ -4,8 +4,8 @@
 
 .DESCRIPTION
     Creates a scheduled task that runs scripts/daily_sync.py once a day. It first
-    imports new Accepted submissions from LeetCode and CodeChef, then explains
-    anything sitting in inbox/, files it, rebuilds the index and stats, and
+    imports new submissions from LeetCode and CodeChef, archives unsuccessful
+    attempts, explains accepted solutions, rebuilds the index and stats, and
     commits and pushes as you.
 
     The task runs as the CURRENT USER and only while you are logged on. That is
@@ -104,7 +104,7 @@ Register-ScheduledTask `
     -Trigger $trigger `
     -Settings $settings `
     -Principal $principal `
-    -Description "Imports, explains, files, indexes, commits and pushes LeetCode and CodeChef solutions." `
+    -Description "Archives attempts and imports, explains, indexes, commits and pushes LeetCode and CodeChef solutions." `
     -Force | Out-Null
 
 Write-Host ""

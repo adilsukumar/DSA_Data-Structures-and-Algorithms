@@ -76,6 +76,25 @@ def update_leetcode_status(returncode, output):
         LEETCODE_ALERT.unlink()
 
 
+def commit_attempts():
+    """Commit only the archived attempts and their README counter."""
+    attempts = ROOT / "Attempts"
+    if not attempts.exists():
+        return 0
+    subprocess.run([PYTHON, "scripts/update_stats.py"], cwd=str(ROOT), check=True)
+    subprocess.run(["git", "add", "--", "Attempts", "README.md"],
+                   cwd=str(ROOT), check=True)
+    staged = subprocess.run(["git", "diff", "--staged", "--quiet"], cwd=str(ROOT))
+    if staged.returncode == 0:
+        print("No new attempts to commit.")
+        return 0
+    day = datetime.now().strftime("%d %b %Y")
+    subprocess.run(["git", "commit", "-m", "attempts: " + day],
+                   cwd=str(ROOT), check=True)
+    pushed = subprocess.run(["git", "push"], cwd=str(ROOT))
+    return pushed.returncode
+
+
 def main():
     STATUS_DIR.mkdir(exist_ok=True)
     print("DSA daily sync started {0}".format(datetime.now().isoformat(timespec="seconds")))
@@ -91,9 +110,10 @@ def main():
     # This is the only stage that commits and pushes. Failed explanations stay
     # in inbox/ and are retried by the next nightly run.
     process_rc, _ = run("Explain, file, index and push", "scripts/process_inbox.py", "--workers", "2")
+    attempts_rc = commit_attempts()
 
     print("\nDSA daily sync finished {0}".format(datetime.now().isoformat(timespec="seconds")))
-    return process_rc
+    return process_rc if process_rc not in (0, 1) else attempts_rc
 
 
 if __name__ == "__main__":

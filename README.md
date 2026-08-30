@@ -14,6 +14,7 @@
 <a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-109-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-30-FFA116?style=for-the-badge&logo=leetcode" /></a>
 <a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-79-5B4638?style=for-the-badge&logo=codechef" /></a>
+<a href="#attempt-history"><img src="https://img.shields.io/badge/Attempts-637-6c757d?style=for-the-badge" /></a>
 <a href="#"><img src="https://img.shields.io/badge/Milestone_150-72%25-success?style=for-the-badge" /></a>
 <a href="#"><img src="https://img.shields.io/badge/Goal-109%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
@@ -85,6 +86,11 @@ Problems are solved from:
 | 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
 | :---: | :---: | :---: |
 | **109** | **101** | **8** |
+
+### Attempt History
+
+**637 unsuccessful submissions archived** in [`Attempts/`](Attempts/).
+These are tracked separately and do not count as solved problems.
 
 ### 🏆 Milestone Progress: 109 / 150
 
@@ -263,7 +269,8 @@ platform and difficulty, rebuilds the index and stats, commits and pushes.
 ### 2. Automatically, once a night
 
 The scheduled task first checks the LeetCode and CodeChef accounts for new
-Accepted submissions. It downloads their code into `inbox/`, then explains,
+submissions. Failed attempts are stored by date under `Attempts/` and kept out
+of solved-problem totals. Accepted code goes into `inbox/`, then gets explained,
 files, indexes, commits and pushes them. You can also drop a solution into
 `inbox/` manually under any filename; it enters the same pipeline:
 

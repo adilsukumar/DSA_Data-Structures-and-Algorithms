@@ -39,6 +39,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "inbox"
+ATTEMPTS = ROOT / "Attempts" / "CodeChef"
 
 RECENT_URL = "https://www.codechef.com/recent/user"
 CODE_URL = "https://www.codechef.com/api/submission-code/{0}"
@@ -238,6 +239,7 @@ def main():
     # problem code -> {latest accepted id, earliest accepted time, lang}
     best = {}
     verdicts_by_problem = {}
+    failed_rows = []
     for page in range(0, max_page):
         payload = first if page == 0 else fetch_page(sess, args.user, page)
         if not payload:
@@ -246,6 +248,8 @@ def main():
             if row["problem"]:
                 verdicts_by_problem.setdefault(row["problem"], set()).add(
                     row["verdict"] or "unknown")
+            if row["problem"] and row["verdict"] and row["verdict"] != "accepted":
+                failed_rows.append(row)
             if row["verdict"] != "accepted" or not row["problem"]:
                 continue
             code = row["problem"]
@@ -276,6 +280,37 @@ def main():
 
     if args.audit_only:
         return 0
+
+    archived = 0
+    for row in failed_rows:
+        day = row["when"].strftime("%Y-%m-%d") if row["when"] else "Unknown-Date"
+        base = ATTEMPTS / day
+        existing = list(ATTEMPTS.rglob(row["id"] + ".*")) if ATTEMPTS.exists() else []
+        if existing:
+            continue
+        source, lang_info = fetch_code(sess, row["id"])
+        time.sleep(REQUEST_PAUSE)
+        if not source.strip():
+            continue
+        ext = "." + (lang_info.get("extension") or "").lstrip(".") \
+            if lang_info.get("extension") else LANG_EXT.get(
+                (row["lang"] or "").lower(), ".txt")
+        target = base / (row["id"] + "." + slugify(row["problem"]) + ext)
+        print("  ~ attempt {0} {1}: {2}".format(
+            row["id"], row["problem"], row["verdict"]))
+        if not args.dry_run:
+            base.mkdir(parents=True, exist_ok=True)
+            lines = [
+                "Platform: CodeChef", "Submission: " + row["id"],
+                "Problem: " + row["problem"], "Verdict: " + row["verdict"],
+                "Date: " + day,
+                "URL: https://www.codechef.com/problems/" + row["problem"], "",
+            ]
+            header = "/*\n" + "\n".join(" * " + line for line in lines) + " */\n\n"
+            if ext == ".py":
+                header = '"""\n' + "\n".join(lines) + '"""\n\n'
+            target.write_text(header + source, encoding="utf-8")
+        archived += 1
 
     already = existing_titles()
     imported, skipped = 0, 0
@@ -331,8 +366,8 @@ def main():
         print("\n{0} new, {1} already filed. Nothing written (--dry-run).".format(
             imported, skipped))
     else:
-        print("\n{0} new problem(s) written to inbox/, {1} already filed.".format(
-            imported, skipped))
+        print("\n{0} new problem(s) written to inbox/, {1} attempt(s) archived, "
+              "{2} already filed.".format(imported, archived, skipped))
         if imported:
             print("\nNext:  python scripts/process_inbox.py --workers 2")
             print("(one Claude call per problem -- consider batches)")

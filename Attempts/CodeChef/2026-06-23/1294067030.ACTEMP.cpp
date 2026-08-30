@@ -1,0 +1,35 @@
+/*
+ * Platform: CodeChef
+ * Submission: 1294067030
+ * Problem: ACTEMP
+ * Verdict: compilation error
+ * Date: 2026-06-23
+ * URL: https://www.codechef.com/problems/ACTEMP
+ *  */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int T, A, B, C;
+	cin >> T;
+	
+	for(int i = 0; i < T; i++){
+	    cin >> A >> B >> C;
+	    if(A <= C){
+	        if(A <= C && A<=B && C<=B){
+	            cout << "Yes" << endl;
+	        }
+	    }
+	    if(C <= A){
+	        if(C =< A && A<=B && C<=B){
+	            cout << "Yes" << endl;
+	        }
+	    }
+	    if(B < A || B < C){
+	        cout << "No" << endl;
+	    }
+	}
+    return 0;
+}

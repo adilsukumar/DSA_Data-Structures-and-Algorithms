@@ -55,6 +55,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "inbox"
+ATTEMPTS = ROOT / "Attempts" / "LeetCode"
 ENV_FILE = ROOT / ".env"
 
 SUBMISSIONS_URL = "https://leetcode.com/api/submissions/"
@@ -270,6 +271,39 @@ def slugify(title):
     return re.sub(r"[\s-]+", "_", cleaned) or "Untitled"
 
 
+def archive_attempt(sub, dry_run=False):
+    """Store one non-Accepted submission without treating it as a solution."""
+    status = (sub.get("status_display") or "Unknown").strip()
+    if status == "Accepted":
+        return False
+    sid = str(sub.get("id") or sub.get("submission_id") or "").strip()
+    code = sub.get("code") or ""
+    if not sid or not code.strip():
+        return False
+    stamp = int(sub.get("timestamp") or 0)
+    day = time.strftime("%Y-%m-%d", time.localtime(stamp)) if stamp else "Unknown-Date"
+    title = sub.get("title") or sub.get("title_slug") or "Unknown Problem"
+    slug = sub.get("title_slug") or slugify(title)
+    ext = LANG_EXT.get(sub.get("lang", ""), ".txt")
+    target = ATTEMPTS / day / (sid + "." + slugify(title) + ext)
+    if target.exists():
+        return False
+    print("  ~ attempt {0} {1}: {2}".format(sid, title, status))
+    if dry_run:
+        return True
+    target.parent.mkdir(parents=True, exist_ok=True)
+    lines = [
+        "Platform: LeetCode", "Submission: " + sid, "Problem: " + title,
+        "Verdict: " + status, "Date: " + day,
+        "URL: https://leetcode.com/problems/{0}/".format(slug), "",
+    ]
+    header = "/*\n" + "\n".join(" * " + line for line in lines) + " */\n\n"
+    if ext == ".py":
+        header = '"""\n' + "\n".join(lines) + '"""\n\n'
+    target.write_text(header + code, encoding="utf-8")
+    return True
+
+
 def main():
     parser = argparse.ArgumentParser(description="Backfill LeetCode solutions into inbox/.")
     parser.add_argument("--limit", type=int, default=0,
@@ -292,12 +326,13 @@ def main():
 
     INBOX.mkdir(exist_ok=True)
 
-    imported, skipped, seen_slugs = 0, 0, set()
+    imported, attempts, skipped, seen_slugs = 0, 0, 0, set()
     stopped_early = ""
 
     try:
       for sub in fetch_submissions(session):
         if sub.get("status_display") != "Accepted":
+            attempts += int(archive_attempt(sub, args.dry_run))
             continue
 
         slug = sub.get("title_slug") or ""
@@ -360,8 +395,8 @@ def main():
         print("\n{0} new problem(s) found, {1} already in the repo. "
               "Nothing was written (--dry-run).".format(imported, skipped))
     else:
-        print("\n{0} new problem(s) written to inbox/, {1} already present.".format(
-            imported, skipped))
+        print("\n{0} new problem(s) written to inbox/, {1} attempt(s) archived, "
+              "{2} already present.".format(imported, attempts, skipped))
         if imported:
             print("\nNext:  python scripts/process_inbox.py")
             print("(that is one Claude call per problem -- consider batches of ~20)")
