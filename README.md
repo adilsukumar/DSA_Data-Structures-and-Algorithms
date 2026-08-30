@@ -278,7 +278,7 @@ machine was off):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\setup_daily_task.ps1
-powershell -ExecutionPolicy Bypass -File scripts\setup_daily_task.ps1 -Time 23:30
+powershell -ExecutionPolicy Bypass -File scripts\setup_daily_task.ps1 -Time 23:45
 ```
 
 If a file cannot be processed it stays in `inbox/` — nothing is ever lost.

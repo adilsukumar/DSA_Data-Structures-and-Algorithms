@@ -18,20 +18,20 @@
     skipped.
 
 .PARAMETER Time
-    24-hour local time to run, as HH:mm. Default 21:00.
+    24-hour local time to run, as HH:mm. Default 23:45.
 
 .PARAMETER Remove
     Unregister the task instead of creating it.
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File scripts\setup_daily_task.ps1
-    powershell -ExecutionPolicy Bypass -File scripts\setup_daily_task.ps1 -Time 23:30
+    powershell -ExecutionPolicy Bypass -File scripts\setup_daily_task.ps1 -Time 23:45
     powershell -ExecutionPolicy Bypass -File scripts\setup_daily_task.ps1 -Remove
 #>
 
 [CmdletBinding()]
 param(
-    [string]$Time = "21:00",
+    [string]$Time = "23:45",
     [switch]$Remove
 )
 
