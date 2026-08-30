@@ -11,12 +11,12 @@
 <br>
 
 <!-- BADGES_START -->
-<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-109-blueviolet?style=for-the-badge&logo=codeforces" /></a>
+<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-110-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-30-FFA116?style=for-the-badge&logo=leetcode" /></a>
-<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-79-5B4638?style=for-the-badge&logo=codechef" /></a>
+<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-80-5B4638?style=for-the-badge&logo=codechef" /></a>
 <a href="#attempt-history"><img src="https://img.shields.io/badge/Attempts-637-6c757d?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Milestone_150-72%25-success?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Goal-109%2F1000-orange?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Milestone_150-73%25-success?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Goal-110%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
 
 
@@ -85,24 +85,24 @@ Problems are solved from:
 
 | 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
 | :---: | :---: | :---: |
-| **109** | **101** | **8** |
+| **110** | **102** | **8** |
 
 ### Attempt History
 
 **637 unsuccessful submissions archived** in [`Attempts/`](Attempts/).
 These are tracked separately and do not count as solved problems.
 
-### 🏆 Milestone Progress: 109 / 150
+### 🏆 Milestone Progress: 110 / 150
 
-![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[72],backgroundColor:'green'}]}}&w=800&h=50)
+![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[73],backgroundColor:'green'}]}}&w=800&h=50)
 
-> 🎉 Only **41** problems left to reach the next big milestone of 150!
+> 🎉 Only **40** problems left to reach the next big milestone of 150!
 
 ---
 
 <div align="center">
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%2079%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B101%2C%208%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%2080%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B102%2C%208%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
 </div>
 
 ---
@@ -120,7 +120,7 @@ These are tracked separately and do not count as solved problems.
 | Difficulty Rating | Count |
 | :--- | :---: |
 | 🔹 500 Rating | 39 |
-| 🔹 500 to 1000 | 40 |
+| 🔹 500 to 1000 | 41 |
 | 🔹 1000 to 1400 | 0 |
 | 🔹 1400 to 1600 | 0 |
 | 🔹 1600 to 1800 | 0 |
@@ -152,6 +152,7 @@ These are tracked separately and do not count as solved problems.
 | Arithmetic | 2 |
 | Binary Search | 2 |
 | Integer Division | 2 |
+| Mathematics | 2 |
 | Ad-hoc | 1 |
 | Arrays | 1 |
 | Basic I/O | 1 |
@@ -164,7 +165,6 @@ These are tracked separately and do not count as solved problems.
 | Division | 1 |
 | Inbuilt Functions | 1 |
 | Loops | 1 |
-| Mathematics | 1 |
 | Matrix | 1 |
 | Memoization | 1 |
 | Modular Arithmetic | 1 |
@@ -233,14 +233,11 @@ DSA_Data-Structures-and-Algorithms
 ├── inbox                     # drop new solutions here
 │
 ├── scripts
-│   ├── process_inbox.py      # explain -> file -> index -> commit -> push
+│   ├── process_inbox.py      # file -> index -> commit -> push (no AI model)
 │   ├── build_index.py        # generates INDEX.md from @tag headers
 │   ├── import_leetcode.py    # backfills solved problems from your account
 │   ├── update_stats.py       # refreshes the README dashboard
 │   └── setup_daily_task.ps1  # registers the nightly sweep on Windows
-│
-├── .claude
-│   └── commands/solved.md    # the /solved slash command
 │
 ├── .github
 │   └── workflows
@@ -253,24 +250,15 @@ DSA_Data-Structures-and-Algorithms
 
 ## ⚙️ How This Repository Stays Updated
 
-Solutions are never filed by hand. There are two ways in, and both end with a
-commit authored by me — so the contribution graph reflects real work.
+The local automation runs without Claude, Codex, OpenAI, or any other model.
+It uses platform metadata to file submissions, then commits under my Git author.
+Detailed explanations are reviewed manually.
 
-### 1. Instantly, while I'm still in the editor
-
-```bash
-/solved                    # in Claude Code — paste the accepted code
-/solved path/to/file.cpp
-```
-
-Identifies the problem, writes the explanation, files it under the right
-platform and difficulty, rebuilds the index and stats, commits and pushes.
-
-### 2. Automatically, once a night
+### Automatically, once a night
 
 The scheduled task first checks the LeetCode and CodeChef accounts for new
 submissions. Failed attempts are stored by date under `Attempts/` and kept out
-of solved-problem totals. Accepted code goes into `inbox/`, then gets explained,
+of solved-problem totals. Accepted code goes into `inbox/`, then gets filed,
 files, indexes, commits and pushes them. You can also drop a solution into
 `inbox/` manually under any filename; it enters the same pipeline:
 

@@ -5,12 +5,11 @@
 .DESCRIPTION
     Creates a scheduled task that runs scripts/daily_sync.py once a day. It first
     imports new submissions from LeetCode and CodeChef, archives unsuccessful
-    attempts, explains accepted solutions, rebuilds the index and stats, and
+    attempts, files accepted solutions, rebuilds the index and stats, and
     commits and pushes as you.
 
     The task runs as the CURRENT USER and only while you are logged on. That is
-    deliberate: `claude -p` needs your Claude Code credentials, and `git push`
-    needs your stored Git credentials. Neither is available to a task running
+    deliberate: `git push` needs your stored Git credentials, which are not available to a task running
     under SYSTEM or in a logged-off session.
 
     StartWhenAvailable is enabled, so if the machine is asleep or off at the
@@ -67,10 +66,6 @@ if (-not $python) {
     throw "Python is not on PATH. Install it, or edit this script to hard-code the path."
 }
 
-if (-not (Get-Command claude -ErrorAction SilentlyContinue)) {
-    Write-Warning "The 'claude' CLI is not on PATH. The sweep will file nothing until it is."
-}
-
 try {
     $when = [datetime]::ParseExact($Time, "HH:mm", $null)
 }
@@ -104,7 +99,7 @@ Register-ScheduledTask `
     -Trigger $trigger `
     -Settings $settings `
     -Principal $principal `
-    -Description "Archives attempts and imports, explains, indexes, commits and pushes LeetCode and CodeChef solutions." `
+    -Description "Archives attempts and imports, files, indexes, commits and pushes LeetCode and CodeChef solutions without an AI model." `
     -Force | Out-Null
 
 Write-Host ""

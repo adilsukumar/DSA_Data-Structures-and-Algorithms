@@ -4,8 +4,7 @@ process_inbox.py -- the daily solution pipeline.
 
 Drop a raw solution file into inbox/. This script then, for each file:
 
-  1. Asks Claude (via the `claude -p` headless CLI) to identify the problem and
-     write an interview-prep explanation header.
+  1. Reads trusted metadata written by the platform importer.
   2. Files the solution into the right platform/difficulty folder with the
      repo's naming convention.
   3. Rebuilds INDEX.md and the README statistics.
@@ -18,31 +17,25 @@ Usage
     python scripts/process_inbox.py --dry-run     # show what would happen
     python scripts/process_inbox.py --no-push     # commit locally only
     python scripts/process_inbox.py --file x.cpp  # process one specific file
-    python scripts/process_inbox.py --workers 5   # 5 Claude calls at a time
+    python scripts/process_inbox.py --workers 5   # process 5 files at a time
 
-Each solution costs one Claude call, and a call takes a couple of minutes, so
-a large backfill runs them in parallel (default 2 at a time). Use --workers 1
-to force serial execution when debugging.
+No AI model or model CLI is used. Explanations are marked for manual review.
 
 A file is left in inbox/ untouched if anything about it fails, so nothing is
 ever lost. Re-run the script after fixing the problem.
 """
 
 import argparse
-import json
 import re
-import shutil
 import subprocess
 import sys
-import tempfile
-import time
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
-# Serialises the "pick a destination path and write to it" step. Claude calls
-# run in parallel, but CodeChef filenames are numbered by scanning the target
+# Serialises the "pick a destination path and write to it" step. Files can be
+# processed in parallel, but CodeChef filenames are numbered by scanning the target
 # folder, so two threads landing there at once would pick the same number.
 PLACEMENT_LOCK = threading.Lock()
 PRINT_LOCK = threading.Lock()
@@ -68,245 +61,8 @@ CODECHEF_BUCKETS = [
     (2500, "2000_to_2500_Difficulty_Rating"),
 ]
 
-PROMPT_TEMPLATE = """\
-You are writing concise revision notes for a competitive-programming solution.
-The notes should sound like a programmer explaining the idea to their future
-self: direct, specific, and free of motivational or tutorial filler.
-
-Here is the solution file the author wrote:
-
-FILENAME: {filename}
-```
-{code}
-```
-{hint_block}
-Identify which LeetCode or CodeChef problem this solves, then produce an \
-explanation header.
-
-Reply with EXACTLY TWO fenced blocks and no other prose.
-
-Block 1 -- a ```json fence holding only short, single-line metadata values:
-
-- "platform"   : "LeetCode" or "CodeChef"
-- "id"         : problem number as a string (LeetCode) or "" if unknown
-- "title"      : official problem title, Title Case
-- "difficulty" : "Easy" | "Medium" | "Hard" for LeetCode; the numeric rating \
-as a string (e.g. "800") for CodeChef
-- "topics"     : array of standard topic tags, e.g. ["Array","Hash Table"]. \
-Use the platform's own tag vocabulary.
-- "pattern"    : short name for the technique THIS code uses, under 45 chars
-- "url"        : canonical problem URL, or "" if you are not certain
-
-Block 2 -- a ```header fence holding the explanation comment block as RAW TEXT. \
-Do not JSON-encode it and do not escape newlines; write it exactly as it should \
-appear in the file.
-
-The header must be a complete comment block in {lang}'s comment syntax
-({comment_hint}), ready to sit directly above the code. Keep it compact:
-
-  - One plain title line: "{platform_placeholder} <id> - <title> [difficulty]"
-  - The @tag metadata block, one tag per line, values aligned in a column, \
-and with NO colon after the tag name. Exactly this shape:
-        @platform   LeetCode
-        @id         217
-        @title      Contains Duplicate
-        @difficulty Easy
-        @topics     Array, Hash Table
-        @pattern    Hash Set Membership
-        @url        https://leetcode.com/problems/contains-duplicate/
-  - Problem: one or two sentences; an example only when it adds clarity
-  - Approach: two to four sentences explaining this code's key idea
-  - Complexity: one short Time line and one short Space line
-  - Notes: at most two bullets for a real edge case, bug, or better approach
-
-Be specific and honest. If the code has a bug, dead code, or violates the
-required complexity, say so plainly. Aim for 20-35 lines total. Do not add
-decorative rulers, emojis, multiple dry runs, repeated conclusions, interview
-pep-talk, or phrases such as "worth remembering" and "the key takeaway".
-
-Do not repeat the solution code in the header block -- the header sits directly \
-above the real code, so duplicating it is noise.
-"""
-
-
 def log(msg):
     print(msg, flush=True)
-
-
-def claude_executable():
-    """Locate the Claude Code CLI.
-
-    On Windows the PATH entry is a `claude.CMD` shim; a bare "claude" in an
-    argv list is not resolvable by CreateProcess, so the full path found by
-    shutil.which is what actually works here.
-    """
-    for name in ("claude", "claude.cmd", "claude.exe"):
-        found = shutil.which(name)
-        if found:
-            return found
-    return None
-
-
-_ISOLATED_DIR = None
-
-
-def isolated_cwd():
-    """An empty scratch directory to run the Claude subprocess in.
-
-    Kept outside the repo so the subprocess finds no CLAUDE.md, no slash
-    commands and no source tree to explore -- it should answer the prompt it
-    was handed, nothing else.
-    """
-    global _ISOLATED_DIR
-    if _ISOLATED_DIR is None:
-        _ISOLATED_DIR = Path(tempfile.mkdtemp(prefix="dsa-explain-"))
-    return _ISOLATED_DIR
-
-
-def run_claude(prompt, timeout=420):
-    """Call the headless Claude CLI. Returns stdout text, or None on failure."""
-    exe = claude_executable()
-    if not exe:
-        log("  ! `claude` CLI not found on PATH. Install Claude Code or add it.")
-        return None
-
-    # The prompt goes in on STDIN, not as an argv element. On Windows the PATH
-    # entry is a .CMD shim routed through cmd.exe, which caps a command line at
-    # 8191 characters -- and prompt + solution code blows past that, which made
-    # calls die with a bare "exited 1" and no stderr.
-    #
-    # cwd is an EMPTY scratch directory rather than the repo. Run inside the
-    # repo, the subprocess auto-discovers CLAUDE.md and the /solved command,
-    # decides it is being asked to help with the project, and replies "which
-    # solution do you want documented?" instead of doing the transform. With no
-    # project around it, the prompt is all there is to respond to.
-    try:
-        proc = subprocess.run(
-            [exe, "-p"], input=prompt,
-            capture_output=True, text=True, timeout=timeout,
-            encoding="utf-8", errors="replace", cwd=str(isolated_cwd()),
-        )
-    except FileNotFoundError:
-        log("  ! could not execute {0}".format(exe))
-        return None
-    except subprocess.TimeoutExpired:
-        log("  ! claude timed out after {0}s".format(timeout))
-        return None
-
-    if proc.returncode != 0:
-        # Report BOTH streams. A rate-limited CLI exits 1 with an empty stderr,
-        # which on its own tells you nothing about what went wrong.
-        detail = (proc.stderr or "").strip() or (proc.stdout or "").strip()
-        log("  ! claude exited {0}: {1}".format(
-            proc.returncode, detail[:300] or "(no output)"))
-        return None
-    return proc.stdout
-
-
-def run_claude_with_retry(prompt, log, attempts=4):
-    """run_claude, but resilient to the transient failures that actually happen.
-
-    Sustained parallel calls trip a rate limit, and the CLI signals that as
-    exit 1 with no stderr at all. Without a retry a single blip silently drops
-    that solution for the whole run -- which is how 57 of 77 problems failed in
-    one batch while the CLI was working perfectly a minute later.
-    """
-    delay = 20
-    for attempt in range(1, attempts + 1):
-        result = run_claude(prompt)
-        if result and result.strip():
-            return result
-        if attempt == attempts:
-            return result
-        log("    attempt {0}/{1} failed, retrying in {2}s...".format(
-            attempt, attempts, delay))
-        time.sleep(delay)
-        delay = min(delay * 2, 300)
-    return None
-
-
-def parse_response(text):
-    """Split Claude's reply into (metadata dict, header text).
-
-    The two are kept in SEPARATE fences on purpose. Embedding a 100-line comment
-    block inside a JSON string means the model has to escape every newline, and
-    it reliably gets that wrong. Raw text in its own fence sidesteps the issue.
-    """
-    if not text:
-        return None, None
-
-    # --- metadata ---
-    meta = None
-    blobs = re.findall(r"```json\s*(\{.*?\})\s*```", text, re.DOTALL)
-    if not blobs:
-        first, last = text.find("{"), text.find("}")
-        if first != -1 and last > first:
-            blobs = [text[first:last + 1]]
-    for blob in blobs:
-        try:
-            candidate = json.loads(blob)
-        except json.JSONDecodeError:
-            continue
-        if isinstance(candidate, dict) and candidate.get("title"):
-            meta = candidate
-            break
-
-    # --- header ---
-    header = None
-    fenced = re.findall(r"```header\s*\n(.*?)```", text, re.DOTALL)
-    if fenced:
-        header = fenced[-1]
-    else:
-        # Fall back to any fence that looks like a comment block.
-        for body in re.findall(r"```[a-zA-Z]*\s*\n(.*?)```", text, re.DOTALL):
-            stripped = body.lstrip()
-            if stripped.startswith("/*") or stripped.startswith('"""'):
-                header = body
-                break
-
-    return meta, (header.strip() if header else None)
-
-
-def ensure_solved_tag(header, date_str):
-    """Add `@solved <date>` to the header's tag block if it is missing.
-
-    Done here rather than asked of the model: the date a problem was filed is a
-    fact this script already knows, and generated metadata is one more thing
-    that can come back wrong. The value column is kept aligned with @url.
-    """
-    if re.search(r"@solved\s", header):
-        return header
-
-    match = re.search(r"^([^\S\n]*\S*\s*)@url(\s+)(\S*)[^\n]*$", header, re.M)
-    if not match:
-        return header
-
-    prefix, gap = match.group(1), match.group(2)
-    # "@url" is 3 characters shorter than "@solved", so trim the gap to match.
-    solved_gap = gap[:-3] if len(gap) > 3 else " "
-    insertion = "\n{0}@solved{1}{2}".format(prefix, solved_gap, date_str)
-    return header[:match.end()] + insertion + header[match.end():]
-
-
-def ensure_problem_id(header, hint):
-    """Fill an empty `@id` with the CodeChef problem code from the hint.
-
-    CodeChef problems have no numeric id, so the model leaves @id blank. The
-    short code (ACTEMP, FLOW007) is the real identifier -- it is what the URL
-    uses and what the importer matches on to avoid re-importing a problem that
-    is already filed.
-    """
-    if not hint:
-        return header
-    match = re.search(r"CodeChef problem\s+([A-Z0-9_]+)", hint)
-    if not match:
-        return header
-    code = match.group(1)
-
-    # Only fill a blank one; never overwrite an id the model got right.
-    return re.sub(r"^(\s*\S*\s*@id)([^\S\n]*)$",
-                  lambda m: "{0}{1}{2}".format(m.group(1), "         "[:9], code),
-                  header, count=1, flags=re.M)
 
 
 def slugify(title):
@@ -356,8 +112,52 @@ def destination(meta, suffix):
     return folder / "{0}.{1}{2}".format(number, slugify(meta.get("title", "")), suffix)
 
 
+def metadata_from_hint(path, hint):
+    """Read importer-provided facts without calling any model."""
+    first = hint.splitlines()[0] if hint else path.stem.replace("_", " ")
+    lc = re.match(r"LeetCode\s+(\S*)\s+-\s+(.+)", first)
+    cc = re.match(r"CodeChef problem\s+(\S+)\s+-\s+(.+)", first)
+    if lc:
+        platform, pid, title = "LeetCode", lc.group(1), lc.group(2)
+    elif cc:
+        platform, pid, title = "CodeChef", cc.group(1), cc.group(2)
+    else:
+        platform = "CodeChef" if "codechef" in hint.lower() else "LeetCode"
+        pid, title = "", path.stem.split(".", 1)[-1].replace("_", " ")
+
+    def field(name, default=""):
+        match = re.search(r"^{0}:\s*(.*)$".format(re.escape(name)), hint, re.M | re.I)
+        return match.group(1).strip() if match else default
+
+    return {
+        "platform": platform, "id": pid, "title": title,
+        "difficulty": field("Difficulty", "Easy" if platform == "LeetCode" else "0"),
+        "topics": [x.strip() for x in field("Topics").split(",") if x.strip()],
+        "pattern": "Pending manual review", "url": field("URL"),
+    }
+
+
+def factual_header(meta, solved_on, suffix):
+    """Create a metadata-only header; explanations are intentionally manual."""
+    topics = ", ".join(meta.get("topics") or []) or "Unclassified"
+    lines = [
+        "{0} {1} - {2} [{3}]".format(
+            meta["platform"], meta.get("id", ""), meta["title"], meta["difficulty"]),
+        "", "@platform   " + meta["platform"], "@id         " + meta.get("id", ""),
+        "@title      " + meta["title"], "@difficulty " + str(meta["difficulty"]),
+        "@topics     " + topics, "@pattern    Pending manual review",
+        "@url        " + meta.get("url", ""), "@solved     " + solved_on,
+        "", "Problem", "Accepted solution for " + meta["title"] + ".",
+        "", "Approach", "Pending manual review. The submitted code is preserved exactly below.",
+        "", "Complexity", "Pending manual review.",
+    ]
+    if suffix == ".py":
+        return '"""\n' + "\n".join(lines) + '\n"""'
+    return "/*\n" + "\n".join(" * " + line if line else " *" for line in lines) + "\n */"
+
+
 def process_one(path, dry_run=False):
-    """Explain one inbox file and move it into place.
+    """File one inbox solution using importer metadata only.
 
     Returns the destination Path, or None on failure. Output is collected in a
     local buffer and flushed as one block, so parallel workers cannot
@@ -379,8 +179,6 @@ def process_one(path, dry_run=False):
         return None
 
     suffix = path.suffix.lower()
-    lang = EXT_LANG.get(suffix, "the source")
-    comment_hint = '"""..."""' if suffix == ".py" else "/* ... */"
 
     # A sibling .url or .txt file, or a leading URL comment, pins down the
     # problem when the code alone is ambiguous.
@@ -388,30 +186,10 @@ def process_one(path, dry_run=False):
     hint_file = path.with_suffix(".url")
     if hint_file.exists():
         hint = hint_file.read_text(encoding="utf-8", errors="replace").strip()
-    hint_block = "\nThe author says this is: {0}\n".format(hint) if hint else ""
-
-    prompt = PROMPT_TEMPLATE.format(
-        filename=path.name, code=code, hint_block=hint_block, lang=lang,
-        comment_hint=comment_hint, platform_placeholder="<Platform>",
-    )
+    data = metadata_from_hint(path, hint)
 
     if dry_run:
-        log("  (dry run) would call claude and file this solution")
-        flush()
-        return None
-
-    log("  asking claude for an explanation...")
-    raw = run_claude_with_retry(prompt, log)
-    data, header = parse_response(raw)
-
-    if not data or not header:
-        missing = "metadata" if not data else "header"
-        log("  ! response was missing the {0}; leaving file in inbox".format(missing))
-        if raw:
-            FAILED.mkdir(parents=True, exist_ok=True)
-            dump = FAILED / (path.stem + ".response.txt")
-            dump.write_text(raw, encoding="utf-8")
-            log("    raw reply saved to {0}".format(dump.relative_to(ROOT).as_posix()))
+        log("  (dry run) would file this solution from local metadata")
         flush()
         return None
 
@@ -422,8 +200,7 @@ def process_one(path, dry_run=False):
     hint_date = re.search(r"^Solved:\s*(\d{4}-\d{2}-\d{2})", hint, re.M) if hint else None
     if hint_date:
         solved_on = hint_date.group(1)
-    header = ensure_solved_tag(header, solved_on)
-    header = ensure_problem_id(header, hint)
+    header = factual_header(data, solved_on, suffix)
 
     dest = destination(data, suffix)
     if dest.exists():
@@ -513,7 +290,7 @@ def main():
     parser.add_argument("--no-push", action="store_true", help="commit but do not push")
     parser.add_argument("--file", help="process a single file instead of the inbox")
     parser.add_argument("--workers", type=int, default=2,
-                        help="parallel Claude calls (default 2; higher trips rate limits)")
+                        help="parallel local file operations (default 2)")
     args = parser.parse_args()
 
     INBOX.mkdir(exist_ok=True)
@@ -540,7 +317,7 @@ def main():
 
     workers = max(1, min(args.workers, len(pending)))
     if workers > 1:
-        log("Running {0} Claude calls in parallel.".format(workers))
+        log("Processing {0} files in parallel.".format(workers))
 
     def safely(path):
         """One file's work, isolated so a single failure cannot stop the batch."""

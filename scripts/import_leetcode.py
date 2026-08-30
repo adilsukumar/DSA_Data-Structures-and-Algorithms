@@ -399,7 +399,7 @@ def main():
               "{2} already present.".format(imported, attempts, skipped))
         if imported:
             print("\nNext:  python scripts/process_inbox.py")
-            print("(that is one Claude call per problem -- consider batches of ~20)")
+            print("(filing uses local metadata only; no model is called)")
     return 0
 
 

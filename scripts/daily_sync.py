@@ -109,7 +109,7 @@ def main():
 
     # This is the only stage that commits and pushes. Failed explanations stay
     # in inbox/ and are retried by the next nightly run.
-    process_rc, _ = run("Explain, file, index and push", "scripts/process_inbox.py", "--workers", "2")
+    process_rc, _ = run("File, index and push", "scripts/process_inbox.py", "--workers", "2")
     attempts_rc = commit_attempts()
 
     print("\nDSA daily sync finished {0}".format(datetime.now().isoformat(timespec="seconds")))

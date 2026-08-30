@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**109 problems solved** - **CodeChef** 79 / **LeetCode** 30
+**110 problems solved** - **CodeChef** 80 / **LeetCode** 30
 
 
 ---
@@ -37,6 +37,7 @@
 | CHEFONDATE | [Chef On Date](https://www.codechef.com/problems/CHEFONDATE) | CodeChef | 🔹 294 | Basic Programming, Conditionals, Implementation | Direct Conditional Comparison | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/13.Chef_On_Date.cpp) |
 | LUDO | [Chef Plays Ludo](https://www.codechef.com/problems/LUDO) | CodeChef | 🔹 260 | Basic Programming, Conditionals, Implementation | Single Equality Check | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/25.Chef_Plays_Ludo.cpp) |
 | CHEFGAMES | [Chefland Games](https://www.codechef.com/problems/CHEFGAMES) | CodeChef | 🔹 550 | Basic Programming, Implementation, Conditionals | All-Equal Check via Conditional | C++ | 2026-06-14 | [code](CodeChef/500_to_1000_Difficulty_Rating/5.Chefland_Games.cpp) |
+| C_RATING | [Chess Ratings](https://www.codechef.com/problems/C_RATING) | CodeChef | 🔹 651 | Mathematics | Pending manual review | C++ | 2026-08-31 | [code](CodeChef/500_to_1000_Difficulty_Rating/41.Chess_Ratings.cpp) |
 | CLEARDAY | [Clear Day](https://www.codechef.com/problems/CLEARDAY) | CodeChef | 🔹 233 | Math, Implementation, Basic Programming | Constant-time arithmetic (7 - X - Y) | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/12.Clear_Day.cpp) |
 | NOTEBOOK | [Count The Notebooks](https://www.codechef.com/problems/NOTEBOOK) | CodeChef | 🔹 563 | Basic Math, Implementation | Direct closed-form formula (10*N) | C++ | 2026-06-17 | [code](CodeChef/500_to_1000_Difficulty_Rating/26.Count_The_Notebooks.cpp) |
 | CNTWRD | [Counting Words](https://www.codechef.com/problems/CNTWRD) | CodeChef | 🔹 296 | Basic Programming Concepts, Basic Math | Per-test read two ints, print product | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp) |
@@ -394,6 +395,11 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
 - **CodeChef NIBBLE** - [Good Program](https://www.codechef.com/problems/NIBBLE) (🔹 593, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/25.Good_Program.cpp)
 
+### Mathematics (2)
+
+- **CodeChef C_RATING** - [Chess Ratings](https://www.codechef.com/problems/C_RATING) (🔹 651, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/41.Chess_Ratings.cpp)
+- **CodeChef REACHTARGET** - [Reach the Target](https://www.codechef.com/problems/REACHTARGET) (🔹 281, C++) -> [code](CodeChef/500_Difficulty_Rating/32.Reach_the_Target.cpp)
+
 ### Ad-hoc (1)
 
 - **CodeChef FLIPCARDS** - [Flip The Cards](https://www.codechef.com/problems/FLIPCARDS) (🔹 641, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/14.Flip_The_Cards.cpp)
@@ -441,10 +447,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 ### Loops (1)
 
 - **CodeChef ELECTN** - [Elections In Chefland](https://www.codechef.com/problems/ELECTN) (🔹 604, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/10.Elections_In_Chefland.cpp)
-
-### Mathematics (1)
-
-- **CodeChef REACHTARGET** - [Reach the Target](https://www.codechef.com/problems/REACHTARGET) (🔹 281, C++) -> [code](CodeChef/500_Difficulty_Rating/32.Reach_the_Target.cpp)
 
 ### Matrix (1)
 

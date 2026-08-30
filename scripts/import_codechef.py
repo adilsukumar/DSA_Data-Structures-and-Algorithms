@@ -370,7 +370,7 @@ def main():
               "{2} already filed.".format(imported, archived, skipped))
         if imported:
             print("\nNext:  python scripts/process_inbox.py --workers 2")
-            print("(one Claude call per problem -- consider batches)")
+            print("(filing uses local metadata only; no model is called)")
     return 0
 
 
