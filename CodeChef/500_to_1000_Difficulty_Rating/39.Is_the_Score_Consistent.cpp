@@ -1,7 +1,6 @@
 /*
- * =============================================================================
- * CodeChef TRUESCORE - Is the Score Consistent (Difficulty 572)
- * =============================================================================
+ * CodeChef TRUESCORE - Is the Score Consistent [572]
+ *
  * @platform   CodeChef
  * @id         TRUESCORE
  * @title      Is the Score Consistent
@@ -10,25 +9,16 @@
  * @pattern    Coordinate-Wise Monotonicity
  * @url        https://www.codechef.com/problems/TRUESCORE
  * @solved     2026-06-19
- * -----------------------------------------------------------------------------
- * PROBLEM
- * Solve the stated task for each test case and print the required result.
  *
- * INTUITION
+ * Approach
  * A score update is consistent only if neither participant's score decreases.
  *
- * WALKTHROUGH
- * For old scores A,B and new scores C,D, require A <= C and B <= D; print POSSIBLE only when both hold.
- *
- * WHY IT WORKS
- * The implementation follows the condition or formula above directly, so every possible input falls into exactly the required result case.
- *
- * COMPLEXITY
+ * Complexity
  * O(1) time and O(1) space per test case.
  *
- * EDGE CASES
- * One non-decreasing score cannot compensate for the other decreasing; the conditions must be joined with AND.
- * =============================================================================
+ * Notes
+ * - One non-decreasing score cannot compensate for the other decreasing; the conditions
+ *   must be joined with AND.
  */
 
 #include <bits/stdc++.h>

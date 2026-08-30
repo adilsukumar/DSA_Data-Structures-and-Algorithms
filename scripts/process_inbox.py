@@ -69,9 +69,9 @@ CODECHEF_BUCKETS = [
 ]
 
 PROMPT_TEMPLATE = """\
-You are documenting a competitive-programming solution for a personal DSA \
-repository. The author will re-read these files months later to revise for \
-interviews, so the explanation must teach, not just describe.
+You are writing concise revision notes for a competitive-programming solution.
+The notes should sound like a programmer explaining the idea to their future
+self: direct, specific, and free of motivational or tutorial filler.
 
 Here is the solution file the author wrote:
 
@@ -101,11 +101,10 @@ Block 2 -- a ```header fence holding the explanation comment block as RAW TEXT. 
 Do not JSON-encode it and do not escape newlines; write it exactly as it should \
 appear in the file.
 
-The header must be a complete comment block in {lang}'s comment syntax \
-({comment_hint}), ready to sit directly above the code. Follow this structure \
-exactly, matching the style of the existing files in this repo:
+The header must be a complete comment block in {lang}'s comment syntax
+({comment_hint}), ready to sit directly above the code. Keep it compact:
 
-  - A ruled title line: "{platform_placeholder} <id> - <title>" and difficulty
+  - One plain title line: "{platform_placeholder} <id> - <title> [difficulty]"
   - The @tag metadata block, one tag per line, values aligned in a column, \
 and with NO colon after the tag name. Exactly this shape:
         @platform   LeetCode
@@ -115,18 +114,15 @@ and with NO colon after the tag name. Exactly this shape:
         @topics     Array, Hash Table
         @pattern    Hash Set Membership
         @url        https://leetcode.com/problems/contains-duplicate/
-  - PROBLEM      : restate it plainly, with a small worked example
-  - INTUITION    : the key idea, and WHY it works
-  - WALKTHROUGH  : step through THIS code line by line, then a dry run on a \
-concrete input showing intermediate state
-  - COMPLEXITY   : time and space, each with a one-line justification
-  - EDGE CASES   : what could break it, and how the code handles it
-  - A final section flagging a better/optimal approach with a short code \
-sketch, IF this solution is not already optimal. Omit if it is optimal.
+  - Problem: one or two sentences; an example only when it adds clarity
+  - Approach: two to four sentences explaining this code's key idea
+  - Complexity: one short Time line and one short Space line
+  - Notes: at most two bullets for a real edge case, bug, or better approach
 
-Be specific and honest. If the code has a bug, dead code, or violates the \
-problem's stated complexity requirement, say so plainly in the header. Aim for \
-60-110 lines. Do not restate the code itself as prose; explain why it works.
+Be specific and honest. If the code has a bug, dead code, or violates the
+required complexity, say so plainly. Aim for 20-35 lines total. Do not add
+decorative rulers, emojis, multiple dry runs, repeated conclusions, interview
+pep-talk, or phrases such as "worth remembering" and "the key takeaway".
 
 Do not repeat the solution code in the header block -- the header sits directly \
 above the real code, so duplicating it is noise.

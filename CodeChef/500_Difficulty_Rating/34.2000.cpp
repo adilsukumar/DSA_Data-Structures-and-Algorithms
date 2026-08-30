@@ -1,7 +1,6 @@
 /*
- * =============================================================================
- * CodeChef RIP2000 - 2000 (Difficulty 284)
- * =============================================================================
+ * CodeChef RIP2000 - 2000 [284]
+ *
  * @platform   CodeChef
  * @id         RIP2000
  * @title      2000
@@ -10,25 +9,15 @@
  * @pattern    Direct Multiplication
  * @url        https://www.codechef.com/problems/RIP2000
  * @solved     2026-06-07
- * -----------------------------------------------------------------------------
- * PROBLEM
- * Solve the stated task for each test case and print the required result.
  *
- * INTUITION
+ * Approach
  * Each unit contributes four items, so N units contribute 4 * N.
  *
- * WALKTHROUGH
- * Read N once, multiply it by 4, and print the product.
- *
- * WHY IT WORKS
- * The implementation follows the condition or formula above directly, so every possible input falls into exactly the required result case.
- *
- * COMPLEXITY
+ * Complexity
  * O(1) time and O(1) space.
  *
- * EDGE CASES
- * Use a type large enough for 4 * N under the stated constraints.
- * =============================================================================
+ * Notes
+ * - Use a type large enough for 4 * N under the stated constraints.
  */
 
 #include <bits/stdc++.h>

@@ -14,11 +14,11 @@
 
 | # | Problem | Platform | Difficulty | Topics | Pattern | Lang | Solved | Solution |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) | CodeChef | 🔹 584 | Basic Programming, Basic Math, Comparisons | Threshold check on max of two values | C++ | 2026-06-23 | [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp) |
 | 1 | [Cricket World Cup Qualifier](https://www.codechef.com/practice) | CodeChef | 🔹 500 | Implementation, Conditionals, Basic I/O | Single Threshold Comparison | C++ | - | [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp) |
 | RIP2000 | [2000](https://www.codechef.com/problems/RIP2000) | CodeChef | 🔹 284 | Basic Math | Direct Multiplication | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/34.2000.cpp) |
 | ERROR404 | [404 Not Found](https://www.codechef.com/problems/ERROR404) | CodeChef | 🔹 267 | Implementation, Conditionals, Basic Programming | Direct Equality Check | C++ | 2026-06-06 | [code](CodeChef/500_Difficulty_Rating/19.404_Not_Found.cpp) |
 | AGEING | [Ageing](https://www.codechef.com/problems/AGEING) | CodeChef | 🔹 299 | Basic Math, Implementation | Constant Offset Per Query | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/4.Ageing.cpp) |
+| ACTEMP | [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) | CodeChef | 🔹 584 | Basic Programming, Basic Math, Comparisons | Threshold check on max of two values | C++ | 2026-06-23 | [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp) |
 | AUDIBLE | [Audible Range](https://www.codechef.com/problems/AUDIBLE) | CodeChef | 🔹 279 | Basic Math, Implementation | Range Membership Check | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/3.Audible_Range.cpp) |
 | BATH | [Bath In Winters](https://www.codechef.com/problems/BATH) | CodeChef | 🔹 643 | Math, Implementation, Integer Division | Count how many times 2Y fits in X | C++ | 2026-07-26 | [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp) |
 | BTRYHLTH | [Battery Health](https://www.codechef.com/problems/BTRYHLTH) | CodeChef | 🔹 296 | Conditional Statements, Implementation | Single Threshold Comparison | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/7.Battery_Health.cpp) |
@@ -191,9 +191,9 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 ### Basic Math (31)
 
-- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 - **CodeChef RIP2000** - [2000](https://www.codechef.com/problems/RIP2000) (🔹 284, C++) -> [code](CodeChef/500_Difficulty_Rating/34.2000.cpp)
 - **CodeChef AGEING** - [Ageing](https://www.codechef.com/problems/AGEING) (🔹 299, C++) -> [code](CodeChef/500_Difficulty_Rating/4.Ageing.cpp)
+- **CodeChef ACTEMP** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 - **CodeChef AUDIBLE** - [Audible Range](https://www.codechef.com/problems/AUDIBLE) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/3.Audible_Range.cpp)
 - **CodeChef CANDIVIDE** - [Candy Division](https://www.codechef.com/problems/CANDIVIDE) (🔹 289, C++) -> [code](CodeChef/500_Difficulty_Rating/11.Candy_Division.cpp)
 - **CodeChef TRAVELFAST** - [Car or Bike](https://www.codechef.com/problems/TRAVELFAST) (🔹 571, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/38.Car_or_Bike.cpp)
@@ -254,8 +254,8 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 ### Basic Programming (19)
 
-- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 - **CodeChef ERROR404** - [404 Not Found](https://www.codechef.com/problems/ERROR404) (🔹 267, C++) -> [code](CodeChef/500_Difficulty_Rating/19.404_Not_Found.cpp)
+- **CodeChef ACTEMP** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 - **CodeChef BIRYANI** - [Biryani Classes](https://www.codechef.com/problems/BIRYANI) (🔹 257, C++) -> [code](CodeChef/500_Difficulty_Rating/5.Biryani_Classes.cpp)
 - **CodeChef BULLBEAR** - [Bull Or Bear](https://www.codechef.com/problems/BULLBEAR) (🔹 300, C++) -> [code](CodeChef/500_Difficulty_Rating/9.Bull_Or_Bear.cpp)
 - **CodeChef OFFICE** - [Chef In His Office](https://www.codechef.com/problems/OFFICE) (🔹 532, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/27.Chef_In_His_Office.cpp)
@@ -416,7 +416,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 ### Comparisons (1)
 
-- **CodeChef 1** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
+- **CodeChef ACTEMP** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 
 ### Counting (1)
 

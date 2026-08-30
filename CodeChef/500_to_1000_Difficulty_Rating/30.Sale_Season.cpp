@@ -1,7 +1,6 @@
 /*
- * =============================================================================
- * CodeChef SALESEASON - Sale Season (Difficulty 541)
- * =============================================================================
+ * CodeChef SALESEASON - Sale Season [541]
+ *
  * @platform   CodeChef
  * @id         SALESEASON
  * @title      Sale Season
@@ -10,25 +9,16 @@
  * @pattern    Piecewise Discount
  * @url        https://www.codechef.com/problems/SALESEASON
  * @solved     2026-06-10
- * -----------------------------------------------------------------------------
- * PROBLEM
- * Solve the stated task for each test case and print the required result.
  *
- * INTUITION
+ * Approach
  * The discount is determined solely by the price interval containing X.
  *
- * WALKTHROUGH
- * Check the ranges in increasing order: no discount through 100, then subtract 25, 100, or 500 for the successive brackets.
- *
- * WHY IT WORKS
- * The implementation follows the condition or formula above directly, so every possible input falls into exactly the required result case.
- *
- * COMPLEXITY
+ * Complexity
  * O(1) time and O(1) space per test case.
  *
- * EDGE CASES
- * Boundary values 100, 1000, and 5000 must remain in the bracket specified by the statement.
- * =============================================================================
+ * Notes
+ * - Boundary values 100, 1000, and 5000 must remain in the bracket specified by the
+ *   statement.
  */
 
 #include <bits/stdc++.h>

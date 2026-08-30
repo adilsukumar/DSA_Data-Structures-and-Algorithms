@@ -1,7 +1,6 @@
 /*
- * =============================================================================
- * CodeChef TRANSFORM - Mario and Transformation (Difficulty 649)
- * =============================================================================
+ * CodeChef TRANSFORM - Mario and Transformation [649]
+ *
  * @platform   CodeChef
  * @id         TRANSFORM
  * @title      Mario and Transformation
@@ -10,25 +9,15 @@
  * @pattern    Cycle by Modulo
  * @url        https://www.codechef.com/problems/TRANSFORM
  * @solved     2026-07-27
- * -----------------------------------------------------------------------------
- * PROBLEM
- * Solve the stated task for each test case and print the required result.
  *
- * INTUITION
+ * Approach
  * Mario's form repeats every three transformations, so only X mod 3 matters.
  *
- * WALKTHROUGH
- * Compute X % 3: remainder 0 maps to NORMAL, 1 to HUGE, and 2 to SMALL.
- *
- * WHY IT WORKS
- * The implementation follows the condition or formula above directly, so every possible input falls into exactly the required result case.
- *
- * COMPLEXITY
+ * Complexity
  * O(1) time and O(1) space per test case.
  *
- * EDGE CASES
- * The mapping is cyclic, so very large X needs no simulation.
- * =============================================================================
+ * Notes
+ * - The mapping is cyclic, so very large X needs no simulation.
  */
 
 #include <bits/stdc++.h>

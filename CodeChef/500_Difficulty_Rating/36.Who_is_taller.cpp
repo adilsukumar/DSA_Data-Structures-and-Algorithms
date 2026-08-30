@@ -1,7 +1,6 @@
 /*
- * =============================================================================
- * CodeChef TALLER - Who is taller! (Difficulty 281)
- * =============================================================================
+ * CodeChef TALLER - Who is taller! [281]
+ *
  * @platform   CodeChef
  * @id         TALLER
  * @title      Who is taller!
@@ -10,25 +9,16 @@
  * @pattern    Two-Way Comparison
  * @url        https://www.codechef.com/problems/TALLER
  * @solved     2026-06-07
- * -----------------------------------------------------------------------------
- * PROBLEM
- * Solve the stated task for each test case and print the required result.
  *
- * INTUITION
+ * Approach
  * The taller person is determined by comparing heights X and Y.
  *
- * WALKTHROUGH
- * Print A when X > Y; otherwise print B.
- *
- * WHY IT WORKS
- * The implementation follows the condition or formula above directly, so every possible input falls into exactly the required result case.
- *
- * COMPLEXITY
+ * Complexity
  * O(1) time and O(1) space per test case.
  *
- * EDGE CASES
- * The problem guarantees distinct heights; otherwise the else branch would classify a tie as B.
- * =============================================================================
+ * Notes
+ * - The problem guarantees distinct heights; otherwise the else branch would classify a
+ *   tie as B.
  */
 
 #include <bits/stdc++.h>

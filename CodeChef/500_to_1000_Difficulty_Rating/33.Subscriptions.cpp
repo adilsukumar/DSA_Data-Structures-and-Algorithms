@@ -1,7 +1,6 @@
 /*
- * =============================================================================
- * CodeChef SUBSCRIBE_ - Subscriptions (Difficulty 504)
- * =============================================================================
+ * CodeChef SUBSCRIBE_ - Subscriptions [504]
+ *
  * @platform   CodeChef
  * @id         SUBSCRIBE_
  * @title      Subscriptions
@@ -10,25 +9,15 @@
  * @pattern    Ceiling Division
  * @url        https://www.codechef.com/problems/SUBSCRIBE_
  * @solved     2026-06-08
- * -----------------------------------------------------------------------------
- * PROBLEM
- * Solve the stated task for each test case and print the required result.
  *
- * INTUITION
+ * Approach
  * One subscription covers six people, so the number needed is ceil(N/6), each costing X.
  *
- * WALKTHROUGH
- * For multiples of six use N/6; otherwise round up and multiply by X. The formula (N + 5) / 6 performs the same ceiling division with integers.
- *
- * WHY IT WORKS
- * The implementation follows the condition or formula above directly, so every possible input falls into exactly the required result case.
- *
- * COMPLEXITY
+ * Complexity
  * O(1) time and O(1) space per test case.
  *
- * EDGE CASES
- * N below six still requires one complete subscription.
- * =============================================================================
+ * Notes
+ * - N below six still requires one complete subscription.
  */
 
 #include <bits/stdc++.h>

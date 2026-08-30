@@ -1,7 +1,6 @@
 /*
- * =============================================================================
- * CodeChef SEATNUMBER - Bus  Seat Numbering (Difficulty 613)
- * =============================================================================
+ * CodeChef SEATNUMBER - Bus  Seat Numbering [613]
+ *
  * @platform   CodeChef
  * @id         SEATNUMBER
  * @title      Bus  Seat Numbering
@@ -10,25 +9,16 @@
  * @pattern    Range Classification
  * @url        https://www.codechef.com/problems/SEATNUMBER
  * @solved     2026-07-19
- * -----------------------------------------------------------------------------
- * PROBLEM
- * Solve the stated task for each test case and print the required result.
  *
- * INTUITION
+ * Approach
  * A seat number identifies one of four sections through fixed numerical ranges.
  *
- * WALKTHROUGH
- * Check the ranges from lowest to highest and print the matching Lower/Upper and Double/Single label.
- *
- * WHY IT WORKS
- * The implementation follows the condition or formula above directly, so every possible input falls into exactly the required result case.
- *
- * COMPLEXITY
+ * Complexity
  * O(1) time and O(1) space per test case.
  *
- * EDGE CASES
- * The condition N >= 10 in the second branch overlaps N == 10, but the first branch already consumes that value; non-overlapping bounds would be clearer.
- * =============================================================================
+ * Notes
+ * - The condition N >= 10 in the second branch overlaps N == 10, but the first branch
+ *   already consumes that value; non-overlapping bounds would be clearer.
  */
 
 #include <bits/stdc++.h>
