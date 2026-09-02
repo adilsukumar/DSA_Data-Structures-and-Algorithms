@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**110 problems solved** - **CodeChef** 80 / **LeetCode** 30
+**112 problems solved** - **CodeChef** 82 / **LeetCode** 30
 
 
 ---
@@ -33,12 +33,14 @@
 | CHEFCAND | [Chef And Candies](https://www.codechef.com/problems/CHEFCAND) | CodeChef | 🔹 570 | Basic Math, Math | Ceiling division of a shortfall | C++ | 2026-06-17 | [code](CodeChef/500_to_1000_Difficulty_Rating/6.Chef_And_Candies.cpp) |
 | DNATION | [Chef And Donation](https://www.codechef.com/problems/DNATION) | CodeChef | 🔹 305 | Basic Math, Implementation | Per-test subtraction (Y - X) | C++ | 2026-06-13 | [code](CodeChef/500_Difficulty_Rating/16.Chef_And_Donation.cpp) |
 | HELIUM3 | [Chef And NextGen](https://www.codechef.com/problems/HELIUM3) | CodeChef | 🔹 562 | Basic Math, Implementation | Compare Products of Two Pairs | C++ | 2026-06-16 | [code](CodeChef/500_to_1000_Difficulty_Rating/16.Chef_And_NextGen.cpp) |
+| CHEFBOTTLE | [Chef and Water Bottles](https://www.codechef.com/problems/CHEFBOTTLE) | CodeChef | 🔹 662 | Inbuilt functions, Integer Division | Pending manual review | C++ | 2026-09-02 | [code](CodeChef/500_to_1000_Difficulty_Rating/42.Chef_and_Water_Bottles.cpp) |
 | OFFICE | [Chef In His Office](https://www.codechef.com/problems/OFFICE) | CodeChef | 🔹 532 | Basic Programming, Math, Implementation | Direct arithmetic formula, O(1) | C++ | 2026-06-09 | [code](CodeChef/500_to_1000_Difficulty_Rating/27.Chef_In_His_Office.cpp) |
 | CHEFONDATE | [Chef On Date](https://www.codechef.com/problems/CHEFONDATE) | CodeChef | 🔹 294 | Basic Programming, Conditionals, Implementation | Direct Conditional Comparison | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/13.Chef_On_Date.cpp) |
 | LUDO | [Chef Plays Ludo](https://www.codechef.com/problems/LUDO) | CodeChef | 🔹 260 | Basic Programming, Conditionals, Implementation | Single Equality Check | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/25.Chef_Plays_Ludo.cpp) |
 | CHEFGAMES | [Chefland Games](https://www.codechef.com/problems/CHEFGAMES) | CodeChef | 🔹 550 | Basic Programming, Implementation, Conditionals | All-Equal Check via Conditional | C++ | 2026-06-14 | [code](CodeChef/500_to_1000_Difficulty_Rating/5.Chefland_Games.cpp) |
 | C_RATING | [Chess Ratings](https://www.codechef.com/problems/C_RATING) | CodeChef | 🔹 651 | Mathematics | Pending manual review | C++ | 2026-08-31 | [code](CodeChef/500_to_1000_Difficulty_Rating/41.Chess_Ratings.cpp) |
 | CLEARDAY | [Clear Day](https://www.codechef.com/problems/CLEARDAY) | CodeChef | 🔹 233 | Math, Implementation, Basic Programming | Constant-time arithmetic (7 - X - Y) | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/12.Clear_Day.cpp) |
+| DNASTRAND | [Complementary Strand in a DNA](https://www.codechef.com/problems/DNASTRAND) | CodeChef | 🔹 660 | daanish_adm, june222 | Pending manual review | C++ | 2026-09-02 | [code](CodeChef/500_to_1000_Difficulty_Rating/43.Complementary_Strand_in_a_DNA.cpp) |
 | NOTEBOOK | [Count The Notebooks](https://www.codechef.com/problems/NOTEBOOK) | CodeChef | 🔹 563 | Basic Math, Implementation | Direct closed-form formula (10*N) | C++ | 2026-06-17 | [code](CodeChef/500_to_1000_Difficulty_Rating/26.Count_The_Notebooks.cpp) |
 | CNTWRD | [Counting Words](https://www.codechef.com/problems/CNTWRD) | CodeChef | 🔹 296 | Basic Programming Concepts, Basic Math | Per-test read two ints, print product | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp) |
 | CREDCOINS | [CRED Coins](https://www.codechef.com/problems/CREDCOINS) | CodeChef | 🔹 539 | Math, Basic Programming, Implementation | Integer Division (floor total/100) | C++ | 2026-06-10 | [code](CodeChef/500_to_1000_Difficulty_Rating/8.CRED_Coins.cpp) |
@@ -368,6 +370,12 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 118** - [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) (🟢 Easy, Python) -> [code](LeetCode/Easy/118.Pascals_Triangle.py)
 - **LeetCode 121** - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (🟢 Easy, Python) -> [code](LeetCode/Easy/121.Best_Time_to_Buy_and_Sell_Stock.py)
 
+### Integer Division (3)
+
+- **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
+- **CodeChef CHEFBOTTLE** - [Chef and Water Bottles](https://www.codechef.com/problems/CHEFBOTTLE) (🔹 662, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/42.Chef_and_Water_Bottles.cpp)
+- **CodeChef NIBBLE** - [Good Program](https://www.codechef.com/problems/NIBBLE) (🔹 593, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/25.Good_Program.cpp)
+
 ### Linked List (3)
 
 - **LeetCode 21** - [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (🟢 Easy, Python) -> [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py)
@@ -389,11 +397,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 
 - **LeetCode 35** - [Search Insert Position](https://leetcode.com/problems/search-insert-position/) (🟢 Easy, C++) -> [code](LeetCode/Easy/35.Search_Insert_Position.cpp)
 - **LeetCode 69** - [Sqrt(x)](https://leetcode.com/problems/sqrtx/) (🟢 Easy, C++) -> [code](LeetCode/Easy/69.Sqrtx.cpp)
-
-### Integer Division (2)
-
-- **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
-- **CodeChef NIBBLE** - [Good Program](https://www.codechef.com/problems/NIBBLE) (🔹 593, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/25.Good_Program.cpp)
 
 ### Mathematics (2)
 
@@ -443,6 +446,10 @@ exercise. Use this to drill one pattern instead of working in ID order.
 ### Inbuilt Functions (1)
 
 - **CodeChef FINDSHOES** - [Finding Shoes](https://www.codechef.com/problems/FINDSHOES) (🔹 646, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/13.Finding_Shoes.cpp)
+
+### Inbuilt functions (1)
+
+- **CodeChef CHEFBOTTLE** - [Chef and Water Bottles](https://www.codechef.com/problems/CHEFBOTTLE) (🔹 662, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/42.Chef_and_Water_Bottles.cpp)
 
 ### Loops (1)
 
@@ -499,6 +506,14 @@ exercise. Use this to drill one pattern instead of working in ID order.
 ### arjunarul_adm (1)
 
 - **CodeChef SNDMAX** - [Second Max of Three Numbers](https://www.codechef.com/problems/SNDMAX) (🔹 300, Python) -> [code](CodeChef/500_Difficulty_Rating/35.Second_Max_of_Three_Numbers.py)
+
+### daanish_adm (1)
+
+- **CodeChef DNASTRAND** - [Complementary Strand in a DNA](https://www.codechef.com/problems/DNASTRAND) (🔹 660, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/43.Complementary_Strand_in_a_DNA.cpp)
+
+### june222 (1)
+
+- **CodeChef DNASTRAND** - [Complementary Strand in a DNA](https://www.codechef.com/problems/DNASTRAND) (🔹 660, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/43.Complementary_Strand_in_a_DNA.cpp)
 
 ### largesecond (1)
 
