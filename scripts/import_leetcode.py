@@ -170,6 +170,13 @@ def get_with_retry(session, url, params=None, attempts=6, first_request=False):
             time.sleep(delay)
             continue
 
+        if response.status_code == 401:
+            raise SystemExit(
+                "LeetCode returned 401 Unauthorized. Your saved session is expired.\n"
+                "Use the Chrome extension while logged in; it reads the current browser "
+                "session automatically."
+            )
+
         if response.status_code in (403, 429):
             if first_request and attempt == 1:
                 raise SystemExit(

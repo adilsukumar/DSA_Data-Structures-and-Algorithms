@@ -53,6 +53,7 @@ def run(label, *args):
 def update_leetcode_status(returncode, output):
     auth_problem = returncode and any(phrase in output.lower() for phrase in (
         "leetcode_session", "invalid or expired", "missing, wrong or expired",
+        "401 unauthorized",
     ))
     if auth_problem:
         message = (

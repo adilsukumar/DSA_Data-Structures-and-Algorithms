@@ -259,6 +259,20 @@ Detailed explanations are reviewed manually.
 
 ### Automatically, once a night
 
+The Chrome extension in [`extension/`](extension/) uses the LeetCode session
+already active in Chrome. It does not store the cookie in the repository or
+send it to any model. Click **Sync now** at any time, or leave Chrome running
+for the daily 11:45 PM local-time sync.
+
+Install the local bridge once, then load the unpacked extension:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\setup_chrome_extension.ps1
+```
+
+Open `chrome://extensions`, enable Developer mode, choose **Load unpacked**,
+and select this repository's `extension` folder.
+
 The scheduled task first checks the LeetCode and CodeChef accounts for new
 submissions. Failed attempts are stored by date under `Attempts/` and kept out
 of solved-problem totals. Accepted code goes into `inbox/`, then gets filed,
