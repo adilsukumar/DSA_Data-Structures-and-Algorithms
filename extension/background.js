@@ -11,6 +11,19 @@ async function scheduleNightly() {
   await chrome.storage.local.set({ nextRun: next.toISOString() });
 }
 
+async function catchUpIfNeeded() {
+  const now = new Date();
+  if (now.getHours() < 23 || (now.getHours() === 23 && now.getMinutes() < 45)) return;
+  const { lastRun } = await chrome.storage.local.get("lastRun");
+  if (lastRun && new Date(lastRun).toDateString() === now.toDateString()) return;
+  await syncNow("catch-up");
+}
+
+async function initialize() {
+  await scheduleNightly();
+  await catchUpIfNeeded();
+}
+
 async function getSession() {
   const cookie = await chrome.cookies.get({ url: "https://leetcode.com/", name: "LEETCODE_SESSION" });
   if (!cookie?.value) throw new Error("Log in to LeetCode in Chrome first.");
@@ -30,8 +43,8 @@ async function syncNow(source = "manual") {
   return response;
 }
 
-chrome.runtime.onInstalled.addListener(scheduleNightly);
-chrome.runtime.onStartup.addListener(scheduleNightly);
+chrome.runtime.onInstalled.addListener(() => initialize().catch(() => {}));
+chrome.runtime.onStartup.addListener(() => initialize().catch(() => {}));
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === ALARM) syncNow("scheduled").catch(async (error) => {
     await chrome.storage.local.set({ status: "Sync failed: " + error.message });
@@ -43,4 +56,4 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   return true;
 });
 
-scheduleNightly();
+initialize().catch(() => {});

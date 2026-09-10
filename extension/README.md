@@ -9,4 +9,5 @@ Run `scripts/setup_chrome_extension.ps1` once, then load this directory as an
 unpacked extension from `chrome://extensions`.
 
 Use **Sync now** whenever needed. The extension also schedules a daily sync at
-11:45 PM local time; Chrome must be running for the alarm to fire on time.
+11:45 PM local time. If Chrome was closed then, opening it later that night
+triggers a catch-up sync.

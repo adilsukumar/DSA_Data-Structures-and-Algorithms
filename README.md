@@ -262,7 +262,8 @@ Detailed explanations are reviewed manually.
 The Chrome extension in [`extension/`](extension/) uses the LeetCode session
 already active in Chrome. It does not store the cookie in the repository or
 send it to any model. Click **Sync now** at any time, or leave Chrome running
-for the daily 11:45 PM local-time sync.
+for the daily 11:45 PM local-time sync. A missed run catches up when Chrome is
+opened later that night.
 
 Install the local bridge once, then load the unpacked extension:
 
