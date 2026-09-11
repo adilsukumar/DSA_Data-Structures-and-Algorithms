@@ -317,6 +317,14 @@ def main():
 
     for code in sorted(best, key=lambda c: best[c]["first"] or datetime.min):
         entry = best[code]
+
+        # Problem codes are stable and already stored in every filed solution.
+        # Avoid two network requests per known problem on routine incremental
+        # runs; fetch metadata and source only for genuinely new codes.
+        if normalise(code) in already:
+            skipped += 1
+            continue
+
         detail = fetch_problem(sess, code)
         time.sleep(REQUEST_PAUSE)
 
@@ -326,7 +334,7 @@ def main():
         if isinstance(tags, str):
             tags = [tags]
 
-        if normalise(name) in already or normalise(code) in already:
+        if normalise(name) in already:
             skipped += 1
             continue
 

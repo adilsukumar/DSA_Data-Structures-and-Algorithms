@@ -106,7 +106,11 @@ def main():
     update_leetcode_status(leetcode_rc, leetcode_output)
 
     # CodeChef's public history/code APIs require no login cookie.
-    run("Import CodeChef", "scripts/import_codechef.py", "--user", "adilsukumar")
+    # Historical backfill is already complete. Daily runs only need the newest
+    # submissions; five pages covers roughly the latest 100 attempts and keeps
+    # the extension response comfortably short.
+    run("Import CodeChef", "scripts/import_codechef.py", "--user", "adilsukumar",
+        "--max-pages", "5")
 
     # This is the only stage that commits and pushes. Failed explanations stay
     # in inbox/ and are retried by the next nightly run.
