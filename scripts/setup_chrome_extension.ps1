@@ -72,9 +72,30 @@ $manifest = @{
     [System.Text.UTF8Encoding]::new($false)
 )
 
-$key = "HKCU:\Software\Google\Chrome\NativeMessagingHosts\com.adilsukumar.dsa_sync"
-New-Item -Force -Path $key | Out-Null
-Set-Item -Path $key -Value $HostManifest
+# Chrome can be 32-bit or 64-bit. Register in both registry views so the host
+# is discoverable regardless of which build is installed.
+$subKey = "Software\Google\Chrome\NativeMessagingHosts\com.adilsukumar.dsa_sync"
+foreach ($view in @(
+    [Microsoft.Win32.RegistryView]::Registry32,
+    [Microsoft.Win32.RegistryView]::Registry64
+)) {
+    $base = [Microsoft.Win32.RegistryKey]::OpenBaseKey(
+        [Microsoft.Win32.RegistryHive]::CurrentUser,
+        $view
+    )
+    try {
+        $key = $base.CreateSubKey($subKey)
+        try {
+            $key.SetValue("", $HostManifest, [Microsoft.Win32.RegistryValueKind]::String)
+        }
+        finally {
+            $key.Dispose()
+        }
+    }
+    finally {
+        $base.Dispose()
+    }
+}
 
 Write-Host "Native host registered." -ForegroundColor Green
 Write-Host "Native executable: $HostLauncher"
