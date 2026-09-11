@@ -273,6 +273,26 @@ def existing_problem_ids():
     return found
 
 
+def existing_problem_slugs():
+    """LeetCode URL slugs already filed in the repo."""
+    found = set()
+    base = ROOT / "LeetCode"
+    if not base.is_dir():
+        return found
+    pattern = re.compile(r"leetcode\.com/problems/([^/\s]+)")
+    for path in base.rglob("*"):
+        if not path.is_file():
+            continue
+        try:
+            head = path.read_text(encoding="utf-8", errors="replace")[:3000]
+        except OSError:
+            continue
+        match = pattern.search(head)
+        if match:
+            found.add(match.group(1))
+    return found
+
+
 def slugify(title):
     cleaned = re.sub(r"[^\w\s-]", "", title).strip()
     return re.sub(r"[\s-]+", "_", cleaned) or "Untitled"
@@ -317,6 +337,8 @@ def main():
                         help="stop after N new problems (0 = no limit)")
     parser.add_argument("--dry-run", action="store_true",
                         help="list what would be imported, write nothing")
+    parser.add_argument("--max-pages", type=int, default=200,
+                        help="submission-history pages to scan (default: full history)")
     args = parser.parse_args()
 
     token = load_env("LEETCODE_SESSION")
@@ -329,6 +351,7 @@ def main():
 
     session = make_session(token)
     already = existing_problem_ids()
+    already_slugs = existing_problem_slugs()
     print("{0} problem(s) already in the repo.".format(len(already)))
 
     INBOX.mkdir(exist_ok=True)
@@ -337,7 +360,7 @@ def main():
     stopped_early = ""
 
     try:
-      for sub in fetch_submissions(session):
+      for sub in fetch_submissions(session, max_pages=args.max_pages):
         if sub.get("status_display") != "Accepted":
             attempts += int(archive_attempt(sub, args.dry_run))
             continue
@@ -346,6 +369,12 @@ def main():
         if not slug or slug in seen_slugs:
             continue          # keep only the most recent accept per problem
         seen_slugs.add(slug)
+
+        # The slug is available in the submission response, so known problems
+        # do not need an additional GraphQL metadata request.
+        if slug in already_slugs:
+            skipped += 1
+            continue
 
         detail = fetch_question(session, slug)
         time.sleep(REQUEST_PAUSE)

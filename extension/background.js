@@ -59,7 +59,11 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message?.action !== "sync") return;
-  syncNow("manual").then(sendResponse).catch((error) => sendResponse({ ok: false, error: error.message }));
+  syncNow("manual").then(sendResponse).catch(async (error) => {
+    const status = "Sync failed: " + error.message;
+    await chrome.storage.local.set({ status });
+    sendResponse({ ok: false, error: error.message });
+  });
   return true;
 });
 

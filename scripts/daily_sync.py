@@ -102,7 +102,10 @@ def main():
 
     # LeetCode reads LEETCODE_SESSION from the gitignored .env. If it expires,
     # this stage reports the error and the rest of the sync still runs.
-    leetcode_rc, leetcode_output = run("Import LeetCode", "scripts/import_leetcode.py")
+    # Five pages covers roughly the latest 100 submissions. The standalone
+    # importer retains its full-history default for deliberate backfills.
+    leetcode_rc, leetcode_output = run(
+        "Import LeetCode", "scripts/import_leetcode.py", "--max-pages", "5")
     update_leetcode_status(leetcode_rc, leetcode_output)
 
     # CodeChef's public history/code APIs require no login cookie.

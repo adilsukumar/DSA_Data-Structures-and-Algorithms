@@ -13,5 +13,6 @@ Use **Sync now** whenever needed. The extension also schedules a daily sync at
 11:45 PM local time. If Chrome was closed then, opening it later that night
 triggers a catch-up sync.
 
-Routine syncs scan the newest five CodeChef history pages (about 100 recent
-submissions). The standalone importer still supports a full historical scan.
+Routine syncs scan the newest five history pages on each platform (about 100
+recent submissions). The standalone importers still support full historical
+scans.
