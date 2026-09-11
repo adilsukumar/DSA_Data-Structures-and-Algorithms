@@ -16,7 +16,13 @@ $manifest = @{
     type = "stdio"
     allowed_origins = @("chrome-extension://$ExtensionId/")
 } | ConvertTo-Json -Depth 4
-Set-Content -LiteralPath $HostManifest -Value $manifest -Encoding UTF8
+# Windows PowerShell 5.1's `-Encoding UTF8` adds a BOM. Chrome rejects a
+# native-host manifest when any bytes appear before its opening `{`.
+[System.IO.File]::WriteAllText(
+    $HostManifest,
+    $manifest,
+    [System.Text.UTF8Encoding]::new($false)
+)
 
 $key = "HKCU:\Software\Google\Chrome\NativeMessagingHosts\com.adilsukumar.dsa_sync"
 New-Item -Force -Path $key | Out-Null
