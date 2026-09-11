@@ -1,5 +1,6 @@
-const HOST = "com.adilsukumar.dsa_sync";
 const ALARM = "dsa-nightly-sync";
+const BRIDGE = "http://127.0.0.1:8765";
+importScripts("config.local.js");
 
 async function scheduleNightly() {
   const now = new Date();
@@ -33,10 +34,16 @@ async function getSession() {
 async function syncNow(source = "manual") {
   const session = await getSession();
   await chrome.storage.local.set({ status: "Sync running…", lastSource: source });
-  const response = await chrome.runtime.sendNativeMessage(HOST, {
-    action: "sync", leetcodeSession: session
+  const request = await fetch(BRIDGE + "/sync", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-DSA-Token": self.DSA_BRIDGE_TOKEN
+    },
+    body: JSON.stringify({ leetcodeSession: session })
   });
-  if (!response?.ok) throw new Error(response?.error || "Local sync failed.");
+  const response = await request.json();
+  if (!request.ok || !response?.ok) throw new Error(response?.error || "Local sync failed.");
   await chrome.storage.local.set({
     status: "Last sync succeeded", lastRun: new Date().toISOString(), summary: response.summary
   });

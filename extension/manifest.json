@@ -4,8 +4,12 @@
   "version": "1.0.0",
   "description": "Sync LeetCode and CodeChef submissions to the local DSA repository.",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuG/E3kEYRPTteHvReaMPoI9EG51eyTD3gElwpBn/p70A2RdYMQzxYb7S+uLqow4QHfcw7haLaKE3eLceMoEm4wfJC2CNA0k8lRf/Ohpt00/LfJ/xu2xQsu64KWv+GRmV8VUSKwcBGSXauRkgJC4Cqf1mDROqoulWaJpgHEVJebN3Qrae/JOmGrGSTthOJGx4qNutjIWOxGBkxj/vH6+D3Q4znA9ld9VIb6yC7l3o9NFy9dWPii8yAXdR7aXSpQ8XK4v7dxIDKhIfCld3rqgjnRWu+MqcA0DJPyGVrqMoIFlm0BNBrFICwWhC9XolsvuCGvpLHEkfBOrG4X79H4se/wIDAQAB",
-  "permissions": ["alarms", "cookies", "nativeMessaging", "storage"],
-  "host_permissions": ["https://leetcode.com/*", "https://www.leetcode.com/*"],
+  "permissions": ["alarms", "cookies", "storage"],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://www.leetcode.com/*",
+    "http://127.0.0.1:8765/*"
+  ],
   "background": { "service_worker": "background.js" },
   "action": { "default_popup": "popup.html", "default_title": "DSA Submission Sync" }
 }

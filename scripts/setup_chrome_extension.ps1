@@ -3,102 +3,90 @@ param()
 
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent $PSScriptRoot
-$HostScript = Join-Path $PSScriptRoot "extension_native_host.py"
-$HostDir = Join-Path $env:LOCALAPPDATA "DSAExtension"
-$HostLauncher = Join-Path $HostDir "dsa_native_host.exe"
-$HostManifest = Join-Path $HostDir "com.adilsukumar.dsa_sync.json"
-$ExtensionId = "plbilacillelljfdjbkhhmkofghlfajl"
+$ExtensionDir = Join-Path $RepoRoot "extension"
+$BridgeScript = Join-Path $PSScriptRoot "extension_bridge.py"
+$BridgeDir = Join-Path $env:LOCALAPPDATA "DSAExtension"
+$LegacyTokenFile = Join-Path $BridgeDir "bridge.token"
+$TokenFile = Join-Path $ExtensionDir "bridge.token"
+$ConfigFile = Join-Path $ExtensionDir "config.local.js"
+$TaskName = "DSA-Extension-Bridge"
+$LegacyTaskName = "DSA-Daily-Solution-Sweep"
 
-New-Item -ItemType Directory -Force -Path $HostDir | Out-Null
+New-Item -ItemType Directory -Force -Path $BridgeDir | Out-Null
+
+if (Test-Path -LiteralPath $TokenFile) {
+    $token = (Get-Content -LiteralPath $TokenFile -Raw).Trim()
+}
+elseif (Test-Path -LiteralPath $LegacyTokenFile) {
+    $token = (Get-Content -LiteralPath $LegacyTokenFile -Raw).Trim()
+}
+else {
+    $bytes = New-Object byte[] 32
+    [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
+    $token = [Convert]::ToBase64String($bytes).TrimEnd('=').Replace('+', '-').Replace('/', '_')
+}
+$utf8 = [Text.UTF8Encoding]::new($false)
+[IO.File]::WriteAllText($TokenFile, $token, $utf8)
+[IO.File]::WriteAllText($ConfigFile, "self.DSA_BRIDGE_TOKEN = `"$token`";`n", $utf8)
+
 $python = (Get-Command python -ErrorAction Stop).Source
-$escapedPython = $python.Replace('\', '\\').Replace('"', '\"')
-$escapedScript = $HostScript.Replace('\', '\\').Replace('"', '\"')
-$source = @"
-using System;
-using System.Diagnostics;
-using System.IO;
-
-public static class DsaNativeLauncher {
-    private static byte[] ReadExact(Stream stream, int count) {
-        var data = new byte[count];
-        var offset = 0;
-        while (offset < count) {
-            var read = stream.Read(data, offset, count - offset);
-            if (read == 0) throw new EndOfStreamException();
-            offset += read;
-        }
-        return data;
-    }
-
-    public static int Main() {
-        var chromeIn = Console.OpenStandardInput();
-        var length = ReadExact(chromeIn, 4);
-        var payload = ReadExact(chromeIn, BitConverter.ToInt32(length, 0));
-        var start = new ProcessStartInfo("$escapedPython", "\"$escapedScript\"");
-        start.UseShellExecute = false;
-        start.CreateNoWindow = true;
-        start.RedirectStandardInput = true;
-        start.RedirectStandardOutput = true;
-        start.RedirectStandardError = true;
-        using (var child = Process.Start(start)) {
-            child.StandardInput.BaseStream.Write(length, 0, length.Length);
-            child.StandardInput.BaseStream.Write(payload, 0, payload.Length);
-            child.StandardInput.Close();
-            child.StandardOutput.BaseStream.CopyTo(Console.OpenStandardOutput());
-            child.WaitForExit();
-            return child.ExitCode;
-        }
-    }
-}
-"@
-if (Test-Path -LiteralPath $HostLauncher) {
-    Remove-Item -LiteralPath $HostLauncher -Force
-}
-Add-Type -TypeDefinition $source -OutputAssembly $HostLauncher `
-    -OutputType ConsoleApplication -ReferencedAssemblies @("System.dll", "System.Core.dll")
-
-$manifest = @{
-    name = "com.adilsukumar.dsa_sync"
-    description = "Local bridge for the DSA submission sync extension"
-    path = $HostLauncher
-    type = "stdio"
-    allowed_origins = @("chrome-extension://$ExtensionId/")
-} | ConvertTo-Json -Depth 4
-# Windows PowerShell 5.1's `-Encoding UTF8` adds a BOM. Chrome rejects a
-# native-host manifest when any bytes appear before its opening `{`.
-[System.IO.File]::WriteAllText(
-    $HostManifest,
-    $manifest,
-    [System.Text.UTF8Encoding]::new($false)
-)
-
-# Chrome can be 32-bit or 64-bit. Register in both registry views so the host
-# is discoverable regardless of which build is installed.
-$subKey = "Software\Google\Chrome\NativeMessagingHosts\com.adilsukumar.dsa_sync"
-foreach ($view in @(
-    [Microsoft.Win32.RegistryView]::Registry32,
-    [Microsoft.Win32.RegistryView]::Registry64
-)) {
-    $base = [Microsoft.Win32.RegistryKey]::OpenBaseKey(
-        [Microsoft.Win32.RegistryHive]::CurrentUser,
-        $view
-    )
-    try {
-        $key = $base.CreateSubKey($subKey)
-        try {
-            $key.SetValue("", $HostManifest, [Microsoft.Win32.RegistryValueKind]::String)
-        }
-        finally {
-            $key.Dispose()
-        }
-    }
-    finally {
-        $base.Dispose()
-    }
+$pythonw = Join-Path (Split-Path -Parent $python) "pythonw.exe"
+if (-not (Test-Path -LiteralPath $pythonw)) {
+    $pythonw = $python
 }
 
-Write-Host "Native host registered." -ForegroundColor Green
-Write-Host "Native executable: $HostLauncher"
-Write-Host "Extension folder: $(Join-Path $RepoRoot 'extension')"
-Write-Host "Extension ID: $ExtensionId"
-Write-Host "Now open chrome://extensions, enable Developer mode, and choose Load unpacked."
+$existing = Get-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue
+if ($existing) {
+    Stop-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue
+    Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false
+}
+
+$action = New-ScheduledTaskAction `
+    -Execute $pythonw `
+    -Argument "`"$BridgeScript`"" `
+    -WorkingDirectory $RepoRoot
+$trigger = New-ScheduledTaskTrigger `
+    -AtLogOn `
+    -User "$env:USERDOMAIN\$env:USERNAME"
+$settings = New-ScheduledTaskSettingsSet `
+    -AllowStartIfOnBatteries `
+    -DontStopIfGoingOnBatteries `
+    -MultipleInstances IgnoreNew `
+    -RestartCount 3 `
+    -RestartInterval (New-TimeSpan -Minutes 1)
+$principal = New-ScheduledTaskPrincipal `
+    -UserId "$env:USERDOMAIN\$env:USERNAME" `
+    -LogonType Interactive `
+    -RunLevel Limited
+
+Register-ScheduledTask `
+    -TaskName $TaskName `
+    -Action $action `
+    -Trigger $trigger `
+    -Settings $settings `
+    -Principal $principal `
+    -Description "Local loopback bridge for the DSA Submission Sync Chrome extension." `
+    -Force | Out-Null
+Start-ScheduledTask -TaskName $TaskName
+Start-Sleep -Seconds 2
+
+# The extension owns the nightly schedule now. Keep the old task installed but
+# disabled so it cannot run with an expired cookie and produce duplicate errors.
+$legacyTask = Get-ScheduledTask -TaskName $LegacyTaskName -ErrorAction SilentlyContinue
+if ($legacyTask) {
+    Stop-ScheduledTask -TaskName $LegacyTaskName -ErrorAction SilentlyContinue
+    Disable-ScheduledTask -TaskName $LegacyTaskName | Out-Null
+}
+
+$health = Invoke-RestMethod -Uri "http://127.0.0.1:8765/health" -TimeoutSec 5
+if (-not $health.ok) {
+    throw "The extension bridge did not pass its health check."
+}
+
+Write-Host "DSA extension bridge is running." -ForegroundColor Green
+Write-Host "Health check: http://127.0.0.1:8765/health"
+Write-Host "Extension folder: $ExtensionDir"
+if ($legacyTask) {
+    Write-Host "Disabled obsolete task: $LegacyTaskName"
+}
+Write-Host "Reload the extension once at chrome://extensions, then click Sync now."

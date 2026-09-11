@@ -1,11 +1,12 @@
 # DSA Submission Sync extension
 
 This Manifest V3 extension reads the current LeetCode login from Chrome and
-passes it in memory to the repository's local native-messaging helper. The
+passes it in memory to a loopback helper listening only on `127.0.0.1`. The
 helper runs the model-free import, organization, statistics, commit, and push
 pipeline. The login token is never written to the repository.
 
-Run `scripts/setup_chrome_extension.ps1` once, then load this directory as an
+Run `scripts/setup_chrome_extension.ps1` once. It creates a private local token
+and starts the loopback helper at Windows login. Then load this directory as an
 unpacked extension from `chrome://extensions`.
 
 Use **Sync now** whenever needed. The extension also schedules a daily sync at
