@@ -41,10 +41,10 @@ jobs:
 
           git add README.md INDEX.md
 
-          git diff --quiet && git diff --staged --quiet || (
+          if ! git diff --staged --quiet; then
             git commit -m "chore: refresh problem index and stats"
-            git push
-          )
+            git push origin HEAD:main
+          fi
 
       - name: Generate Snake Animation
         uses: Platane/snk/svg-only@v3
