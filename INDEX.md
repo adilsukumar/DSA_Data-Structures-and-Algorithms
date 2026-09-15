@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**113 problems solved** - **CodeChef** 83 / **LeetCode** 30
+**114 problems solved** - **CodeChef** 83 / **LeetCode** 31
 
 
 ---
@@ -122,6 +122,7 @@
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | LeetCode | 🟢 Easy | Array, Hash Table, Divide and Conquer, Sorting, Counting | Sort + Middle Element | C++ | 2026-06-24 | [code](LeetCode/Easy/169.Majority_Element.cpp) |
 | 171 | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | LeetCode | 🟢 Easy | Math, String | Base-26 Positional Decoding (Horner) | C++ | 2026-06-26 | [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | LeetCode | 🟢 Easy | Array, Hash Table, Sorting | Hash set size comparison | C++ | 2026-07-27 | [code](LeetCode/Easy/217.Contains_Duplicate.cpp) |
+| 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | LeetCode | 🟢 Easy | Math, String, Simulation | Pending manual review | C++ | 2026-09-15 | [code](LeetCode/Easy/412.Fizz_Buzz.cpp) |
 | 500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/) | LeetCode | 🟢 Easy | Array, Hash Table, String | Row Membership Flag Elimination | C++ | 2026-06-28 | [code](LeetCode/Easy/500.Keyboard_Row.cpp) |
 | 1295 | [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | LeetCode | 🟢 Easy | Array, Math | Digit Counting via Division | C++ | 2026-07-27 | [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp) |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | LeetCode | 🟢 Easy | Array, Prefix Sum | In-Place Prefix Sum | C++ | 2026-07-26 | [code](LeetCode/Easy/1480.Running_Sum_of_1d_Array.cpp) |
@@ -228,7 +229,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef SUGARCANE** - [Sugarcane Juice Business](https://www.codechef.com/problems/SUGARCANE) (🔹 563, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/34.Sugarcane_Juice_Business.cpp)
 - **CodeChef PRIZEPOOL** - [Total Prize Money](https://www.codechef.com/problems/PRIZEPOOL) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/31.Total_Prize_Money.cpp)
 
-### Math (26)
+### Math (27)
 
 - **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
 - **CodeChef BIRYANI** - [Biryani Classes](https://www.codechef.com/problems/BIRYANI) (🔹 257, C++) -> [code](CodeChef/500_Difficulty_Rating/5.Biryani_Classes.cpp)
@@ -255,6 +256,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 70** - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (🟢 Easy, C++) -> [code](LeetCode/Easy/70.Climbing_Stairs.cpp)
 - **LeetCode 168** - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) (🟢 Easy, C++) -> [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp)
 - **LeetCode 171** - [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp)
+- **LeetCode 412** - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) (🟢 Easy, C++) -> [code](LeetCode/Easy/412.Fizz_Buzz.cpp)
 - **LeetCode 1295** - [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp)
 
 ### Basic Programming (19)
@@ -314,7 +316,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef THREETOPICS** - [The Three Topics](https://www.codechef.com/problems/THREETOPICS) (🔹 573, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/35.The_Three_Topics.cpp)
 - **CodeChef JERRYCHASE** - [Tom And Jerry Chase](https://www.codechef.com/problems/JERRYCHASE) (🔹 298, C++) -> [code](CodeChef/500_Difficulty_Rating/22.Tom_And_Jerry_Chase.cpp)
 
-### String (10)
+### String (11)
 
 - **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
 - **LeetCode 14** - [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) (🟢 Easy, Python) -> [code](LeetCode/Easy/14.Longest_Common_Prefix.py)
@@ -324,6 +326,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 125** - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (🟢 Easy, C++) -> [code](LeetCode/Easy/125.Valid_Palindrome.cpp)
 - **LeetCode 168** - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) (🟢 Easy, C++) -> [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp)
 - **LeetCode 171** - [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp)
+- **LeetCode 412** - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) (🟢 Easy, C++) -> [code](LeetCode/Easy/412.Fizz_Buzz.cpp)
 - **LeetCode 500** - [Keyboard Row](https://leetcode.com/problems/keyboard-row/) (🟢 Easy, C++) -> [code](LeetCode/Easy/500.Keyboard_Row.cpp)
 - **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
 
@@ -406,6 +409,11 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef C_RATING** - [Chess Ratings](https://www.codechef.com/problems/C_RATING) (🔹 651, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/41.Chess_Ratings.cpp)
 - **CodeChef REACHTARGET** - [Reach the Target](https://www.codechef.com/problems/REACHTARGET) (🔹 281, C++) -> [code](CodeChef/500_Difficulty_Rating/32.Reach_the_Target.cpp)
 
+### Simulation (2)
+
+- **LeetCode 412** - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) (🟢 Easy, C++) -> [code](LeetCode/Easy/412.Fizz_Buzz.cpp)
+- **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
+
 ### Ad-hoc (1)
 
 - **CodeChef FLIPCARDS** - [Flip The Cards](https://www.codechef.com/problems/FLIPCARDS) (🔹 641, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/14.Flip_The_Cards.cpp)
@@ -481,10 +489,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 ### Recursion (1)
 
 - **LeetCode 21** - [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (🟢 Easy, Python) -> [code](LeetCode/Easy/21.Merge_Two_Sorted_Lists.py)
-
-### Simulation (1)
-
-- **LeetCode 2011** - [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) (🟢 Easy, C++) -> [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp)
 
 ### Stack (1)
 
