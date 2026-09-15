@@ -6,7 +6,7 @@
  * @title      Fizz Buzz
  * @difficulty Easy
  * @topics     Math, String, Simulation
- * @pattern    Pending manual review
+ * @pattern    Linear Loop
  * @url        https://leetcode.com/problems/fizz-buzz/
  * @solved     2026-09-15
  *
@@ -14,10 +14,10 @@
  * Accepted solution for Fizz Buzz.
  *
  * Approach
- * Pending manual review. The submitted code is preserved exactly below.
+ * The solution iterates through numbers from 1 to n using a simple for loop. It checks each number's divisibility by 3 and 5 using modulo operations and appends the corresponding string to the result vector. This approach directly maps each integer to its FizzBuzz representation in order.
  *
  * Complexity
- * Pending manual review.
+ * Time: O(n) Space: O(n)
  */
 
 class Solution {

@@ -6,7 +6,7 @@
  * @title      Candy Distribution
  * @difficulty 668
  * @topics     Basic Programming Concepts, Basic Math
- * @pattern    Pending manual review
+ * @pattern    Mathematical
  * @url        https://www.codechef.com/problems/CANDYDIST
  * @solved     2026-09-15
  *
@@ -14,10 +14,10 @@
  * Accepted solution for Candy Distribution.
  *
  * Approach
- * Pending manual review. The submitted code is preserved exactly below.
+ * The code checks if the number of candies (N) can be evenly distributed among M friends such that each receives an even number. It verifies if M divides N and if the quotient (N/M) is even, printing Yes if both conditions are met, otherwise No.
  *
  * Complexity
- * Pending manual review.
+ * Time: O(1) Space: O(1)
  */
 
 #include <bits/stdc++.h>

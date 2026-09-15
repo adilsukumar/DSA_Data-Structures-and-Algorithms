@@ -6,7 +6,7 @@
  * @title      Chef and Water Bottles
  * @difficulty 662
  * @topics     Inbuilt functions, Integer Division
- * @pattern    Pending manual review
+ * @pattern    Greedy Logic
  * @url        https://www.codechef.com/problems/CHEFBOTTLE
  * @solved     2026-09-02
  *
@@ -14,10 +14,10 @@
  * Accepted solution for Chef and Water Bottles.
  *
  * Approach
- * Pending manual review. The submitted code is preserved exactly below.
+ * The solution checks if the total number of bottles times the water per bottle is sufficient to meet requirement K. If yes but X < K, it calculates how many full bottles can be used (K / X). Otherwise, it uses all N bottles or zero depending on constraints.
  *
  * Complexity
- * Pending manual review.
+ * Time: O(1) Space: O(1)
  */
 
 #include <bits/stdc++.h>

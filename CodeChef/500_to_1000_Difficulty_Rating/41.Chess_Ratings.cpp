@@ -6,7 +6,7 @@
  * @title      Chess Ratings
  * @difficulty 651
  * @topics     Mathematics
- * @pattern    Pending manual review
+ * @pattern    Mathematical Formula
  * @url        https://www.codechef.com/problems/C_RATING
  * @solved     2026-08-31
  *
@@ -14,10 +14,10 @@
  * Accepted solution for Chess Ratings.
  *
  * Approach
- * Pending manual review. The submitted code is preserved exactly below.
+ * The solution calculates the difference Y - X to determine the rating gap. It then computes the number of units of size 8 needed to cover this gap. The expression (remaining + 7) / 8 effectively performs a ceiling division, rounding up to the nearest integer when remaining is not a multiple of 8.
  *
  * Complexity
- * Pending manual review.
+ * Time: O(T) Space: O(1)
  */
 
 #include <bits/stdc++.h>

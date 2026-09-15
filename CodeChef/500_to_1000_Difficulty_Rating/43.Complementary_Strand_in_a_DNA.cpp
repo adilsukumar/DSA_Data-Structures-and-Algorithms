@@ -6,7 +6,7 @@
  * @title      Complementary Strand in a DNA
  * @difficulty 660
  * @topics     daanish_adm, june222
- * @pattern    Pending manual review
+ * @pattern    Linear Scan
  * @url        https://www.codechef.com/problems/DNASTRAND
  * @solved     2026-09-02
  *
@@ -14,10 +14,10 @@
  * Accepted solution for Complementary Strand in a DNA.
  *
  * Approach
- * Pending manual review. The submitted code is preserved exactly below.
+ * The algorithm iterates through the DNA string one character at a time. For each character, it applies a direct conditional check to map it to its complementary base (A to T, T to A, G to C, C to G). It immediately outputs the mapping without storing intermediate results, leveraging a constant-time lookup logic.
  *
  * Complexity
- * Pending manual review.
+ * Time: O(N) Space: O(1)
  */
 
 #include <bits/stdc++.h>

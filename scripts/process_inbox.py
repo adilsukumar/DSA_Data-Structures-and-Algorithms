@@ -26,6 +26,10 @@ ever lost. Re-run the script after fixing the problem.
 """
 
 import argparse
+import json
+import os
+import urllib.request
+import urllib.error
 import re
 import subprocess
 import sys
@@ -137,19 +141,99 @@ def metadata_from_hint(path, hint):
     }
 
 
-def factual_header(meta, solved_on, suffix):
-    """Create a metadata-only header; explanations are intentionally manual."""
+def load_env():
+    env_file = ROOT / ".env"
+    if not env_file.exists():
+        return
+    for line in env_file.read_text(encoding="utf-8").splitlines():
+        if line.strip() and not line.startswith("#"):
+            key, _, val = line.partition("=")
+            if key.strip() and key.strip() not in os.environ:
+                os.environ[key.strip()] = val.strip()
+
+def get_ai_review(code, title):
+    load_env()
+    groq_key = os.environ.get("GROQ_API_KEY", "").strip()
+    
+    prompt = f"""Analyze the following solution for '{title}'.
+Please provide:
+1. The primary algorithmic pattern used (e.g., Sliding Window, DP, etc.). Keep it short (2-4 words).
+2. A short explanation of the approach (2-4 sentences).
+3. The Time and Space Complexity.
+
+Format your response exactly like this JSON:
+{{
+  "pattern": "...",
+  "approach": "...",
+  "complexity": "Time: O(...) Space: O(...)"
+}}
+
+Code:
+```
+{code}
+```
+"""
+
+    if groq_key:
+        req = urllib.request.Request(
+            "https://api.groq.com/openai/v1/chat/completions",
+            data=json.dumps({
+                "model": "qwen/qwen3.8-27b",
+                "messages": [{"role": "user", "content": prompt}],
+                "response_format": {"type": "json_object"}
+            }).encode("utf-8"),
+            headers={"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json", "User-Agent": "Mozilla/5.0"}
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=15) as res:
+                response = json.loads(res.read().decode("utf-8"))
+                content = response["choices"][0]["message"]["content"]
+                return json.loads(content)
+        except Exception as e:
+            print(f"  ! Groq API failed: {e}")
+            
+    # Try Ollama (fallback)
+    req = urllib.request.Request(
+        "http://localhost:11434/api/chat",
+        data=json.dumps({
+            "model": "llama3.1",
+            "messages": [{"role": "user", "content": prompt}],
+            "stream": False,
+            "format": "json"
+        }).encode("utf-8"),
+        headers={"Content-Type": "application/json"}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as res:
+            response = json.loads(res.read().decode("utf-8"))
+            content = response["message"]["content"]
+            return json.loads(content)
+    except Exception as e:
+        pass
+        
+    return {
+        "pattern": "Pending manual review",
+        "approach": "Pending manual review. The submitted code is preserved exactly below.",
+        "complexity": "Pending manual review."
+    }
+
+
+def generate_header(meta, code, solved_on, suffix):
+    """Create a header using AI-generated explanations if available."""
     topics = ", ".join(meta.get("topics") or []) or "Unclassified"
+    
+    review = get_ai_review(code, meta.get("title", ""))
+    
     lines = [
         "{0} {1} - {2} [{3}]".format(
             meta["platform"], meta.get("id", ""), meta["title"], meta["difficulty"]),
         "", "@platform   " + meta["platform"], "@id         " + meta.get("id", ""),
         "@title      " + meta["title"], "@difficulty " + str(meta["difficulty"]),
-        "@topics     " + topics, "@pattern    Pending manual review",
+        "@topics     " + topics, "@pattern    " + review.get("pattern", "Pending manual review").replace("\n", " "),
         "@url        " + meta.get("url", ""), "@solved     " + solved_on,
         "", "Problem", "Accepted solution for " + meta["title"] + ".",
-        "", "Approach", "Pending manual review. The submitted code is preserved exactly below.",
-        "", "Complexity", "Pending manual review.",
+        "", "Approach", review.get("approach", "Pending manual review. The submitted code is preserved exactly below."),
+        "", "Complexity", review.get("complexity", "Pending manual review."),
     ]
     if suffix == ".py":
         return '"""\n' + "\n".join(lines) + '\n"""'
@@ -200,7 +284,7 @@ def process_one(path, dry_run=False):
     hint_date = re.search(r"^Solved:\s*(\d{4}-\d{2}-\d{2})", hint, re.M) if hint else None
     if hint_date:
         solved_on = hint_date.group(1)
-    header = factual_header(data, solved_on, suffix)
+    header = generate_header(data, code, solved_on, suffix)
 
     dest = destination(data, suffix)
     if dest.exists():
