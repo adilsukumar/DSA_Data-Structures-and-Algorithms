@@ -11,12 +11,12 @@
 <br>
 
 <!-- BADGES_START -->
-<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-112-blueviolet?style=for-the-badge&logo=codeforces" /></a>
+<a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-113-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-30-FFA116?style=for-the-badge&logo=leetcode" /></a>
-<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-82-5B4638?style=for-the-badge&logo=codechef" /></a>
-<a href="#attempt-history"><img src="https://img.shields.io/badge/Attempts-658-6c757d?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Milestone_150-74%25-success?style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/Goal-112%2F1000-orange?style=for-the-badge" /></a>
+<a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-83-5B4638?style=for-the-badge&logo=codechef" /></a>
+<a href="#attempt-history"><img src="https://img.shields.io/badge/Attempts-660-6c757d?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Milestone_150-75%25-success?style=for-the-badge" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Goal-113%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
 
 
@@ -85,24 +85,24 @@ Problems are solved from:
 
 | 🚀 Total Problems | 💙 C++ Solutions | 🐍 Python Solutions |
 | :---: | :---: | :---: |
-| **112** | **104** | **8** |
+| **113** | **105** | **8** |
 
 ### Attempt History
 
-**658 unsuccessful submissions archived** in [`Attempts/`](Attempts/).
+**660 unsuccessful submissions archived** in [`Attempts/`](Attempts/).
 These are tracked separately and do not count as solved problems.
 
-### 🏆 Milestone Progress: 112 / 150
+### 🏆 Milestone Progress: 113 / 150
 
-![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[74],backgroundColor:'green'}]}}&w=800&h=50)
+![Milestone Progress](https://quickchart.io/chart?c={type:'progressBar',data:{datasets:[{data:[75],backgroundColor:'green'}]}}&w=800&h=50)
 
-> 🎉 Only **38** problems left to reach the next big milestone of 150!
+> 🎉 Only **37** problems left to reach the next big milestone of 150!
 
 ---
 
 <div align="center">
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%2082%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
-  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B104%2C%208%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22LeetCode%22%2C%20%22CodeChef%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B30%2C%2083%5D%2C%20%22backgroundColor%22%3A%20%5B%22%23FFA116%22%2C%20%22%235B4638%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Platforms%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Platforms Chart" />
+  <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22doughnut%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22C%2B%2B%22%2C%20%22Python%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22data%22%3A%20%5B105%2C%208%5D%2C%20%22backgroundColor%22%3A%20%5B%22%2300599C%22%2C%20%22%233776AB%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22position%22%3A%20%22right%22%2C%20%22labels%22%3A%20%7B%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2014%7D%7D%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Languages%22%2C%20%22fontColor%22%3A%20%22%23ffffff%22%2C%20%22fontSize%22%3A%2018%7D%7D%7D&w=500&h=300&bkg=transparent" alt="Languages Chart" />
 </div>
 
 ---
@@ -120,7 +120,7 @@ These are tracked separately and do not count as solved problems.
 | Difficulty Rating | Count |
 | :--- | :---: |
 | 🔹 500 Rating | 39 |
-| 🔹 500 to 1000 | 43 |
+| 🔹 500 to 1000 | 44 |
 | 🔹 1000 to 1400 | 0 |
 | 🔹 1400 to 1600 | 0 |
 | 🔹 1600 to 1800 | 0 |
@@ -136,7 +136,7 @@ These are tracked separately and do not count as solved problems.
 | Topic | Problems |
 | :--- | :---: |
 | Implementation | 53 |
-| Basic Math | 31 |
+| Basic Math | 32 |
 | Math | 26 |
 | Basic Programming | 19 |
 | Array | 16 |
@@ -145,7 +145,7 @@ These are tracked separately and do not count as solved problems.
 | Conditionals | 9 |
 | Hash Table | 7 |
 | Two Pointers | 7 |
-| Basic Programming Concepts | 4 |
+| Basic Programming Concepts | 5 |
 | Dynamic Programming | 3 |
 | Integer Division | 3 |
 | Linked List | 3 |

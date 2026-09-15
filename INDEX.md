@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**112 problems solved** - **CodeChef** 82 / **LeetCode** 30
+**113 problems solved** - **CodeChef** 83 / **LeetCode** 30
 
 
 ---
@@ -27,6 +27,7 @@
 | BNE_APT | [Bone Appetit](https://www.codechef.com/problems/BNE_APT) | CodeChef | 🔹 280 | Math, Implementation | Weighted Sum (two-item linear combination) | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/8.Bone_Appetit.cpp) |
 | BULLBEAR | [Bull Or Bear](https://www.codechef.com/problems/BULLBEAR) | CodeChef | 🔹 300 | Implementation, Conditionals, Basic Programming | Three-way comparison per query | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/9.Bull_Or_Bear.cpp) |
 | SEATNUMBER | [Bus  Seat Numbering](https://www.codechef.com/problems/SEATNUMBER) | CodeChef | 🔹 613 | Conditional Statements, Implementation | Range Classification | C++ | 2026-07-19 | [code](CodeChef/500_to_1000_Difficulty_Rating/31.Bus_Seat_Numbering.cpp) |
+| CANDYDIST | [Candy Distribution](https://www.codechef.com/problems/CANDYDIST) | CodeChef | 🔹 668 | Basic Programming Concepts, Basic Math | Pending manual review | C++ | 2026-09-15 | [code](CodeChef/500_to_1000_Difficulty_Rating/44.Candy_Distribution.cpp) |
 | CANDIVIDE | [Candy Division](https://www.codechef.com/problems/CANDIVIDE) | CodeChef | 🔹 289 | Conditional Statements, Basic Math | Divisibility Check (N mod 3) | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/11.Candy_Division.cpp) |
 | TRAVELFAST | [Car or Bike](https://www.codechef.com/problems/TRAVELFAST) | CodeChef | 🔹 571 | Basic Math | Compare Travel Times | C++ | 2026-06-18 | [code](CodeChef/500_to_1000_Difficulty_Rating/38.Car_or_Bike.cpp) |
 | CHAIRS_ | [Chairs Requirement](https://www.codechef.com/problems/CHAIRS_) | CodeChef | 🔹 305 | Basic Math, Implementation | Clamped Difference max(X-Y, 0) | C++ | 2026-06-12 | [code](CodeChef/500_Difficulty_Rating/10.Chairs_Requirement.cpp) |
@@ -192,12 +193,13 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef PRIZEPOOL** - [Total Prize Money](https://www.codechef.com/problems/PRIZEPOOL) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/31.Total_Prize_Money.cpp)
 - **CodeChef MOVIE2X** - [Watching Movies At 2x](https://www.codechef.com/problems/MOVIE2X) (🔹 628, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/23.Watching_Movies_At_2x.cpp)
 
-### Basic Math (31)
+### Basic Math (32)
 
 - **CodeChef RIP2000** - [2000](https://www.codechef.com/problems/RIP2000) (🔹 284, C++) -> [code](CodeChef/500_Difficulty_Rating/34.2000.cpp)
 - **CodeChef AGEING** - [Ageing](https://www.codechef.com/problems/AGEING) (🔹 299, C++) -> [code](CodeChef/500_Difficulty_Rating/4.Ageing.cpp)
 - **CodeChef ACTEMP** - [Air Conditioner Temperature](https://www.codechef.com/problems/ACTEMP) (🔹 584, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/1.Air_Conditioner_Temperature.cpp)
 - **CodeChef AUDIBLE** - [Audible Range](https://www.codechef.com/problems/AUDIBLE) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/3.Audible_Range.cpp)
+- **CodeChef CANDYDIST** - [Candy Distribution](https://www.codechef.com/problems/CANDYDIST) (🔹 668, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/44.Candy_Distribution.cpp)
 - **CodeChef CANDIVIDE** - [Candy Division](https://www.codechef.com/problems/CANDIVIDE) (🔹 289, C++) -> [code](CodeChef/500_Difficulty_Rating/11.Candy_Division.cpp)
 - **CodeChef TRAVELFAST** - [Car or Bike](https://www.codechef.com/problems/TRAVELFAST) (🔹 571, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/38.Car_or_Bike.cpp)
 - **CodeChef CHAIRS_** - [Chairs Requirement](https://www.codechef.com/problems/CHAIRS_) (🔹 305, C++) -> [code](CodeChef/500_Difficulty_Rating/10.Chairs_Requirement.cpp)
@@ -357,8 +359,9 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 125** - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (🟢 Easy, C++) -> [code](LeetCode/Easy/125.Valid_Palindrome.cpp)
 - **LeetCode 160** - [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (🟢 Easy, C++) -> [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp)
 
-### Basic Programming Concepts (4)
+### Basic Programming Concepts (5)
 
+- **CodeChef CANDYDIST** - [Candy Distribution](https://www.codechef.com/problems/CANDYDIST) (🔹 668, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/44.Candy_Distribution.cpp)
 - **CodeChef CNTWRD** - [Counting Words](https://www.codechef.com/problems/CNTWRD) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp)
 - **CodeChef DETSCORE** - [Determine The Score](https://www.codechef.com/problems/DETSCORE) (🔹 267, C++) -> [code](CodeChef/500_Difficulty_Rating/15.Determine_The_Score.cpp)
 - **CodeChef TIMELY** - [Reach on Time](https://www.codechef.com/problems/TIMELY) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/38.Reach_on_Time.cpp)
