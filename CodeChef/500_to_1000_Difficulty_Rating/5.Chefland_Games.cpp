@@ -15,16 +15,14 @@
  * flags).
  *
  * Approach
- * The only decision is: "are all four numbers zero?" A conjunction of four equality tests
- * answers that directly in O(1). No arithmetic, no data structures, no sorting -- the
- * condition IS the whole solution.
+ * The only decision is: "are all four numbers zero?" A conjunction of four
+ * equality tests answers that directly in O(1). No arithmetic, no data structures,
+ * no sorting -- the condition IS the whole solution.
  *
  * Complexity
- * Time: O(T) -- constant work (4 reads + 4 comparisons) per test case.
- * Space: O(1) -- five int variables, reused across all iterations.
- *
- * Notes
- * - All zero -> "IN" (handled by the conjunction).
+ * Time: O(T) -- constant work (4 reads + 4 comparisons) per test case. Space: O(1)
+ * -- five int variables, reused across all iterations. * Notes - All zero -> "IN"
+ * (handled by the conjunction).
  */
 
 #include <bits/stdc++.h>

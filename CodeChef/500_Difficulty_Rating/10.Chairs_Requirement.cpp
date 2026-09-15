@@ -15,16 +15,14 @@
  * number of chairs you currently have, and Y = the number of chairs actually needed.
  *
  * Approach
- * The whole task is a single expression: max(X - Y, 0). We never care by how much we fall
- * short, only whether a surplus exists and how big it is.
+ * The whole task is a single expression: max(X - Y, 0). We never care by how much
+ * we fall short, only whether a surplus exists and how big it is.
  *
  * Complexity
- * Time: O(T) overall -- constant work (one compare, one subtraction, one print) per test
- * case, so it scales linearly in the number of cases.
- * Space: O(1) -- only the scalars T, X, Y are kept; nothing is stored per case.
- *
- * Notes
- * - X == Y: falls into the `>=` branch and prints X-Y = 0 (correct, no surplus).
+ * Time: O(T) overall -- constant work (one compare, one subtraction, one print)
+ * per test case, so it scales linearly in the number of cases. Space: O(1) -- only
+ * the scalars T, X, Y are kept; nothing is stored per case. * Notes - X == Y:
+ * falls into the `>=` branch and prints X-Y = 0 (correct, no surplus).
  */
 
 #include <bits/stdc++.h>

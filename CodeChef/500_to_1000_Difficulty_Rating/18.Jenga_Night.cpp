@@ -14,18 +14,16 @@
  * A Jenga tower is built in complete levels, each level using exactly N blocks.
  *
  * Approach
- * "Fill k complete levels of N blocks each" means the total X must equal k*N for some
- * integer k >= 1. That is exactly the statement "X is a positive multiple of N": X leaves
- * no remainder when divided by N (X % N == 0), AND X is large enough to form at least one
- * level (X >= N).
+ * "Fill k complete levels of N blocks each" means the total X must equal k*N for
+ * some integer k >= 1. That is exactly the statement "X is a positive multiple of
+ * N": X leaves no remainder when divided by N (X % N == 0), AND X is large enough
+ * to form at least one level (X >= N).
  *
  * Complexity
- * Time: O(T) -- constant work (one comparison, one modulo) per test case.
- * Space: O(1) -- only the scalars T, N, X are stored; no arrays.
- *
- * Notes
- * - X == 0 (no blocks): X % N == 0 would say "yes", but the `X >= N` guard correctly
- *   forces "NO" (you cannot build a tower from nothing).
+ * Time: O(T) -- constant work (one comparison, one modulo) per test case. Space:
+ * O(1) -- only the scalars T, N, X are stored; no arrays. * Notes - X == 0 (no
+ * blocks): X % N == 0 would say "yes", but the `X >= N` guard correctly forces
+ * "NO" (you cannot build a tower from nothing).
  */
 
 #include <bits/stdc++.h>

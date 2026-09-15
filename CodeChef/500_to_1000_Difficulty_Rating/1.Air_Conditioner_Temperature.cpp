@@ -14,17 +14,15 @@
  * For each test case you are given three integers A, B, C.
  *
  * Approach
- * Two independent conditions "A <= B" and "C <= B" can be folded into one: the *larger* of
- * A and C is the only one that can break the ceiling. If the bigger of the two already
- * fits under B, the smaller one trivially does too.
+ * Two independent conditions "A <= B" and "C <= B" can be folded into one: the
+ * *larger* of A and C is the only one that can break the ceiling. If the bigger of
+ * the two already fits under B, the smaller one trivially does too.
  *
  * Complexity
- * Time: O(T) overall -- O(1) work per test case (one max + one compare).
- * Space: O(1) -- only a handful of int scalars, reused each iteration.
- *
- * Notes
- * - A == B or C == B: the "<=" is inclusive, so equal-to-ceiling counts as fitting ->
- *   "Yes".
+ * Time: O(T) overall -- O(1) work per test case (one max + one compare). Space:
+ * O(1) -- only a handful of int scalars, reused each iteration. * Notes - A == B
+ * or C == B: the "<=" is inclusive, so equal-to-ceiling counts as fitting ->
+ * "Yes".
  */
 
 #include <bits/stdc++.h>

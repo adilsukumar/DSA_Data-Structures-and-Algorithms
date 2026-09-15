@@ -14,16 +14,13 @@
  * For each test case you are given two integers X and Y.
  *
  * Approach
- * Each unit costs a fixed 2*Y. With a fixed budget X and a fixed per-unit cost, the
- * maximum number of whole units is just the floor division X / (2*Y).
+ * Each unit costs a fixed 2*Y. With a fixed budget X and a fixed per-unit cost,
+ * the maximum number of whole units is just the floor division X / (2*Y).
  *
  * Complexity
- * Time: O(T).
- * Space: O(1).
- *
- * Notes
- * - 2*Y > X (can't afford even one unit): handled -> outputs 0, both by the explicit guard
- *   and, redundantly, by the division itself.
+ * Time: O(T). Space: O(1). * Notes - 2*Y > X (can't afford even one unit): handled
+ * -> outputs 0, both by the explicit guard and, redundantly, by the division
+ * itself.
  */
 
 #include <bits/stdc++.h>

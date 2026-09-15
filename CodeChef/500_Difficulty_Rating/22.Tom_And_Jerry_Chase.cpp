@@ -14,17 +14,14 @@
  * Tom is chasing Jerry.
  *
  * Approach
- * There is no algorithm to design here -- the whole problem collapses to one comparison.
- * The only decision that carries any subtlety is the boundary: escape requires Y to *beat*
- * X, not merely match it.
+ * There is no algorithm to design here -- the whole problem collapses to one
+ * comparison. The only decision that carries any subtlety is the boundary: escape
+ * requires Y to *beat* X, not merely match it.
  *
  * Complexity
- * Time: O(T) -- constant work (one read pair + one compare) per test case.
- * Space: O(1) -- only the scalars T, X, Y are held; nothing is stored across iterations,
- * so memory does not grow with T.
- *
- * Notes
- * - Y == X (a tie): must be "NO".
+ * Time: O(T) -- constant work (one read pair + one compare) per test case. Space:
+ * O(1) -- only the scalars T, X, Y are held; nothing is stored across iterations,
+ * so memory does not grow with T. * Notes - Y == X (a tie): must be "NO".
  */
 
 #include <bits/stdc++.h>

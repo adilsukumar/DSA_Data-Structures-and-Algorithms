@@ -14,17 +14,15 @@
  * An army has N weapons, each with an integer power A[i].
  *
  * Approach
- * You never need the actual sum, only its parity. Adding an even number never flips
- * parity; adding an odd number always flips it.
+ * You never need the actual sum, only its parity. Adding an even number never
+ * flips parity; adding an odd number always flips it.
  *
  * Complexity
- * Time: O(N) - single pass reading and classifying each of the N values.
- * Space: O(1) - only two counters and scalars are kept, regardless of N.
- *
- * Notes
- * - Negative powers: C++ % can yield a negative remainder for negatives, but the != 0 vs
- *   == 0 split still classifies parity correctly, so tallying is safe.
- * - Only the parity of the odd count is needed; the even count can be removed.
+ * Time: O(N) - single pass reading and classifying each of the N values. Space:
+ * O(1) - only two counters and scalars are kept, regardless of N. * Notes -
+ * Negative powers: C++ % can yield a negative remainder for negatives, but the !=
+ * 0 vs == 0 split still classifies parity correctly, so tallying is safe. - Only
+ * the parity of the odd count is needed; the even count can be removed.
  */
 
 #include <bits/stdc++.h>

@@ -14,16 +14,14 @@
  * You are given T independent test cases.
  *
  * Approach
- * "Divisible by 4" is exactly "the remainder when dividing by 4 is zero". The modulo
- * operator X % 4 computes that remainder directly, so a single comparison X % 4 == 0
- * settles each case.
+ * "Divisible by 4" is exactly "the remainder when dividing by 4 is zero". The
+ * modulo operator X % 4 computes that remainder directly, so a single comparison X
+ * % 4 == 0 settles each case.
  *
  * Complexity
- * Time: O(T) overall -- O(1) work (one modulo, one compare) per test case.
- * Space: O(1) -- only the scalars T, X, i are stored; nothing scales with T.
- *
- * Notes
- * - X = 0: 0 % 4 == 0 -> "Good".
+ * Time: O(T) overall -- O(1) work (one modulo, one compare) per test case. Space:
+ * O(1) -- only the scalars T, X, i are stored; nothing scales with T. * Notes - X
+ * = 0: 0 % 4 == 0 -> "Good".
  */
 
 #include <bits/stdc++.h>

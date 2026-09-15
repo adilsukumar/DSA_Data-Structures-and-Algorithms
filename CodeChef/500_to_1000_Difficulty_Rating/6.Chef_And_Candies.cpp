@@ -15,16 +15,15 @@
  * must end up with, and X is the number he already has.
  *
  * Approach
- * The shortfall is (N - X). Each bundle contributes exactly 4 candies, so the number of
- * bundles is the shortfall divided by 4, ROUNDED UP - you cannot buy a fractional bundle,
- * and any leftover need (1, 2, or 3 candies) still forces one more whole bundle.
+ * The shortfall is (N - X). Each bundle contributes exactly 4 candies, so the
+ * number of bundles is the shortfall divided by 4, ROUNDED UP - you cannot buy a
+ * fractional bundle, and any leftover need (1, 2, or 3 candies) still forces one
+ * more whole bundle.
  *
  * Complexity
- * Time: O(T) total - each test case is a constant amount of arithmetic.
- * Space: O(1) - a handful of scalar variables, no arrays or buffers.
- *
- * Notes
- * - X == N : shortfall is 0; the > 0 guard sends it to the else branch -> 0.
+ * Time: O(T) total - each test case is a constant amount of arithmetic. Space:
+ * O(1) - a handful of scalar variables, no arrays or buffers. * Notes - X == N :
+ * shortfall is 0; the > 0 guard sends it to the else branch -> 0.
  */
 
 #include <bits/stdc++.h>

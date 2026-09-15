@@ -15,17 +15,15 @@
  * spreadsheet column.
  *
  * Approach
- * This looks like base-26 conversion, but it is NOT ordinary base-26. A normal positional
- * system has a digit for 0; here the smallest symbol 'A' maps to 1, and there is no symbol
- * for 0.
+ * This looks like base-26 conversion, but it is NOT ordinary base-26. A normal
+ * positional system has a digit for 0; here the smallest symbol 'A' maps to 1, and
+ * there is no symbol for 0.
  *
  * Complexity
- * Time: O(log_26 n) - the value is divided by 26 each iteration, so the loop runs once per
- * output letter (at most ~7 for a 32-bit int).
- * Space: O(log_26 n) for the output string (O(1) auxiliary beyond it).
- *
- * Notes
- * - Single letters (1..26): loop runs once; 26 -> "Z" handled by the shift.
+ * Time: O(log_26 n) - the value is divided by 26 each iteration, so the loop runs
+ * once per output letter (at most ~7 for a 32-bit int). Space: O(log_26 n) for the
+ * output string (O(1) auxiliary beyond it). * Notes - Single letters (1..26): loop
+ * runs once; 26 -> "Z" handled by the shift.
  */
 
 class Solution {

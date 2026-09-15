@@ -14,16 +14,15 @@
  * For each test case you are given a count N and a threshold X, followed by N integers.
  *
  * Approach
- * The answer is just a population count over a fixed predicate ("value >= X"). There is no
- * ordering, no relationship between the values, and each element is judged independently.
+ * The answer is just a population count over a fixed predicate ("value >= X").
+ * There is no ordering, no relationship between the values, and each element is
+ * judged independently.
  *
  * Complexity
- * Time: O(N) per test case, O(sum of N) overall -- each value is touched exactly once,
- * with O(1) work (one comparison) per value.
- * Space: O(1) -- only a handful of scalars; the input is never stored.
- *
- * Notes
- * - N = 0: the inner loop never executes, count stays 0, prints 0.
+ * Time: O(N) per test case, O(sum of N) overall -- each value is touched exactly
+ * once, with O(1) work (one comparison) per value. Space: O(1) -- only a handful
+ * of scalars; the input is never stored. * Notes - N = 0: the inner loop never
+ * executes, count stays 0, prints 0.
  */
 
 #include <bits/stdc++.h>

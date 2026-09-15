@@ -14,16 +14,13 @@
  * There are two kinds of items.
  *
  * Approach
- * No search, no data structure — just distributivity. The contribution of a group of
- * identical items is (count * per-unit value), and disjoint groups simply add.
+ * No search, no data structure — just distributivity. The contribution of a group
+ * of identical items is (count * per-unit value), and disjoint groups simply add.
  *
  * Complexity
- * Time: O(1) -- a fixed number of reads and two multiplications.
- * Space: O(1) -- four scalars, no allocation.
- *
- * Notes
- * - Leading blank line (the stray `cout << endl;`): output becomes "\n<ans>" instead of
- *   "<ans>".
+ * Time: O(1) -- a fixed number of reads and two multiplications. Space: O(1) --
+ * four scalars, no allocation. * Notes - Leading blank line (the stray `cout <<
+ * endl;`): output becomes "\n<ans>" instead of "<ans>".
  */
 
 #include <bits/stdc++.h>

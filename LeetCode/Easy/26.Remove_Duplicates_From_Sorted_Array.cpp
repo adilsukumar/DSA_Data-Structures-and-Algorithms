@@ -14,14 +14,12 @@
  * Given a SORTED array, remove duplicates IN PLACE so each unique value appears once.
  *
  * Approach
- * Sortedness is the whole gift here. In a sorted array, equal values are always ADJACENT.
+ * Sortedness is the whole gift here. In a sorted array, equal values are always
+ * ADJACENT.
  *
  * Complexity
  * Time: O(n) -- std::unique makes exactly one pass, comparing each element to its
- * predecessor.
- * Space: O(1) -- compaction happens in place; no allocation.
- *
- * Notes
+ * predecessor. Space: O(1) -- compaction happens in place; no allocation. * Notes
  * - Empty array -> begin() == end(), unique returns begin(), distance 0.
  */
 

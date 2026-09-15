@@ -14,18 +14,16 @@
  * There are T independent test cases.
  *
  * Approach
- * There is no algorithm here at all -- the "answer" is defined as the product. The only
- * real skill being tested is the standard competitive-programming I/O shape: read a count
- * T, then loop T times reading a fixed set of inputs and emitting one line of output per
- * test.
+ * There is no algorithm here at all -- the "answer" is defined as the product. The
+ * only real skill being tested is the standard competitive-programming I/O shape:
+ * read a count T, then loop T times reading a fixed set of inputs and emitting one
+ * line of output per test.
  *
  * Complexity
- * Time: O(T) overall -- constant work (one multiply, one print) per test.
- * Space: O(1) -- three int variables reused across all iterations; no arrays.
- *
- * Notes
- * - int overflow: this is the ONLY real risk.
- * - Use long long if X * Y can exceed int.
+ * Time: O(T) overall -- constant work (one multiply, one print) per test. Space:
+ * O(1) -- three int variables reused across all iterations; no arrays. * Notes -
+ * int overflow: this is the ONLY real risk. - Use long long if X * Y can exceed
+ * int.
  */
 
 #include <bits/stdc++.h>

@@ -15,15 +15,13 @@
  * 6 unlocks a token and lets play begin.
  *
  * Approach
- * The entire rule collapses to one boolean fact: "did the die show 6?". Every roll from
- * 1..5 is equivalent (all fail), and 6 is the only success.
+ * The entire rule collapses to one boolean fact: "did the die show 6?". Every roll
+ * from 1..5 is equivalent (all fail), and 6 is the only success.
  *
  * Complexity
- * Time: O(T) -- one comparison and one print per test case, no inner work.
- * Space: O(1) -- only two ints are held regardless of T; nothing is stored.
- *
- * Notes
- * - X in 1..5: all correctly map to "NO" (only 6 is special).
+ * Time: O(T) -- one comparison and one print per test case, no inner work. Space:
+ * O(1) -- only two ints are held regardless of T; nothing is stored. * Notes - X
+ * in 1..5: all correctly map to "NO" (only 6 is special).
  */
 
 #include <bits/stdc++.h>

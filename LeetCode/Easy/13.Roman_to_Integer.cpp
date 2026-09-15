@@ -14,19 +14,17 @@
  * Convert a Roman numeral string to an integer.
  *
  * Approach
- * Since there are only six special pairs, you can handle them head-on: walk the string
- * left to right, and at each position first ask "do I and my neighbour form one of the six
- * pairs?". If yes, add the pair's combined value and skip BOTH characters.
+ * Since there are only six special pairs, you can handle them head-on: walk the
+ * string left to right, and at each position first ask "do I and my neighbour form
+ * one of the six pairs?". If yes, add the pair's combined value and skip BOTH
+ * characters.
  *
  * Complexity
- * Time: O(n) -- each character is visited once; the if-chain is O(1) since it is a fixed
- * 13 comparisons, independent of input size.
- * Space: O(1) -- a handful of int variables, nothing that grows with n.
- *
- * Notes
- * - READING s[i+1] AT THE LAST CHARACTER: this looks like an out-of-bounds read but is
- *   actually safe.
- * - Simpler: subtract a symbol when the next symbol is larger; otherwise add it.
+ * Time: O(n) -- each character is visited once; the if-chain is O(1) since it is a
+ * fixed 13 comparisons, independent of input size. Space: O(1) -- a handful of int
+ * variables, nothing that grows with n. * Notes - READING s[i+1] AT THE LAST
+ * CHARACTER: this looks like an out-of-bounds read but is actually safe. -
+ * Simpler: subtract a symbol when the next symbol is larger; otherwise add it.
  */
 
 class Solution {

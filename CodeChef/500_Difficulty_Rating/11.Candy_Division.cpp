@@ -15,18 +15,15 @@
  * left over and none broken.
  *
  * Approach
- * "Divide N into 3 equal whole parts" is exactly the definition of "N is divisible by 3".
- * There is no need to actually compute the shares or search anything -- a single remainder
- * test settles it.
+ * "Divide N into 3 equal whole parts" is exactly the definition of "N is divisible
+ * by 3". There is no need to actually compute the shares or search anything -- a
+ * single remainder test settles it.
  *
  * Complexity
- * Time: O(T) -- one read + one modulo + one print per test case; the work per case is
- * constant, so total is linear in the number of test cases.
- * Space: O(1) -- only the scalars T, N, i are stored; no arrays or buffers that grow with
- * the input.
- *
- * Notes
- * - N = 0: 0 % 3 == 0 -> YES.
+ * Time: O(T) -- one read + one modulo + one print per test case; the work per case
+ * is constant, so total is linear in the number of test cases. Space: O(1) -- only
+ * the scalars T, N, i are stored; no arrays or buffers that grow with the input. *
+ * Notes - N = 0: 0 % 3 == 0 -> YES.
  */
 
 #include <bits/stdc++.h>

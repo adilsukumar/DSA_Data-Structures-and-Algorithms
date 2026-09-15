@@ -14,16 +14,12 @@
  * For each test case you are given three integers X, Y, Z.
  *
  * Approach
- * "More than half of the total" is the whole problem. Total is X*Y, so the bar to clear is
- * (X*Y)/2, and the single test Z > bar decides everything.
+ * "More than half of the total" is the whole problem. Total is X*Y, so the bar to
+ * clear is (X*Y)/2, and the single test Z > bar decides everything.
  *
  * Complexity
- * Time: O(T).
- * Space: O(1).
- *
- * Notes
- * - Exactly half (Z == X*Y/2): prints NO.
- * - Use long long if N * X can exceed int.
+ * Time: O(T). Space: O(1). * Notes - Exactly half (Z == X*Y/2): prints NO. - Use
+ * long long if N * X can exceed int.
  */
 
 #include <bits/stdc++.h>

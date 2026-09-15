@@ -14,15 +14,14 @@
  * For each of T independent test cases you are given two integers X and Y.
  *
  * Approach
- * The whole problem is one comparison. The only genuinely useful trick is to test 2*Y >= X
- * instead of Y >= X/2.
+ * The whole problem is one comparison. The only genuinely useful trick is to test
+ * 2*Y >= X instead of Y >= X/2.
  *
  * Complexity
- * Time: O(T) overall, O(1) per test -- one multiply and one compare each.
- * Space: O(1) -- three scalar ints reused across every iteration; nothing is accumulated.
- *
- * Notes
- * - Exact half (2*Y == X): the `>=` includes equality, so a precise half counts as YES.
+ * Time: O(T) overall, O(1) per test -- one multiply and one compare each. Space:
+ * O(1) -- three scalar ints reused across every iteration; nothing is accumulated.
+ * * Notes - Exact half (2*Y == X): the `>=` includes equality, so a precise half
+ * counts as YES.
  */
 
 #include <bits/stdc++.h>

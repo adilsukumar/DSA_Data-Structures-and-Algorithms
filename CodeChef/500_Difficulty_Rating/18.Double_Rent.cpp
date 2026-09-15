@@ -14,16 +14,14 @@
  * Read a single integer X (the base rent) and report the "double rent" for it -- i.e.
  *
  * Approach
- * "Double" is the whole task, so the answer is literally 2 * X. The only thing worth
- * thinking about is representation: doubling is exact in integer arithmetic (no rounding,
- * no fractions), so a single multiply is both correct and optimal.
+ * "Double" is the whole task, so the answer is literally 2 * X. The only thing
+ * worth thinking about is representation: doubling is exact in integer arithmetic
+ * (no rounding, no fractions), so a single multiply is both correct and optimal.
  *
  * Complexity
- * Time: O(1) -- one read, one multiply, one write; independent of X.
- * Space: O(1) -- a single int variable; no containers allocated.
- *
- * Notes
- * - Large X: the result is stored in an int.
+ * Time: O(1) -- one read, one multiply, one write; independent of X. Space: O(1)
+ * -- a single int variable; no containers allocated. * Notes - Large X: the result
+ * is stored in an int.
  */
 
 #include <bits/stdc++.h>

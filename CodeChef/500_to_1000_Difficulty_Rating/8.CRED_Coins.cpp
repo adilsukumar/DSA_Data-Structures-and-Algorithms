@@ -15,17 +15,15 @@
  * not awarded).
  *
  * Approach
- * Coins earned = floor(amount / 100), because you only get a coin once a *full* block of
- * 100 rupees is spent. Integer division in C++ already truncates toward zero, and since
- * amount = X*Y is non-negative here, truncation IS the floor we want.
+ * Coins earned = floor(amount / 100), because you only get a coin once a *full*
+ * block of 100 rupees is spent. Integer division in C++ already truncates toward
+ * zero, and since amount = X*Y is non-negative here, truncation IS the floor we
+ * want.
  *
  * Complexity
- * Time: O(T) — a constant amount of work (one multiply, one divide, one compare) per test
- * case.
- * Space: O(1) — only the scalars T, X, Y are held; no arrays.
- *
- * Notes
- * - A bill below 100 earns zero coins; exactly 100 earns one.
+ * Time: O(T) — a constant amount of work (one multiply, one divide, one compare)
+ * per test case. Space: O(1) — only the scalars T, X, Y are held; no arrays. *
+ * Notes - A bill below 100 earns zero coins; exactly 100 earns one.
  */
 
 #include <bits/stdc++.h>

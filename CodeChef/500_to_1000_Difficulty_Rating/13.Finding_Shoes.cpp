@@ -14,17 +14,14 @@
  * T independent test cases.
  *
  * Approach
- * There is nothing to search or iterate over: each query is a single number decided by one
- * comparison. The key observation is that the two printed formulas are one function in
- * disguise.
+ * There is nothing to search or iterate over: each query is a single number
+ * decided by one comparison. The key observation is that the two printed formulas
+ * are one function in disguise.
  *
  * Complexity
- * Time: O(T) overall, O(1) per test case - a comparison and a subtraction, no loop over
- * the values themselves.
- * Space: O(1) - three int variables reused across all test cases.
- *
- * Notes
- * - N == M : handled correctly.
+ * Time: O(T) overall, O(1) per test case - a comparison and a subtraction, no loop
+ * over the values themselves. Space: O(1) - three int variables reused across all
+ * test cases. * Notes - N == M : handled correctly.
  */
 
 #include <bits/stdc++.h>

@@ -14,16 +14,14 @@
  * You are climbing a staircase with n steps.
  *
  * Approach
- * To reach step i, the final move came from i-1 or i-2. Therefore
- * ways[i] = ways[i-1] + ways[i-2], which the code computes bottom-up.
+ * To reach step i, the final move came from i-1 or i-2. Therefore ways[i] =
+ * ways[i-1] + ways[i-2], which the code computes bottom-up.
  *
  * Complexity
- * Time: O(n) - single pass filling one dp entry per step.
- * Space: O(n) - the dp array holds all n+1 entries.
- *
- * Notes
- * - n = 1, n = 2: handled by the early return, before any dp[1]/dp[2] access.
- * - Only the previous two values are needed, so space can be reduced to O(1).
+ * Time: O(n) - single pass filling one dp entry per step. Space: O(n) - the dp
+ * array holds all n+1 entries. * Notes - n = 1, n = 2: handled by the early
+ * return, before any dp[1]/dp[2] access. - Only the previous two values are
+ * needed, so space can be reduced to O(1).
  */
 
 class Solution {

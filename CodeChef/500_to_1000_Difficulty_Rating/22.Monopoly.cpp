@@ -14,18 +14,16 @@
  * For each test case you are given four non-negative integers P, Q, R, S.
  *
  * Approach
- * This is the generalized triangle inequality. Given four amounts, exactly one of two
- * situations holds: the largest value is <= the sum of the other three (balanced), or the
- * largest value is > the sum of the other three (one dominates).
+ * This is the generalized triangle inequality. Given four amounts, exactly one of
+ * two situations holds: the largest value is <= the sum of the other three
+ * (balanced), or the largest value is > the sum of the other three (one
+ * dominates).
  *
  * Complexity
  * Time: O(T) overall - each test case does a fixed set of 4 comparisons, i.e.
- * Space: O(1) - five scalar ints are reused across every iteration; nothing scales with T
- * or with the input values.
- *
- * Notes
- * - Equality boundary: the test uses strict '>', so a value EQUAL to the sum of the other
- *   three (e.g.
+ * Space: O(1) - five scalar ints are reused across every iteration; nothing scales
+ * with T or with the input values. * Notes - Equality boundary: the test uses
+ * strict '>', so a value EQUAL to the sum of the other three (e.g.
  */
 
 #include <bits/stdc++.h>

@@ -11,15 +11,13 @@
  * @solved     2026-06-05
  *
  * Approach
- * The maximum amount that can be saved is the difference between income X and the tax-free
- * threshold Y.
+ * The maximum amount that can be saved is the difference between income X and the
+ * tax-free threshold Y.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - The extra blank line printed before all answers is unnecessary and may be removed for
- *   exact output formatting.
+ * O(1) time and O(1) space per test case. * Notes - The extra blank line printed
+ * before all answers is unnecessary and may be removed for exact output
+ * formatting.
  */
 
 #include <bits/stdc++.h>

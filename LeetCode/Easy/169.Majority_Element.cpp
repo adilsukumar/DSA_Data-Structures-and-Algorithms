@@ -15,18 +15,15 @@
  * STRICTLY MORE than floor(n/2) times.
  *
  * Approach
- * If one value occupies more than half the array, then after SORTING, that value forms a
- * single contiguous run longer than n/2. A run of length > n/2 is so long it must cover
- * the center of the array no matter where it starts.
+ * If one value occupies more than half the array, then after SORTING, that value
+ * forms a single contiguous run longer than n/2. A run of length > n/2 is so long
+ * it must cover the center of the array no matter where it starts.
  *
  * Complexity
- * Time: O(n log n) -- dominated by the sort; the index lookup is O(1).
- * Space: O(1) auxiliary if the sort is in-place (introsort typically uses O(log n)
- * recursion stack).
- *
- * Notes
- * - Single element [x]: half = 0, returns x.
- * - Boyer-Moore finds the majority in O(n) time and O(1) space without sorting.
+ * Time: O(n log n) -- dominated by the sort; the index lookup is O(1). Space: O(1)
+ * auxiliary if the sort is in-place (introsort typically uses O(log n) recursion
+ * stack). * Notes - Single element [x]: half = 0, returns x. - Boyer-Moore finds
+ * the majority in O(n) time and O(1) space without sorting.
  */
 
 class Solution {

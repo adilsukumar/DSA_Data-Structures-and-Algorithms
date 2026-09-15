@@ -14,10 +14,8 @@
  * Each unit contributes four items, so N units contribute 4 * N.
  *
  * Complexity
- * O(1) time and O(1) space.
- *
- * Notes
- * - Use a type large enough for 4 * N under the stated constraints.
+ * O(1) time and O(1) space. * Notes - Use a type large enough for 4 * N under the
+ * stated constraints.
  */
 
 #include <bits/stdc++.h>

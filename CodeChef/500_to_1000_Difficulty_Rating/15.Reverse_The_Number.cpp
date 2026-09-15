@@ -14,16 +14,13 @@
  * Given T test cases, each a positive integer N, print N with its digits reversed.
  *
  * Approach
- * A number in base 10 is a stack of digits. The units digit is the cheapest to reach: N %
- * 10 peels it off, N / 10 discards it.
+ * A number in base 10 is a stack of digits. The units digit is the cheapest to
+ * reach: N % 10 peels it off, N / 10 discards it.
  *
  * Complexity
- * Time: O(d) per test case, where d = number of digits in N (d = log10 N).
- * Space: O(1).
- *
- * Notes
- * - Trailing zeros disappear naturally: reversing 120 produces 21.
- * - Use long long if the reversed value can exceed int.
+ * Time: O(d) per test case, where d = number of digits in N (d = log10 N). Space:
+ * O(1). * Notes - Trailing zeros disappear naturally: reversing 120 produces 21. -
+ * Use long long if the reversed value can exceed int.
  */
 
 #include <iostream>

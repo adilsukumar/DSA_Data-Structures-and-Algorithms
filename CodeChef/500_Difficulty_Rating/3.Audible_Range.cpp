@@ -15,15 +15,15 @@
  * inclusive.
  *
  * Approach
- * There is no algorithm to design here -- the whole task is a definition lookup. "Inside a
- * closed interval [lo, hi]" is exactly the compound condition (X >= lo && X <= hi).
+ * There is no algorithm to design here -- the whole task is a definition lookup.
+ * "Inside a closed interval [lo, hi]" is exactly the compound condition (X >= lo
+ * && X <= hi).
  *
  * Complexity
- * Time: O(T) -- one read and two constant-time comparisons per test case.
- * Space: O(1) -- only the scalars T, X, i; nothing scales with input size.
- *
- * Notes
- * - Exact endpoints 67 and 45000: accepted, because the operators are inclusive (>=, <=).
+ * Time: O(T) -- one read and two constant-time comparisons per test case. Space:
+ * O(1) -- only the scalars T, X, i; nothing scales with input size. * Notes -
+ * Exact endpoints 67 and 45000: accepted, because the operators are inclusive (>=,
+ * <=).
  */
 
 #include <bits/stdc++.h>

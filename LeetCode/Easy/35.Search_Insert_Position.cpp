@@ -15,16 +15,13 @@
  * if found.
  *
  * Approach
- * The answer is the first index whose value is at least target. This code finds it with
- * a linear scan, though the sorted input also allows binary search.
+ * The answer is the first index whose value is at least target. This code finds it
+ * with a linear scan, though the sorted input also allows binary search.
  *
  * Complexity
  * Time: O(n) -- worst case (target at the end or beyond) touches every element.
- * Space: O(1)
- *
- * Notes
- * - Target smaller than everything -> returns 0 on the first comparison.
- * - Binary search would meet the requested O(log n) time bound.
+ * Space: O(1) * Notes - Target smaller than everything -> returns 0 on the first
+ * comparison. - Binary search would meet the requested O(log n) time bound.
  */
 
 class Solution {

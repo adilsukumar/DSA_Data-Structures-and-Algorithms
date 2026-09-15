@@ -11,15 +11,12 @@
  * @solved     2026-06-26
  *
  * Approach
- * The two offers are worth 10*A and 5*B; dividing both by 5 reduces the comparison to 2*A
- * versus B.
+ * The two offers are worth 10*A and 5*B; dividing both by 5 reduces the comparison
+ * to 2*A versus B.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - The equality branch is essential because either offer is acceptable when both
- *   valuations match.
+ * O(1) time and O(1) space per test case. * Notes - The equality branch is
+ * essential because either offer is acceptable when both valuations match.
  */
 
 #include <iostream>

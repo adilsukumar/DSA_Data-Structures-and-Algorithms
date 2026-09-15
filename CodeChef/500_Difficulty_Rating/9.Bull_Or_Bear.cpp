@@ -14,16 +14,15 @@
  * For each of T days you are given two prices: X (opening) and Y (closing).
  *
  * Approach
- * There is nothing to compute or remember across days. Each day is a wholly independent
- * question: "did the price go up, down, or stay flat?" That is a single sign comparison
- * between two numbers.
+ * There is nothing to compute or remember across days. Each day is a wholly
+ * independent question: "did the price go up, down, or stay flat?" That is a
+ * single sign comparison between two numbers.
  *
  * Complexity
- * Time: O(T) -- constant work (two reads + up to two comparisons) per day.
- * Space: O(1) -- three ints reused for all days; no arrays or accumulation.
- *
- * Notes
- * - Equal prices (X == Y): handled by the `else`, never misreported as a profit or loss.
+ * Time: O(T) -- constant work (two reads + up to two comparisons) per day. Space:
+ * O(1) -- three ints reused for all days; no arrays or accumulation. * Notes -
+ * Equal prices (X == Y): handled by the `else`, never misreported as a profit or
+ * loss.
  */
 
 #include <bits/stdc++.h>

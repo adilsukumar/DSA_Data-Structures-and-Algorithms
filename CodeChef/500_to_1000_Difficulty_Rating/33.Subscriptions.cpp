@@ -11,13 +11,12 @@
  * @solved     2026-06-08
  *
  * Approach
- * One subscription covers six people, so the number needed is ceil(N/6), each costing X.
+ * One subscription covers six people, so the number needed is ceil(N/6), each
+ * costing X.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - N below six still requires one complete subscription.
+ * O(1) time and O(1) space per test case. * Notes - N below six still requires one
+ * complete subscription.
  */
 
 #include <bits/stdc++.h>

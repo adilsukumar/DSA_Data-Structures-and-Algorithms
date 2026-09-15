@@ -14,16 +14,13 @@
  * You are given T independent test cases.
  *
  * Approach
- * Parity is just "is there a remainder when you halve the number." An integer is even
- * exactly when it is divisible by 2, i.e. N % 2 == 0.
+ * Parity is just "is there a remainder when you halve the number." An integer is
+ * even exactly when it is divisible by 2, i.e. N % 2 == 0.
  *
  * Complexity
- * Time: O(T) -- one constant-work modulo test per test case, no inner work.
- * Space: O(1) -- only T, N, and the loop counter are stored; output is streamed, nothing
- * is buffered per case.
- *
- * Notes
- * - N = 0: 0 % 2 == 0 -> "YES".
+ * Time: O(T) -- one constant-work modulo test per test case, no inner work. Space:
+ * O(1) -- only T, N, and the loop counter are stored; output is streamed, nothing
+ * is buffered per case. * Notes - N = 0: 0 % 2 == 0 -> "YES".
  */
 
 #include <bits/stdc++.h>

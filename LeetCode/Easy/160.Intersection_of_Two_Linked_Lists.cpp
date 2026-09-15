@@ -14,18 +14,16 @@
  * Two singly-linked lists MAY share a common tail.
  *
  * Approach
- * The obstacle is that the two lists can differ in length, so the shared tail doesn't
- * start at the same "step count" from each head. The trick removes that offset without
- * measuring anything.
+ * The obstacle is that the two lists can differ in length, so the shared tail
+ * doesn't start at the same "step count" from each head. The trick removes that
+ * offset without measuring anything.
  *
  * Complexity
- * Time: O(m + n) -- each pointer takes at most m + n steps (one full pass of each list)
- * before meeting or both reaching NULL.
- * Space: O(1) -- two pointers, no hash set, no length precomputation.
- *
- * Notes
- * - No intersection: both pointers hit NULL together after m + n steps; the loop condition
- *   a != b becomes false (NULL == NULL) and NULL is returned.
+ * Time: O(m + n) -- each pointer takes at most m + n steps (one full pass of each
+ * list) before meeting or both reaching NULL. Space: O(1) -- two pointers, no hash
+ * set, no length precomputation. * Notes - No intersection: both pointers hit NULL
+ * together after m + n steps; the loop condition a != b becomes false (NULL ==
+ * NULL) and NULL is returned.
  */
 
 /**

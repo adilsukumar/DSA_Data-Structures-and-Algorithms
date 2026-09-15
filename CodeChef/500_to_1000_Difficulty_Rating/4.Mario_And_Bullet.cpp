@@ -14,16 +14,14 @@
  * Mario fires a bullet toward an enemy.
  *
  * Approach
- * Compute time as distance / speed, compare it with deadline Z, and return the remaining
- * time or 0 if the bullet arrives too late.
+ * Compute time as distance / speed, compare it with deadline Z, and return the
+ * remaining time or 0 if the bullet arrives too late.
  *
  * Complexity
- * Time: O(T) -- constant work (one division, one compare) per test case.
- * Space: O(1) -- only a handful of scalar ints, nothing scales with input.
- *
- * Notes
- * - Bullet exactly on time (seconds_taken == Z): prints 0, which is correct - there is
- *   zero time to spare, handled by the else branch (Z - Z = 0).
+ * Time: O(T) -- constant work (one division, one compare) per test case. Space:
+ * O(1) -- only a handful of scalar ints, nothing scales with input. * Notes -
+ * Bullet exactly on time (seconds_taken == Z): prints 0, which is correct - there
+ * is zero time to spare, handled by the else branch (Z - Z = 0).
  */
 
 #include <bits/stdc++.h>

@@ -14,11 +14,8 @@
  * The known net profit per glass is 15, so selling N glasses yields 15*N.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - The arithmetic already incorporates all stated costs; do not subtract them a second
- *   time.
+ * O(1) time and O(1) space per test case. * Notes - The arithmetic already
+ * incorporates all stated costs; do not subtract them a second time.
  */
 
 #include <bits/stdc++.h>

@@ -14,11 +14,9 @@
  * A seat number identifies one of four sections through fixed numerical ranges.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - The condition N >= 10 in the second branch overlaps N == 10, but the first branch
- *   already consumes that value; non-overlapping bounds would be clearer.
+ * O(1) time and O(1) space per test case. * Notes - The condition N >= 10 in the
+ * second branch overlaps N == 10, but the first branch already consumes that
+ * value; non-overlapping bounds would be clearer.
  */
 
 #include <bits/stdc++.h>

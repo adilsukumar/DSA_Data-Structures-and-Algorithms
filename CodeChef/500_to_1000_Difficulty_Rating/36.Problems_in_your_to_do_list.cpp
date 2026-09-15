@@ -11,15 +11,12 @@
  * @solved     2026-06-23
  *
  * Approach
- * Only difficulties of at least 1000 belong on the to-do list, so count values meeting
- * that threshold.
+ * Only difficulties of at least 1000 belong on the to-do list, so count values
+ * meeting that threshold.
  *
  * Complexity
- * O(N) time and O(1) extra space per test case.
- *
- * Notes
- * - Resetting count inside each test-case loop prevents results from leaking between
- *   cases.
+ * O(N) time and O(1) extra space per test case. * Notes - Resetting count inside
+ * each test-case loop prevents results from leaking between cases.
  */
 
 #include <bits/stdc++.h>

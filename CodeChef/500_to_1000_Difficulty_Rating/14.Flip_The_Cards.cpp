@@ -14,17 +14,13 @@
  * There are N cards in a row.
  *
  * Approach
- * The whole task collapses to one formula: min(X, N - X). If N >= 2X, then X <= N - X, so
- * the up-group is the smaller one -> X.
+ * The whole task collapses to one formula: min(X, N - X). If N >= 2X, then X <= N
+ * - X, so the up-group is the smaller one -> X.
  *
  * Complexity
- * Time: O(1) per test, O(T) overall -- a constant number of comparisons and one print per
- * case.
- * Space: O(1) -- only the scalars T, N, X are stored.
- *
- * Notes
- * - X == 0 : no cards up -> 0.
- * - The answer can be written directly as min(X, N - X).
+ * Time: O(1) per test, O(T) overall -- a constant number of comparisons and one
+ * print per case. Space: O(1) -- only the scalars T, N, X are stored. * Notes - X
+ * == 0 : no cards up -> 0. - The answer can be written directly as min(X, N - X).
  */
 
 #include <bits/stdc++.h>

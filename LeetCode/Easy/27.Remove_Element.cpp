@@ -15,16 +15,13 @@
  * remaining elements.
  *
  * Approach
- * "Removing" from an array in place is really COMPACTION: you cannot delete a slot, so
- * instead you copy everything you want to keep to the front, in order, and report how far
- * the keepers reach.
+ * "Removing" from an array in place is really COMPACTION: you cannot delete a
+ * slot, so instead you copy everything you want to keep to the front, in order,
+ * and report how far the keepers reach.
  *
  * Complexity
- * Time: O(n) -- one pass, one comparison per element.
- * Space: O(1) -- two integers, no allocation.
- *
- * Notes
- * - Empty array -> loop never runs, returns 0.
+ * Time: O(n) -- one pass, one comparison per element. Space: O(1) -- two integers,
+ * no allocation. * Notes - Empty array -> loop never runs, returns 0.
  */
 
 class Solution {

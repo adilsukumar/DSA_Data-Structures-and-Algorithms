@@ -15,15 +15,13 @@
  * next generation supplies).
  *
  * Approach
- * There is nothing to search or optimise. The answer is a single boolean fact about the
- * input: does one product dominate the other?
+ * There is nothing to search or optimise. The answer is a single boolean fact
+ * about the input: does one product dominate the other?
  *
  * Complexity
- * Time: O(T) -- constant work (two multiplications, one compare) per case.
- * Space: O(1) -- a fixed handful of int variables, nothing scales with input.
- *
- * Notes
- * - Equality (X*Y == A*B): the '>=' makes this "Yes", which matches "enough".
+ * Time: O(T) -- constant work (two multiplications, one compare) per case. Space:
+ * O(1) -- a fixed handful of int variables, nothing scales with input. * Notes -
+ * Equality (X*Y == A*B): the '>=' makes this "Yes", which matches "enough".
  */
 
 #include <bits/stdc++.h>

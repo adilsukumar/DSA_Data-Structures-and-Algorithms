@@ -14,10 +14,8 @@
  * Mario's form repeats every three transformations, so only X mod 3 matters.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - The mapping is cyclic, so very large X needs no simulation.
+ * O(1) time and O(1) space per test case. * Notes - The mapping is cyclic, so very
+ * large X needs no simulation.
  */
 
 #include <bits/stdc++.h>

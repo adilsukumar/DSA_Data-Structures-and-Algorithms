@@ -14,7 +14,10 @@
  * Accepted solution for Fizz Buzz.
  *
  * Approach
- * The solution iterates through numbers from 1 to n using a simple for loop. It checks each number's divisibility by 3 and 5 using modulo operations and appends the corresponding string to the result vector. This approach directly maps each integer to its FizzBuzz representation in order.
+ * The solution iterates through numbers from 1 to n using a simple for loop. It
+ * checks each number's divisibility by 3 and 5 using modulo operations and appends
+ * the corresponding string to the result vector. This approach directly maps each
+ * integer to its FizzBuzz representation in order.
  *
  * Complexity
  * Time: O(n) Space: O(n)

@@ -15,19 +15,15 @@
  * digits.
  *
  * Approach
- * The number of digits of a positive integer is how many times you can strip off its last
- * digit before nothing is left. Integer division by 10 removes the trailing digit each
- * time (7896 -> 789 -> 78 -> 7).
+ * The number of digits of a positive integer is how many times you can strip off
+ * its last digit before nothing is left. Integer division by 10 removes the
+ * trailing digit each time (7896 -> 789 -> 78 -> 7).
  *
  * Complexity
- * Time: O(n * d) where n = nums.size() and d = max digit count.
- * Space: O(1).
- *
- * Notes
- * - Single-digit values (1..9): inner loop never runs, digits stays 1 (odd), correctly not
- *   counted.
- * - A range check such as [10,99] or [1000,9999] is shorter but less general.
- *   but it is not asymptotically faster and is harder to read.)
+ * Time: O(n * d) where n = nums.size() and d = max digit count. Space: O(1). *
+ * Notes - Single-digit values (1..9): inner loop never runs, digits stays 1 (odd),
+ * correctly not counted. - A range check such as [10,99] or [1000,9999] is shorter
+ * but less general. but it is not asymptotically faster and is harder to read.)
  */
 
 class Solution {

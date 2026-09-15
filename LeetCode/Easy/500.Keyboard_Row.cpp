@@ -17,18 +17,16 @@
  *
  * Approach
  * A word belongs to a row only if every character belongs to that row. Rather than
- * decide which row a word "should" be in, keep three optimistic hypotheses at once: "this
- * word is entirely in row1 / row2 / row3." Scan the characters; the moment a character is
- * missing from a row, that row's hypothesis is disproven.
+ * decide which row a word "should" be in, keep three optimistic hypotheses at
+ * once: "this word is entirely in row1 / row2 / row3." Scan the characters; the
+ * moment a character is missing from a row, that row's hypothesis is disproven.
  *
  * Complexity
- * Time: O(N * L) where N = number of words, L = average word length.
- * Space: O(1) auxiliary (three fixed strings + three bools); output vector excluded, as is
- * standard.
- *
- * Notes
- * - Empty word "": inner loop runs zero times, all three flags remain true, so "" is
- *   (correctly, per constraints) considered typeable and pushed.
+ * Time: O(N * L) where N = number of words, L = average word length. Space: O(1)
+ * auxiliary (three fixed strings + three bools); output vector excluded, as is
+ * standard. * Notes - Empty word "": inner loop runs zero times, all three flags
+ * remain true, so "" is (correctly, per constraints) considered typeable and
+ * pushed.
  */
 
 class Solution {

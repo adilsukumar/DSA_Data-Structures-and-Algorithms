@@ -14,10 +14,8 @@
  * Reaching on time is possible exactly when X is at least 30.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - X == 30 is successful, so the comparison must be >= rather than >.
+ * O(1) time and O(1) space per test case. * Notes - X == 30 is successful, so the
+ * comparison must be >= rather than >.
  */
 
 #include <bits/stdc++.h>

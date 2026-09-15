@@ -28,6 +28,7 @@ ever lost. Re-run the script after fixing the problem.
 import argparse
 import json
 import os
+import textwrap
 import urllib.request
 import urllib.error
 import re
@@ -224,6 +225,9 @@ def generate_header(meta, code, solved_on, suffix):
     
     review = get_ai_review(code, meta.get("title", ""))
     
+    approach_lines = textwrap.wrap(review.get("approach", "Pending manual review. The submitted code is preserved exactly below."), width=80)
+    complexity_lines = textwrap.wrap(review.get("complexity", "Pending manual review."), width=80)
+    
     lines = [
         "{0} {1} - {2} [{3}]".format(
             meta["platform"], meta.get("id", ""), meta["title"], meta["difficulty"]),
@@ -232,9 +236,12 @@ def generate_header(meta, code, solved_on, suffix):
         "@topics     " + topics, "@pattern    " + review.get("pattern", "Pending manual review").replace("\n", " "),
         "@url        " + meta.get("url", ""), "@solved     " + solved_on,
         "", "Problem", "Accepted solution for " + meta["title"] + ".",
-        "", "Approach", review.get("approach", "Pending manual review. The submitted code is preserved exactly below."),
-        "", "Complexity", review.get("complexity", "Pending manual review."),
+        "", "Approach"
     ]
+    lines.extend(approach_lines)
+    lines.extend(["", "Complexity"])
+    lines.extend(complexity_lines)
+
     if suffix == ".py":
         return '"""\n' + "\n".join(lines) + '\n"""'
     return "/*\n" + "\n".join(" * " + line if line else " *" for line in lines) + "\n */"

@@ -14,16 +14,14 @@
  * Return true if integer `x` reads the same forwards and backwards.
  *
  * Approach
- * A number is a palindrome exactly when reversing its digits gives you the same number
- * back. So: build the reverse arithmetically, then compare.
+ * A number is a palindrome exactly when reversing its digits gives you the same
+ * number back. So: build the reverse arithmetically, then compare.
  *
  * Complexity
  * Time: O(log10 x) -- one iteration per digit, so ~10 iterations at 32-bit max.
- * Space: O(1) -- three scalars, no array or string allocated.
- *
- * Notes
- * - x = 0 -> loop body never runs, rev stays 0, 0 == 0 -> true.
- * - Reversing only half the digits avoids overflow and does fewer iterations.
+ * Space: O(1) -- three scalars, no array or string allocated. * Notes - x = 0 ->
+ * loop body never runs, rev stays 0, 0 == 0 -> true. - Reversing only half the
+ * digits avoids overflow and does fewer iterations.
  */
 
 class Solution {

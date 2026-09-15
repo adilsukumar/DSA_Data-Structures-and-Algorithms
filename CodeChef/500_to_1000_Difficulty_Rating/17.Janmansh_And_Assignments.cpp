@@ -14,17 +14,15 @@
  * Janmansh must finish X assignments.
  *
  * Approach
- * "One assignment per day, seven days" collapses to a single capacity number: 7. The
- * maximum work achievable in a week is exactly 7 assignments, so the whole question
- * reduces to "is X <= 7?".
+ * "One assignment per day, seven days" collapses to a single capacity number: 7.
+ * The maximum work achievable in a week is exactly 7 assignments, so the whole
+ * question reduces to "is X <= 7?".
  *
  * Complexity
- * Time: O(T) -- one read and one comparison per test case, nothing nested.
- * Space: O(1) -- only the scalars T, X, i are kept; no arrays or buffers.
- *
- * Notes
- * - X == 7 exactly: the strict `>` keeps this in the "Yes" branch (a full week is enough),
- *   which is the correct and easiest case to get wrong.
+ * Time: O(T) -- one read and one comparison per test case, nothing nested. Space:
+ * O(1) -- only the scalars T, X, i are kept; no arrays or buffers. * Notes - X ==
+ * 7 exactly: the strict `>` keeps this in the "Yes" branch (a full week is
+ * enough), which is the correct and easiest case to get wrong.
  */
 
 #include <bits/stdc++.h>

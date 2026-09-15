@@ -11,14 +11,12 @@
  * @solved     2026-06-10
  *
  * Approach
- * The answer is YES exactly when the available reach X is at least the required position
- * N.
+ * The answer is YES exactly when the available reach X is at least the required
+ * position N.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - Equality is important: when N == X, the target is still reachable.
+ * O(1) time and O(1) space per test case. * Notes - Equality is important: when N
+ * == X, the target is still reachable.
  */
 
 #include <bits/stdc++.h>

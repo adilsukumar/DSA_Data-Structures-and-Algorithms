@@ -14,10 +14,8 @@
  * A rank qualifies for the finals exactly when it is within the top ten.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - Rank 10 qualifies and must be included by using <=.
+ * O(1) time and O(1) space per test case. * Notes - Rank 10 qualifies and must be
+ * included by using <=.
  */
 
 #include <bits/stdc++.h>

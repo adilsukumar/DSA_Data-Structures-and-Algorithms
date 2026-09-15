@@ -18,13 +18,9 @@
  * function f(X) = X - 10, the same for every test case.
  *
  * Complexity
- * Time: O(T) -- one read, one subtraction, one print per test case; the per-case work is
- * constant.
- * Space: O(1) -- only the two scalars T and X are held; nothing scales with the number of
- * test cases.
- *
- * Notes
- * - X = 10 -> 0.
+ * Time: O(T) -- one read, one subtraction, one print per test case; the per-case
+ * work is constant. Space: O(1) -- only the two scalars T and X are held; nothing
+ * scales with the number of test cases. * Notes - X = 10 -> 0.
  */
 
 #include <bits/stdc++.h>

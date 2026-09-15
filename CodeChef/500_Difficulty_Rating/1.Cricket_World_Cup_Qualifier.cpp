@@ -14,16 +14,12 @@
  * points.
  *
  * Approach
- * There is no algorithm here; the whole problem is translating one English sentence into
- * one comparison. The only thing that can go wrong is the boundary: "at least 12" means >=
- * 12, not > 12.
+ * There is no algorithm here; the whole problem is translating one English
+ * sentence into one comparison. The only thing that can go wrong is the boundary:
+ * "at least 12" means >= 12, not > 12.
  *
  * Complexity
- * Time: O(1)
- * Space: O(1)
- *
- * Notes
- * - X exactly 12 -> YES.
+ * Time: O(1) Space: O(1) * Notes - X exactly 12 -> YES.
  */
 
 #include <bits/stdc++.h>

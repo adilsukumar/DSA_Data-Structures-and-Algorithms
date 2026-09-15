@@ -14,15 +14,13 @@
  * A movie is X minutes long.
  *
  * Approach
- * "Speed" scales content-per-minute, so real time = content / speed. The (X - Y) minutes
- * at 1x cost (X - Y) real minutes (speed 1).
+ * "Speed" scales content-per-minute, so real time = content / speed. The (X - Y)
+ * minutes at 1x cost (X - Y) real minutes (speed 1).
  *
  * Complexity
- * Time: O(1) -- two reads and a fixed arithmetic expression, no loops.
- * Space: O(1) -- two int variables, no auxiliary structures.
- *
- * Notes
- * - Y = 0 : nothing sped up, answer = X.
+ * Time: O(1) -- two reads and a fixed arithmetic expression, no loops. Space: O(1)
+ * -- two int variables, no auxiliary structures. * Notes - Y = 0 : nothing sped
+ * up, answer = X.
  */
 
 #include <bits/stdc++.h>

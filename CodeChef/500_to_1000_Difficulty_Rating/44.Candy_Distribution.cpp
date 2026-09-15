@@ -14,7 +14,10 @@
  * Accepted solution for Candy Distribution.
  *
  * Approach
- * The code checks if the number of candies (N) can be evenly distributed among M friends such that each receives an even number. It verifies if M divides N and if the quotient (N/M) is even, printing Yes if both conditions are met, otherwise No.
+ * The code checks if the number of candies (N) can be evenly distributed among M
+ * friends such that each receives an even number. It verifies if M divides N and
+ * if the quotient (N/M) is even, printing Yes if both conditions are met,
+ * otherwise No.
  *
  * Complexity
  * Time: O(1) Space: O(1)

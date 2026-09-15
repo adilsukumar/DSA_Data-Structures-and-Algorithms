@@ -15,15 +15,13 @@
  * that appears exactly once, return that single element.
  *
  * Approach
- * This rides on three properties of bitwise XOR (^): 1. x ^ x = 0 a value XOR'd with
- * itself vanishes 2.
+ * This rides on three properties of bitwise XOR (^): 1. x ^ x = 0 a value XOR'd
+ * with itself vanishes 2.
  *
  * Complexity
- * Time: O(n) -- exactly one pass, one O(1) XOR per element.
- * Space: O(1) -- a single int accumulator, independent of input size.
- *
- * Notes
- * - Single-element array [7]: loop runs once, 0 ^ 7 = 7.
+ * Time: O(n) -- exactly one pass, one O(1) XOR per element. Space: O(1) -- a
+ * single int accumulator, independent of input size. * Notes - Single-element
+ * array [7]: loop runs once, 0 ^ 7 = 7.
  */
 
 class Solution {

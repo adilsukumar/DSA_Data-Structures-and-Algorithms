@@ -15,15 +15,13 @@
  * every element from index 0 through i inclusive.
  *
  * Approach
- * A running sum is a prefix sum. The naive idea is: for each i, add up all elements 0..i
- * from scratch -- that repeats work and costs O(N^2).
+ * A running sum is a prefix sum. The naive idea is: for each i, add up all
+ * elements 0..i from scratch -- that repeats work and costs O(N^2).
  *
  * Complexity
- * Time: O(N) -- one pass, a single addition per element.
- * Space: O(1) extra -- mutates the input in place; no auxiliary array.
- *
- * Notes
- * - N == 1: the loop never runs (starts at i=1, condition 1 < 1 is false).
+ * Time: O(N) -- one pass, a single addition per element. Space: O(1) extra --
+ * mutates the input in place; no auxiliary array. * Notes - N == 1: the loop never
+ * runs (starts at i=1, condition 1 < 1 is false).
  */
 
 class Solution {

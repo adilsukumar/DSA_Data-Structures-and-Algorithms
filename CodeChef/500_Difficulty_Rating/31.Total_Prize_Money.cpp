@@ -15,17 +15,14 @@
  * into each of two prize tiers.
  *
  * Approach
- * There is nothing to search or optimize: each winner's payout depends only on which tier
- * they are in, not on the other winners. So the total is just a weighted sum of two
- * independent counts.
+ * There is nothing to search or optimize: each winner's payout depends only on
+ * which tier they are in, not on the other winners. So the total is just a
+ * weighted sum of two independent counts.
  *
  * Complexity
- * Time: O(T).
- * Space: O(1).
- *
- * Notes
- * - X = 0 or Y = 0: that tier contributes 0 naturally (10*0 or 90*0), so an all-tier-1 or
- *   all-tier-2 case is handled with no special code.
+ * Time: O(T). Space: O(1). * Notes - X = 0 or Y = 0: that tier contributes 0
+ * naturally (10*0 or 90*0), so an all-tier-1 or all-tier-2 case is handled with no
+ * special code.
  */
 
 #include <bits/stdc++.h>

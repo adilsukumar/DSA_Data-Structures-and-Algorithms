@@ -15,17 +15,15 @@
  * that add up to `target`.
  *
  * Approach
- * The most direct reading of the problem is "try every pair". There are only n*(n-1)/2
- * pairs, so we can just look at all of them and stop at the first one that sums to the
- * target.
+ * The most direct reading of the problem is "try every pair". There are only
+ * n*(n-1)/2 pairs, so we can just look at all of them and stop at the first one
+ * that sums to the target.
  *
  * Complexity
- * Time: O(n^2) -- every pair may be checked.
- * Space: O(1) -- only the two loop counters; the output doesn't count.
- *
- * Notes
- * - Duplicate values are safe because the two indices are always different.
- * - A value-to-index hash map reduces the search to O(n).
+ * Time: O(n^2) -- every pair may be checked. Space: O(1) -- only the two loop
+ * counters; the output doesn't count. * Notes - Duplicate values are safe because
+ * the two indices are always different. - A value-to-index hash map reduces the
+ * search to O(n).
  */
 
 class Solution {

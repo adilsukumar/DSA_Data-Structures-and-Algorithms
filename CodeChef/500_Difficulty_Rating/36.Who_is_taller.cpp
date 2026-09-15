@@ -14,11 +14,8 @@
  * The taller person is determined by comparing heights X and Y.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - The problem guarantees distinct heights; otherwise the else branch would classify a
- *   tie as B.
+ * O(1) time and O(1) space per test case. * Notes - The problem guarantees
+ * distinct heights; otherwise the else branch would classify a tie as B.
  */
 
 #include <bits/stdc++.h>

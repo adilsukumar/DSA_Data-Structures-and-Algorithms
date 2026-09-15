@@ -15,17 +15,15 @@
  * currently has and Y is the amount Chef wants to reach (the donation target).
  *
  * Approach
- * "How much is still missing to go from X up to Y" is exactly the gap between them on the
- * number line: Y - X. There is no state to carry between test cases, no ordering, no
- * search -- each query is answered by a single subtraction, so the whole task is a thin
- * loop over independent arithmetic.
+ * "How much is still missing to go from X up to Y" is exactly the gap between them
+ * on the number line: Y - X. There is no state to carry between test cases, no
+ * ordering, no search -- each query is answered by a single subtraction, so the
+ * whole task is a thin loop over independent arithmetic.
  *
  * Complexity
- * Time: O(T) -- constant work (one subtraction, one print) per test case.
- * Space: O(1) -- three scalars reused; no arrays or buffers grow with input.
- *
- * Notes
- * - `cin >> T;` : read the number of test cases.
+ * Time: O(T) -- constant work (one subtraction, one print) per test case. Space:
+ * O(1) -- three scalars reused; no arrays or buffers grow with input. * Notes -
+ * `cin >> T;` : read the number of test cases.
  */
 
 #include <bits/stdc++.h>

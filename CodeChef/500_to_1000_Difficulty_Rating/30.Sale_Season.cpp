@@ -14,11 +14,8 @@
  * The discount is determined solely by the price interval containing X.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - Boundary values 100, 1000, and 5000 must remain in the bracket specified by the
- *   statement.
+ * O(1) time and O(1) space per test case. * Notes - Boundary values 100, 1000, and
+ * 5000 must remain in the bracket specified by the statement.
  */
 
 #include <bits/stdc++.h>

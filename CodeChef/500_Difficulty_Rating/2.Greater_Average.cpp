@@ -14,15 +14,15 @@
  * For each of T test cases you are given three integers A, B, C.
  *
  * Approach
- * The naive test is: (A + B) / 2 > C. But dividing by 2 in integer arithmetic truncates,
- * so a genuine average of 3.5 would collapse to 3 and could flip the answer.
+ * The naive test is: (A + B) / 2 > C. But dividing by 2 in integer arithmetic
+ * truncates, so a genuine average of 3.5 would collapse to 3 and could flip the
+ * answer.
  *
  * Complexity
- * Time: O(T) — a fixed amount of work (two reads-into-compare) per case.
- * Space: O(1) — four scalar ints reused across all iterations; nothing scales with T.
- *
- * Notes
- * - Equality must print NO because the required comparison is strictly greater.
+ * Time: O(T) — a fixed amount of work (two reads-into-compare) per case. Space:
+ * O(1) — four scalar ints reused across all iterations; nothing scales with T. *
+ * Notes - Equality must print NO because the required comparison is strictly
+ * greater.
  */
 
 #include <bits/stdc++.h>

@@ -15,18 +15,16 @@
  * appears only once.
  *
  * Approach
- * The list is already sorted, so any duplicates of a value are guaranteed to sit next to
- * each other. That means we never need to search or use a hash set -- we only ever need to
- * compare a node with its immediate neighbor.
+ * The list is already sorted, so any duplicates of a value are guaranteed to sit
+ * next to each other. That means we never need to search or use a hash set -- we
+ * only ever need to compare a node with its immediate neighbor.
  *
  * Complexity
- * Time: O(n) -- each node is visited a constant number of times; every loop iteration
- * either deletes a node or advances, so at most 2n steps.
- * Space: O(1) -- only one pointer; edits happen in place, no extra structures.
- *
- * Notes
- * - Empty list (head == nullptr): first half of the guard is false, loop never runs,
- *   returns nullptr.
+ * Time: O(n) -- each node is visited a constant number of times; every loop
+ * iteration either deletes a node or advances, so at most 2n steps. Space: O(1) --
+ * only one pointer; edits happen in place, no extra structures. * Notes - Empty
+ * list (head == nullptr): first half of the guard is false, loop never runs,
+ * returns nullptr.
  */
 
 /**

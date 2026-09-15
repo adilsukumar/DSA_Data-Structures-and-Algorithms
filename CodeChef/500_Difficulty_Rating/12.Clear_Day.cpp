@@ -14,17 +14,14 @@
  * A week has exactly 7 days.
  *
  * Approach
- * The week is partitioned into three disjoint buckets: rainy, snowy, clear. Because they
- * are disjoint and together cover all 7 days, the three counts must sum to 7: X + Y +
- * clear = 7.
+ * The week is partitioned into three disjoint buckets: rainy, snowy, clear.
+ * Because they are disjoint and together cover all 7 days, the three counts must
+ * sum to 7: X + Y + clear = 7.
  *
  * Complexity
- * Time: O(1) — a fixed number of reads and one arithmetic expression, independent of the
- * input values.
- * Space: O(1) — two int variables, no containers.
- *
- * Notes
- * - X = 0, Y = 0 -> 7 - 0 - 0 = 7 (whole week clear).
+ * Time: O(1) — a fixed number of reads and one arithmetic expression, independent
+ * of the input values. Space: O(1) — two int variables, no containers. * Notes - X
+ * = 0, Y = 0 -> 7 - 0 - 0 = 7 (whole week clear).
  */
 
 #include <bits/stdc++.h>

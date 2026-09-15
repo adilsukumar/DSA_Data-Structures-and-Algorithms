@@ -14,16 +14,14 @@
  * A group of X students each solved N problems.
  *
  * Approach
- * The whole task is a single arithmetic expression, so the only real decision is the ORDER
- * of operations. The code divides FIRST ((X/TG)*N), which is exactly right: it counts how
- * many complete groups of 10 exist, then scales by N.
+ * The whole task is a single arithmetic expression, so the only real decision is
+ * the ORDER of operations. The code divides FIRST ((X/TG)*N), which is exactly
+ * right: it counts how many complete groups of 10 exist, then scales by N.
  *
  * Complexity
- * Time: O(T) -- constant work (one divide, one multiply) per test case.
- * Space: O(1) -- four ints reused across every iteration; nothing stored.
- *
- * Notes
- * - X < 10 -> X/10 = 0, so the score is 0.
+ * Time: O(T) -- constant work (one divide, one multiply) per test case. Space:
+ * O(1) -- four ints reused across every iteration; nothing stored. * Notes - X <
+ * 10 -> X/10 = 0, so the score is 0.
  */
 
 #include <bits/stdc++.h>

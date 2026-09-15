@@ -14,17 +14,14 @@
  * Chef wants to go on a date.
  *
  * Approach
- * This is not an algorithm problem at all -- it is a single yes/no decision per test case.
- * The whole task reduces to one comparison, X >= Y.
+ * This is not an algorithm problem at all -- it is a single yes/no decision per
+ * test case. The whole task reduces to one comparison, X >= Y.
  *
  * Complexity
- * Time: O(T) -- one read plus one comparison per test case, and nothing inside the loop
- * depends on the size of the values.
- * Space: O(1) -- three int variables reused across all iterations; no arrays or containers
- * are allocated.
- *
- * Notes
- * - X == Y (exactly enough): handled correctly by >=, prints "YES".
+ * Time: O(T) -- one read plus one comparison per test case, and nothing inside the
+ * loop depends on the size of the values. Space: O(1) -- three int variables
+ * reused across all iterations; no arrays or containers are allocated. * Notes - X
+ * == Y (exactly enough): handled correctly by >=, prints "YES".
  */
 
 #include <bits/stdc++.h>

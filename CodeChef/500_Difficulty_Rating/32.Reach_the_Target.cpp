@@ -14,11 +14,8 @@
  * The target is Y units behind X, so the required movement is simply X - Y.
  *
  * Complexity
- * O(1) time and O(1) extra space per test case.
- *
- * Notes
- * - The constraints guarantee the subtraction represents the required non-negative
- *   distance.
+ * O(1) time and O(1) extra space per test case. * Notes - The constraints
+ * guarantee the subtraction represents the required non-negative distance.
  */
 
 #include <bits/stdc++.h>

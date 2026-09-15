@@ -14,11 +14,9 @@
  * A score update is consistent only if neither participant's score decreases.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - One non-decreasing score cannot compensate for the other decreasing; the conditions
- *   must be joined with AND.
+ * O(1) time and O(1) space per test case. * Notes - One non-decreasing score
+ * cannot compensate for the other decreasing; the conditions must be joined with
+ * AND.
  */
 
 #include <bits/stdc++.h>

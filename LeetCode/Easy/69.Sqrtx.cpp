@@ -14,16 +14,14 @@
  * Given a non-negative integer x, return floor(sqrt(x)).
  *
  * Approach
- * Call sqrt() and convert its non-negative floating-point result to int, which truncates
- * the fractional part.
+ * Call sqrt() and convert its non-negative floating-point result to int, which
+ * truncates the fractional part.
  *
  * Complexity
- * Time: O(1) as written -- a single hardware/library sqrt call.
- * Space: O(1) -- no auxiliary storage.
- *
- * Notes
- * - x = 0, x = 1 : sqrt returns 0.0 / 1.0, truncates cleanly.
- * - For interview practice, use integer binary search with 64-bit multiplication.
+ * Time: O(1) as written -- a single hardware/library sqrt call. Space: O(1) -- no
+ * auxiliary storage. * Notes - x = 0, x = 1 : sqrt returns 0.0 / 1.0, truncates
+ * cleanly. - For interview practice, use integer binary search with 64-bit
+ * multiplication.
  */
 
 #include <cmath>

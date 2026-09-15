@@ -15,16 +15,14 @@
  * letter or digit and (b) lowercasing the rest, it reads the same forwards and backwards.
  *
  * Approach
- * You don't need to build the cleaned string at all. A palindrome is defined by symmetry
- * around the center, so compare the string from both ends inward.
+ * You don't need to build the cleaned string at all. A palindrome is defined by
+ * symmetry around the center, so compare the string from both ends inward.
  *
  * Complexity
- * Time: O(n): each pointer moves strictly inward and they never overlap work, so every
- * index is visited at most once across all loops.
- * Space: O(1): only two integer indices; the input is inspected in place.
- *
- * Notes
- * - Empty string: outer loop never runs (see the length()-1 note) -> true.
+ * Time: O(n): each pointer moves strictly inward and they never overlap work, so
+ * every index is visited at most once across all loops. Space: O(1): only two
+ * integer indices; the input is inspected in place. * Notes - Empty string: outer
+ * loop never runs (see the length()-1 note) -> true.
  */
 
 class Solution {

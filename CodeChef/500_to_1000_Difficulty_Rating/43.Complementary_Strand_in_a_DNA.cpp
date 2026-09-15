@@ -14,7 +14,10 @@
  * Accepted solution for Complementary Strand in a DNA.
  *
  * Approach
- * The algorithm iterates through the DNA string one character at a time. For each character, it applies a direct conditional check to map it to its complementary base (A to T, T to A, G to C, C to G). It immediately outputs the mapping without storing intermediate results, leveraging a constant-time lookup logic.
+ * The algorithm iterates through the DNA string one character at a time. For each
+ * character, it applies a direct conditional check to map it to its complementary
+ * base (A to T, T to A, G to C, C to G). It immediately outputs the mapping
+ * without storing intermediate results, leveraging a constant-time lookup logic.
  *
  * Complexity
  * Time: O(N) Space: O(1)

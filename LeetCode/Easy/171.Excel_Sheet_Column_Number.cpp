@@ -14,15 +14,12 @@
  * Excel labels its columns A, B, ..., Z, AA, AB, ..., AZ, BA, ...
  *
  * Approach
- * This is a positional number system, like decimal but base 26. In base 10 the string "28"
- * means 2*10 + 8.
+ * This is a positional number system, like decimal but base 26. In base 10 the
+ * string "28" means 2*10 + 8.
  *
  * Complexity
- * Time: O(n), n = length of columnTitle.
- * Space: O(1).
- *
- * Notes
- * - Single letter ("A"): loop runs once, ans = 0*26+1 = 1.
+ * Time: O(n), n = length of columnTitle. Space: O(1). * Notes - Single letter
+ * ("A"): loop runs once, ans = 0*26+1 = 1.
  */
 
 class Solution {

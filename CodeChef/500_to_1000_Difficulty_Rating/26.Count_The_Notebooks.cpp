@@ -14,17 +14,15 @@
  * For each of T independent test cases you are given one integer N.
  *
  * Approach
- * There is nothing to search or iterate: the output is a fixed linear function of the
- * input. The only "idea" is recognizing the arithmetic collapses to a single
+ * There is nothing to search or iterate: the output is a fixed linear function of
+ * the input. The only "idea" is recognizing the arithmetic collapses to a single
  * multiplication.
  *
  * Complexity
- * Time: O(T) -- one read and one O(1) arithmetic step per test case.
- * Space: O(1) -- only the scalars T, N, a, i; nothing scales with input.
- *
- * Notes
- * - Exact division: (N*1000) is always a multiple of 100, so a/100 never truncates away a
- *   real value.
+ * Time: O(T) -- one read and one O(1) arithmetic step per test case. Space: O(1)
+ * -- only the scalars T, N, a, i; nothing scales with input. * Notes - Exact
+ * division: (N*1000) is always a multiple of 100, so a/100 never truncates away a
+ * real value.
  */
 
 #include <bits/stdc++.h>

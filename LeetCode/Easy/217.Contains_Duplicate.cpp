@@ -15,17 +15,15 @@
  * false if every element is distinct.
  *
  * Approach
- * A set stores only distinct keys: inserting a value that is already present is silently
- * ignored. So if you dump the whole array into a set, the set's final size equals the
- * number of DISTINCT values.
+ * A set stores only distinct keys: inserting a value that is already present is
+ * silently ignored. So if you dump the whole array into a set, the set's final
+ * size equals the number of DISTINCT values.
  *
  * Complexity
- * Time: O(n) average -- one pass, each insert is expected O(1).
- * Space: O(n) -- in the all-distinct case the set holds every element.
- *
- * Notes
- * - Empty array: loop runs 0 times, both sizes are 0, 0==0 -> false.
- * - Return immediately when set insertion reports a duplicate.
+ * Time: O(n) average -- one pass, each insert is expected O(1). Space: O(n) -- in
+ * the all-distinct case the set holds every element. * Notes - Empty array: loop
+ * runs 0 times, both sizes are 0, 0==0 -> false. - Return immediately when set
+ * insertion reports a duplicate.
  */
 
 class Solution {

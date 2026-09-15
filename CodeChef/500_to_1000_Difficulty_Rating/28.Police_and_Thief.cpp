@@ -14,16 +14,15 @@
  * A police officer stands at position X and a thief at position Y on a line.
  *
  * Approach
- * Distance on a number line is direction-agnostic: whether the police is left or right of
- * the thief, the gap between them is the same magnitude. That gap is |X - Y|.
+ * Distance on a number line is direction-agnostic: whether the police is left or
+ * right of the thief, the gap between them is the same magnitude. That gap is |X -
+ * Y|.
  *
  * Complexity
- * Time: O(T) -- constant work (one compare, one subtract, one print) per test case;
- * nothing is stored or revisited.
- * Space: O(1) -- three int scalars reused across all iterations; no arrays.
- *
- * Notes
- * - X == Y (same position): handled by the >= branch, prints 0.
+ * Time: O(T) -- constant work (one compare, one subtract, one print) per test
+ * case; nothing is stored or revisited. Space: O(1) -- three int scalars reused
+ * across all iterations; no arrays. * Notes - X == Y (same position): handled by
+ * the >= branch, prints 0.
  */
 
 #include <bits/stdc++.h>

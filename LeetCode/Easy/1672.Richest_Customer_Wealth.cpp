@@ -15,20 +15,17 @@
  * i-th customer holds in the j-th bank.
  *
  * Approach
- * There is no clever trick to find here: wealth is defined per row, and any row could be
- * the richest, so every cell must be visited at least once. The only real decision is how
- * to track "the best so far." Rather than build a list of all row sums and take its max
- * afterward, we fold the two operations into one pass: sum.
+ * There is no clever trick to find here: wealth is defined per row, and any row
+ * could be the richest, so every cell must be visited at least once. The only real
+ * decision is how to track "the best so far." Rather than build a list of all row
+ * sums and take its max afterward, we fold the two operations into one pass: sum.
  *
  * Complexity
- * Time: O(m * n) — every cell is read exactly once; unavoidable, since the answer depends
- * on all balances.
- * Space: O(1) — only two scalars (`sum`, `highest`) beyond the input; no auxiliary array
- * of row sums is built.
- *
- * Notes
- * - Single customer / single bank: loops still run once; sum = that value, which beats 0
- *   and is returned.
+ * Time: O(m * n) — every cell is read exactly once; unavoidable, since the answer
+ * depends on all balances. Space: O(1) — only two scalars (`sum`, `highest`)
+ * beyond the input; no auxiliary array of row sums is built. * Notes - Single
+ * customer / single bank: loops still run once; sum = that value, which beats 0
+ * and is returned.
  */
 
 class Solution {

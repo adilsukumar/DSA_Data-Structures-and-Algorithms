@@ -14,15 +14,13 @@
  * Read two integers A and B and print a single integer: their combined value.
  *
  * Approach
- * A one-line problem: consume two integers, emit one. The only real skill tested is
- * correctly wiring input to a single arithmetic output.
+ * A one-line problem: consume two integers, emit one. The only real skill tested
+ * is correctly wiring input to a single arithmetic output.
  *
  * Complexity
- * Time: O(1) - a fixed number of reads and one write, no loops.
- * Space: O(1) - two ints, no allocation.
- *
- * Notes
- * - An extra value is appended on every test case, so the submitted output is incorrect.
+ * Time: O(1) - a fixed number of reads and one write, no loops. Space: O(1) - two
+ * ints, no allocation. * Notes - An extra value is appended on every test case, so
+ * the submitted output is incorrect.
  */
 
 #include <bits/stdc++.h>

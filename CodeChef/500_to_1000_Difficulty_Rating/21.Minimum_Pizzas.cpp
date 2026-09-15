@@ -14,17 +14,15 @@
  * There are N people and each person wants exactly X slices of pizza.
  *
  * Approach
- * Total slices required = N * X. Since a pizza is indivisible and yields 4 slices, the
- * answer is ceil(N*X / 4) -- you can never buy a fraction of a pizza, so any remaining
- * slice-demand forces one more whole pizza.
+ * Total slices required = N * X. Since a pizza is indivisible and yields 4 slices,
+ * the answer is ceil(N*X / 4) -- you can never buy a fraction of a pizza, so any
+ * remaining slice-demand forces one more whole pizza.
  *
  * Complexity
- * Time: O(T) -- constant work (one multiply, add, divide) per test case.
- * Space: O(1) -- only a handful of scalar ints regardless of input size.
- *
- * Notes
- * - Exact multiples of 4 (N*X % 4 == 0): the +3 stays below the next multiple, so no
- *   spurious extra pizza.
+ * Time: O(T) -- constant work (one multiply, add, divide) per test case. Space:
+ * O(1) -- only a handful of scalar ints regardless of input size. * Notes - Exact
+ * multiples of 4 (N*X % 4 == 0): the +3 stays below the next multiple, so no
+ * spurious extra pizza.
  */
 
 #include <bits/stdc++.h>

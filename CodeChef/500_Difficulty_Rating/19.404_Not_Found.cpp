@@ -14,16 +14,14 @@
  * Read a single integer X.
  *
  * Approach
- * There is nothing to compute or search. The entire task collapses to a single equality
- * test: is X the magic number 404?
+ * There is nothing to compute or search. The entire task collapses to a single
+ * equality test: is X the magic number 404?
  *
  * Complexity
- * Time: O(1) — one read and one comparison, independent of the input value.
- * Space: O(1) — a single int; no containers or recursion.
- *
- * Notes
- * - Negative numbers, zero, or huge values: all handled — anything that isn't 404 falls
- *   straight into the "FOUND" branch.
+ * Time: O(1) — one read and one comparison, independent of the input value. Space:
+ * O(1) — a single int; no containers or recursion. * Notes - Negative numbers,
+ * zero, or huge values: all handled — anything that isn't 404 falls straight into
+ * the "FOUND" branch.
  */
 
 #include <bits/stdc++.h>

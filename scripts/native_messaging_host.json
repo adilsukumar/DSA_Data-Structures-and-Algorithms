@@ -1,0 +1,9 @@
+{
+  "name": "com.adilsukumar.dsasync",
+  "description": "DSA Sync Native Messaging Host",
+  "path": "D:\\DSA_Data-Structures-and-Algorithms\\scripts\\native_host.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://plbilacillelljfdjbkhhmkofghlfajl/"
+  ]
+}

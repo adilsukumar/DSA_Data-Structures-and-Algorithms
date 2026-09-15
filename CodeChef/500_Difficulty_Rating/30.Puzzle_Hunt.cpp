@@ -15,16 +15,14 @@
  * on the story).
  *
  * Approach
- * The entire task is a membership test on a closed interval. A value is inside [6, 8]
- * exactly when it is simultaneously >= 6 AND <= 8.
+ * The entire task is a membership test on a closed interval. A value is inside [6,
+ * 8] exactly when it is simultaneously >= 6 AND <= 8.
  *
  * Complexity
- * Time: O(1) -- one read and at most two integer comparisons, no loops.
- * Space: O(1) -- a single int; no allocation that scales with input.
- *
- * Notes
- * - Boundaries 6 and 8: both are included because the comparisons are `>=` and `<=`
- *   (inclusive), not strict `>`/`<`.
+ * Time: O(1) -- one read and at most two integer comparisons, no loops. Space:
+ * O(1) -- a single int; no allocation that scales with input. * Notes - Boundaries
+ * 6 and 8: both are included because the comparisons are `>=` and `<=`
+ * (inclusive), not strict `>`/`<`.
  */
 
 #include <bits/stdc++.h>

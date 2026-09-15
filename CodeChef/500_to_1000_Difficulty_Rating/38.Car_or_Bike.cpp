@@ -11,13 +11,12 @@
  * @solved     2026-06-18
  *
  * Approach
- * Choose the vehicle with the smaller travel time; equal times mean either is equivalent.
+ * Choose the vehicle with the smaller travel time; equal times mean either is
+ * equivalent.
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - Keep the equality branch separate so ties are not assigned to either vehicle.
+ * O(1) time and O(1) space per test case. * Notes - Keep the equality branch
+ * separate so ties are not assigned to either vehicle.
  */
 
 #include <bits/stdc++.h>

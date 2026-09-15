@@ -14,10 +14,8 @@
  * Chef knows the requested topic when X equals any one of A, B, or C.
  *
  * Complexity
- * O(1) time and O(1) space.
- *
- * Notes
- * - The code uses bitwise | for the final Boolean comparison.
+ * O(1) time and O(1) space. * Notes - The code uses bitwise | for the final
+ * Boolean comparison.
  */
 
 #include <bits/stdc++.h>

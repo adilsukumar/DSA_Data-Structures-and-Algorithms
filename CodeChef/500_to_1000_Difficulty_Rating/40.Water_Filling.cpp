@@ -11,14 +11,12 @@
  * @solved     2026-06-10
  *
  * Approach
- * Water must be filled when at least two of the three bottles are empty (represented by
- * zero).
+ * Water must be filled when at least two of the three bottles are empty
+ * (represented by zero).
  *
  * Complexity
- * O(1) time and O(1) space per test case.
- *
- * Notes
- * - All three empty bottles also satisfy the first pair check, as required.
+ * O(1) time and O(1) space per test case. * Notes - All three empty bottles also
+ * satisfy the first pair check, as required.
  */
 
 #include <bits/stdc++.h>
