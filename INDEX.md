@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**119 problems solved** - **CodeChef** 86 / **LeetCode** 33
+**118 problems solved** - **CodeChef** 85 / **LeetCode** 33
 
 
 ---
@@ -92,7 +92,6 @@
 | SUBSCRIBE_ | [Subscriptions](https://www.codechef.com/problems/SUBSCRIBE_) | CodeChef | 🔹 504 | Basic Math, Implementation | Ceiling Division | C++ | 2026-06-08 | [code](CodeChef/500_to_1000_Difficulty_Rating/33.Subscriptions.cpp) |
 | SUGARCANE | [Sugarcane Juice Business](https://www.codechef.com/problems/SUGARCANE) | CodeChef | 🔹 563 | Basic Math | Unit Profit | C++ | 2026-06-16 | [code](CodeChef/500_to_1000_Difficulty_Rating/34.Sugarcane_Juice_Business.cpp) |
 | SUMM | [Sum it](https://www.codechef.com/problems/SUMM) | CodeChef | 🔹 308 | Basic Programming Concepts | Condition Check | C++ | 2026-09-16 | [code](CodeChef/500_Difficulty_Rating/41.Sum_it.cpp) |
-| SUMM | [Sum it](https://www.codechef.com/problems/SUMM) | CodeChef | 🔹 308 | Basic Programming Concepts | Direct Computation | C++ | 2026-09-16 | [code](CodeChef/500_Difficulty_Rating/42.Sum_it.cpp) |
 | CHEFSCORE | [Test Score](https://www.codechef.com/problems/CHEFSCORE) | CodeChef | 🔹 610 | Math, Basic Programming | Divisibility + Range Check | C++ | 2026-06-30 | [code](CodeChef/500_to_1000_Difficulty_Rating/7.Test_Score.cpp) |
 | THREETOPICS | [The Three Topics](https://www.codechef.com/problems/THREETOPICS) | CodeChef | 🔹 573 | Conditional Statements | Membership Among Three | C++ | 2026-06-20 | [code](CodeChef/500_to_1000_Difficulty_Rating/35.The_Three_Topics.cpp) |
 | JERRYCHASE | [Tom And Jerry Chase](https://www.codechef.com/problems/JERRYCHASE) | CodeChef | 🔹 298 | Conditional Statements, Implementation, Basic Programming | Single strict inequality per query | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/22.Tom_And_Jerry_Chase.cpp) |
@@ -350,16 +349,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef NEARESTEXIT** - [Nearest Exit](https://www.codechef.com/problems/NEARESTEXIT) (🔹 585, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/24.Nearest_Exit.cpp)
 - **CodeChef MINHEIGHT** - [Roller Coaster](https://www.codechef.com/problems/MINHEIGHT) (🔹 285, C++) -> [code](CodeChef/500_Difficulty_Rating/26.Roller_Coaster.cpp)
 
-### Basic Programming Concepts (7)
-
-- **CodeChef CANDYDIST** - [Candy Distribution](https://www.codechef.com/problems/CANDYDIST) (🔹 668, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/44.Candy_Distribution.cpp)
-- **CodeChef CNTWRD** - [Counting Words](https://www.codechef.com/problems/CNTWRD) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp)
-- **CodeChef DETSCORE** - [Determine The Score](https://www.codechef.com/problems/DETSCORE) (🔹 267, C++) -> [code](CodeChef/500_Difficulty_Rating/15.Determine_The_Score.cpp)
-- **CodeChef TIMELY** - [Reach on Time](https://www.codechef.com/problems/TIMELY) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/38.Reach_on_Time.cpp)
-- **CodeChef SALESEASON** - [Sale Season](https://www.codechef.com/problems/SALESEASON) (🔹 541, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/30.Sale_Season.cpp)
-- **CodeChef SUMM** - [Sum it](https://www.codechef.com/problems/SUMM) (🔹 308, C++) -> [code](CodeChef/500_Difficulty_Rating/41.Sum_it.cpp)
-- **CodeChef SUMM** - [Sum it](https://www.codechef.com/problems/SUMM) (🔹 308, C++) -> [code](CodeChef/500_Difficulty_Rating/42.Sum_it.cpp)
-
 ### Hash Table (7)
 
 - **LeetCode 1** - [Two Sum](https://leetcode.com/problems/two-sum/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1.Two_Sum.cpp)
@@ -379,6 +368,15 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 88** - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (🟢 Easy, C++) -> [code](LeetCode/Easy/88.Merge_Sorted_Array.cpp)
 - **LeetCode 125** - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (🟢 Easy, C++) -> [code](LeetCode/Easy/125.Valid_Palindrome.cpp)
 - **LeetCode 160** - [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (🟢 Easy, C++) -> [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp)
+
+### Basic Programming Concepts (6)
+
+- **CodeChef CANDYDIST** - [Candy Distribution](https://www.codechef.com/problems/CANDYDIST) (🔹 668, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/44.Candy_Distribution.cpp)
+- **CodeChef CNTWRD** - [Counting Words](https://www.codechef.com/problems/CNTWRD) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp)
+- **CodeChef DETSCORE** - [Determine The Score](https://www.codechef.com/problems/DETSCORE) (🔹 267, C++) -> [code](CodeChef/500_Difficulty_Rating/15.Determine_The_Score.cpp)
+- **CodeChef TIMELY** - [Reach on Time](https://www.codechef.com/problems/TIMELY) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/38.Reach_on_Time.cpp)
+- **CodeChef SALESEASON** - [Sale Season](https://www.codechef.com/problems/SALESEASON) (🔹 541, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/30.Sale_Season.cpp)
+- **CodeChef SUMM** - [Sum it](https://www.codechef.com/problems/SUMM) (🔹 308, C++) -> [code](CodeChef/500_Difficulty_Rating/41.Sum_it.cpp)
 
 ### Dynamic Programming (3)
 

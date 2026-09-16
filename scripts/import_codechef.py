@@ -198,9 +198,9 @@ def existing_titles():
         match = re.search(r"@title\s*:?\s+(.+)", head)
         if match:
             titles.add(normalise(match.group(1)))
-        match = re.search(r"@problemcode\s*:?\s+(\S+)", head)
+        match = re.search(r"@(problemcode|id)\s*:?\s+(\S+)", head)
         if match:
-            titles.add(normalise(match.group(1)))
+            titles.add(normalise(match.group(2)))
         titles.add(normalise(path.stem.split(".", 1)[-1]))
     return titles
 
