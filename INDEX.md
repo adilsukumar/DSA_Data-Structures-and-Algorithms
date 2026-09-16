@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**114 problems solved** - **CodeChef** 83 / **LeetCode** 31
+**118 problems solved** - **CodeChef** 85 / **LeetCode** 33
 
 
 ---
@@ -55,6 +55,7 @@
 | FINDSHOES | [Finding Shoes](https://www.codechef.com/problems/FINDSHOES) | CodeChef | 🔹 646 | Arithmetic, Inbuilt Functions | Closed-form arithmetic per query | C++ | 2026-07-25 | [code](CodeChef/500_to_1000_Difficulty_Rating/13.Finding_Shoes.cpp) |
 | FLIPCARDS | [Flip The Cards](https://www.codechef.com/problems/FLIPCARDS) | CodeChef | 🔹 641 | Math, Ad-hoc | Answer = min(X, N-X) | C++ | 2026-07-26 | [code](CodeChef/500_to_1000_Difficulty_Rating/14.Flip_The_Cards.cpp) |
 | FOURTICKETS | [Four Tickets](https://www.codechef.com/problems/FOURTICKETS) | CodeChef | 🔹 302 | Basic Math, Implementation | Direct arithmetic comparison | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/20.Four_Tickets.cpp) |
+| SUBSCRIBE | [Get Subscription](https://www.codechef.com/problems/SUBSCRIBE) | CodeChef | 🔹 315 | Implementation | Conditional Logic | C++ | 2026-09-16 | [code](CodeChef/500_Difficulty_Rating/40.Get_Subscription.cpp) |
 | NIBBLE | [Good Program](https://www.codechef.com/problems/NIBBLE) | CodeChef | 🔹 593 | Divisibility, Integer Division, Implementation | Modulo Divisibility Check | C++ | 2026-07-15 | [code](CodeChef/500_to_1000_Difficulty_Rating/25.Good_Program.cpp) |
 | AVGPROBLEM | [Greater Average](https://www.codechef.com/problems/AVGPROBLEM) | CodeChef | 🔹 500 | Basic Math, Implementation | Avoid-division integer comparison | C++ | 2026-06-07 | [code](CodeChef/500_Difficulty_Rating/2.Greater_Average.cpp) |
 | PRACLIST | [How Many Unattempted Problems](https://www.codechef.com/problems/PRACLIST) | CodeChef | 🔹 264 | Basic Programming, Implementation, Math | Single Subtraction | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/29.How_Many_Unattempted_Problems.cpp) |
@@ -90,6 +91,7 @@
 | SNDMAX | [Second Max of Three Numbers](https://www.codechef.com/problems/SNDMAX) | CodeChef | 🔹 300 | arjunarul_adm, largesecond, sorting | Sort Three Values | Python | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/35.Second_Max_of_Three_Numbers.py) |
 | SUBSCRIBE_ | [Subscriptions](https://www.codechef.com/problems/SUBSCRIBE_) | CodeChef | 🔹 504 | Basic Math, Implementation | Ceiling Division | C++ | 2026-06-08 | [code](CodeChef/500_to_1000_Difficulty_Rating/33.Subscriptions.cpp) |
 | SUGARCANE | [Sugarcane Juice Business](https://www.codechef.com/problems/SUGARCANE) | CodeChef | 🔹 563 | Basic Math | Unit Profit | C++ | 2026-06-16 | [code](CodeChef/500_to_1000_Difficulty_Rating/34.Sugarcane_Juice_Business.cpp) |
+| SUMM | [Sum it](https://www.codechef.com/problems/SUMM) | CodeChef | 🔹 308 | Basic Programming Concepts | Condition Check | C++ | 2026-09-16 | [code](CodeChef/500_Difficulty_Rating/41.Sum_it.cpp) |
 | CHEFSCORE | [Test Score](https://www.codechef.com/problems/CHEFSCORE) | CodeChef | 🔹 610 | Math, Basic Programming | Divisibility + Range Check | C++ | 2026-06-30 | [code](CodeChef/500_to_1000_Difficulty_Rating/7.Test_Score.cpp) |
 | THREETOPICS | [The Three Topics](https://www.codechef.com/problems/THREETOPICS) | CodeChef | 🔹 573 | Conditional Statements | Membership Among Three | C++ | 2026-06-20 | [code](CodeChef/500_to_1000_Difficulty_Rating/35.The_Three_Topics.cpp) |
 | JERRYCHASE | [Tom And Jerry Chase](https://www.codechef.com/problems/JERRYCHASE) | CodeChef | 🔹 298 | Conditional Statements, Implementation, Basic Programming | Single strict inequality per query | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/22.Tom_And_Jerry_Chase.cpp) |
@@ -124,7 +126,9 @@
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | LeetCode | 🟢 Easy | Array, Hash Table, Sorting | Hash set size comparison | C++ | 2026-07-27 | [code](LeetCode/Easy/217.Contains_Duplicate.cpp) |
 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | LeetCode | 🟢 Easy | Math, String, Simulation | Linear Loop | C++ | 2026-09-15 | [code](LeetCode/Easy/412.Fizz_Buzz.cpp) |
 | 500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/) | LeetCode | 🟢 Easy | Array, Hash Table, String | Row Membership Flag Elimination | C++ | 2026-06-28 | [code](LeetCode/Easy/500.Keyboard_Row.cpp) |
+| 1281 | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | LeetCode | 🟢 Easy | Math | Digit Processing | C++ | 2026-09-16 | [code](LeetCode/Easy/1281.Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.cpp) |
 | 1295 | [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | LeetCode | 🟢 Easy | Array, Math | Digit Counting via Division | C++ | 2026-07-27 | [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp) |
+| 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | LeetCode | 🟢 Easy | Math, Bit Manipulation | Simulation | C++ | 2026-09-16 | [code](LeetCode/Easy/1342.Number_of_Steps_to_Reduce_a_Number_to_Zero.cpp) |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | LeetCode | 🟢 Easy | Array, Prefix Sum | In-Place Prefix Sum | C++ | 2026-07-26 | [code](LeetCode/Easy/1480.Running_Sum_of_1d_Array.cpp) |
 | 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | LeetCode | 🟢 Easy | Array, Matrix | Row-Sum Running Maximum | C++ | 2026-07-26 | [code](LeetCode/Easy/1672.Richest_Customer_Wealth.cpp) |
 | 2011 | [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) | LeetCode | 🟢 Easy | Array, String, Simulation | Linear Scan Counter | C++ | 2026-07-27 | [code](LeetCode/Easy/2011.Final_Value_of_Variable_After_Performing_Operations.cpp) |
@@ -138,7 +142,7 @@ The same problems grouped by the data structure or technique they
 exercise. Use this to drill one pattern instead of working in ID order.
 
 
-### Implementation (53)
+### Implementation (54)
 
 - **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
 - **CodeChef ERROR404** - [404 Not Found](https://www.codechef.com/problems/ERROR404) (🔹 267, C++) -> [code](CodeChef/500_Difficulty_Rating/19.404_Not_Found.cpp)
@@ -168,6 +172,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef EXAMCHEF** - [Exams](https://www.codechef.com/problems/EXAMCHEF) (🔹 519, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/12.Exams.cpp)
 - **CodeChef EXPERT** - [Expert Setter](https://www.codechef.com/problems/EXPERT) (🔹 561, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/11.Expert_Setter.cpp)
 - **CodeChef FOURTICKETS** - [Four Tickets](https://www.codechef.com/problems/FOURTICKETS) (🔹 302, C++) -> [code](CodeChef/500_Difficulty_Rating/20.Four_Tickets.cpp)
+- **CodeChef SUBSCRIBE** - [Get Subscription](https://www.codechef.com/problems/SUBSCRIBE) (🔹 315, C++) -> [code](CodeChef/500_Difficulty_Rating/40.Get_Subscription.cpp)
 - **CodeChef NIBBLE** - [Good Program](https://www.codechef.com/problems/NIBBLE) (🔹 593, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/25.Good_Program.cpp)
 - **CodeChef AVGPROBLEM** - [Greater Average](https://www.codechef.com/problems/AVGPROBLEM) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/2.Greater_Average.cpp)
 - **CodeChef PRACLIST** - [How Many Unattempted Problems](https://www.codechef.com/problems/PRACLIST) (🔹 264, C++) -> [code](CodeChef/500_Difficulty_Rating/29.How_Many_Unattempted_Problems.cpp)
@@ -229,7 +234,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef SUGARCANE** - [Sugarcane Juice Business](https://www.codechef.com/problems/SUGARCANE) (🔹 563, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/34.Sugarcane_Juice_Business.cpp)
 - **CodeChef PRIZEPOOL** - [Total Prize Money](https://www.codechef.com/problems/PRIZEPOOL) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/31.Total_Prize_Money.cpp)
 
-### Math (27)
+### Math (29)
 
 - **CodeChef BATH** - [Bath In Winters](https://www.codechef.com/problems/BATH) (🔹 643, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/3.Bath_In_Winters.cpp)
 - **CodeChef BIRYANI** - [Biryani Classes](https://www.codechef.com/problems/BIRYANI) (🔹 257, C++) -> [code](CodeChef/500_Difficulty_Rating/5.Biryani_Classes.cpp)
@@ -257,7 +262,9 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 168** - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) (🟢 Easy, C++) -> [code](LeetCode/Easy/168.Excel_Sheet_Column_Title.cpp)
 - **LeetCode 171** - [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/171.Excel_Sheet_Column_Number.cpp)
 - **LeetCode 412** - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) (🟢 Easy, C++) -> [code](LeetCode/Easy/412.Fizz_Buzz.cpp)
+- **LeetCode 1281** - [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1281.Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.cpp)
 - **LeetCode 1295** - [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1295.Find_Numbers_With_Even_Number_Of_Digits.cpp)
+- **LeetCode 1342** - [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1342.Number_of_Steps_to_Reduce_a_Number_to_Zero.cpp)
 
 ### Basic Programming (19)
 
@@ -362,13 +369,14 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 125** - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (🟢 Easy, C++) -> [code](LeetCode/Easy/125.Valid_Palindrome.cpp)
 - **LeetCode 160** - [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (🟢 Easy, C++) -> [code](LeetCode/Easy/160.Intersection_of_Two_Linked_Lists.cpp)
 
-### Basic Programming Concepts (5)
+### Basic Programming Concepts (6)
 
 - **CodeChef CANDYDIST** - [Candy Distribution](https://www.codechef.com/problems/CANDYDIST) (🔹 668, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/44.Candy_Distribution.cpp)
 - **CodeChef CNTWRD** - [Counting Words](https://www.codechef.com/problems/CNTWRD) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/14.Counting_Words.cpp)
 - **CodeChef DETSCORE** - [Determine The Score](https://www.codechef.com/problems/DETSCORE) (🔹 267, C++) -> [code](CodeChef/500_Difficulty_Rating/15.Determine_The_Score.cpp)
 - **CodeChef TIMELY** - [Reach on Time](https://www.codechef.com/problems/TIMELY) (🔹 279, C++) -> [code](CodeChef/500_Difficulty_Rating/38.Reach_on_Time.cpp)
 - **CodeChef SALESEASON** - [Sale Season](https://www.codechef.com/problems/SALESEASON) (🔹 541, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/30.Sale_Season.cpp)
+- **CodeChef SUMM** - [Sum it](https://www.codechef.com/problems/SUMM) (🔹 308, C++) -> [code](CodeChef/500_Difficulty_Rating/41.Sum_it.cpp)
 
 ### Dynamic Programming (3)
 
@@ -404,6 +412,11 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 35** - [Search Insert Position](https://leetcode.com/problems/search-insert-position/) (🟢 Easy, C++) -> [code](LeetCode/Easy/35.Search_Insert_Position.cpp)
 - **LeetCode 69** - [Sqrt(x)](https://leetcode.com/problems/sqrtx/) (🟢 Easy, C++) -> [code](LeetCode/Easy/69.Sqrtx.cpp)
 
+### Bit Manipulation (2)
+
+- **LeetCode 136** - [Single Number](https://leetcode.com/problems/single-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/136.Single_Number.cpp)
+- **LeetCode 1342** - [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1342.Number_of_Steps_to_Reduce_a_Number_to_Zero.cpp)
+
 ### Mathematics (2)
 
 - **CodeChef C_RATING** - [Chess Ratings](https://www.codechef.com/problems/C_RATING) (🔹 651, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/41.Chess_Ratings.cpp)
@@ -429,10 +442,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 ### Basics (1)
 
 - **CodeChef BESTOFTWO** - [Best Of Two](https://www.codechef.com/problems/BESTOFTWO) (🔹 284, C++) -> [code](CodeChef/500_Difficulty_Rating/6.Best_Of_Two.cpp)
-
-### Bit Manipulation (1)
-
-- **LeetCode 136** - [Single Number](https://leetcode.com/problems/single-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/136.Single_Number.cpp)
 
 ### Comparisons (1)
 
