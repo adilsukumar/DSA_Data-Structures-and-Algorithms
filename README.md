@@ -14,7 +14,7 @@
 <a href="https://github.com/adilsukumar/DSA_Data-Structures-and-Algorithms"><img src="https://img.shields.io/badge/Problems%20Solved-118-blueviolet?style=for-the-badge&logo=codeforces" /></a>
 <a href="https://leetcode.com"><img src="https://img.shields.io/badge/LeetCode-33-FFA116?style=for-the-badge&logo=leetcode" /></a>
 <a href="https://codechef.com"><img src="https://img.shields.io/badge/CodeChef-85-5B4638?style=for-the-badge&logo=codechef" /></a>
-<a href="#attempt-history"><img src="https://img.shields.io/badge/Attempts-687-6c757d?style=for-the-badge" /></a>
+<a href="#attempt-history"><img src="https://img.shields.io/badge/Attempts-704-6c757d?style=for-the-badge" /></a>
 <a href="#"><img src="https://img.shields.io/badge/Milestone_150-78%25-success?style=for-the-badge" /></a>
 <a href="#"><img src="https://img.shields.io/badge/Goal-118%2F1000-orange?style=for-the-badge" /></a>
 <!-- BADGES_END -->
@@ -89,7 +89,7 @@ Problems are solved from:
 
 ### Attempt History
 
-**687 unsuccessful submissions archived** in [`Attempts/`](Attempts/).
+**704 unsuccessful submissions archived** in [`Attempts/`](Attempts/).
 These are tracked separately and do not count as solved problems.
 
 ### 🏆 Milestone Progress: 118 / 150
