@@ -1,0 +1,23 @@
+/*
+ * Platform: LeetCode
+ * Submission: 2151266398
+ * Problem: Two Sum
+ * Verdict: Compile Error
+ * Date: 2026-09-23
+ * URL: https://leetcode.com/problems/two-sum/
+ *  */
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> freq;
+        for(int i = 0; i < nums.size(); i++){
+            int needed = target - nums[i];
+            if(freq.count(needed)){
+                return {freq[needed],i};
+            }
+            freq[needed] = i
+        }
+        return {};
+    }
+};
