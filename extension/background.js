@@ -29,12 +29,19 @@ async function getSession() {
   return cookie.value;
 }
 
+async function getCodeChefCookies() {
+  const cookies = await chrome.cookies.getAll({ domain: ".codechef.com" });
+  return cookies.map((cookie) => cookie.name + "=" + cookie.value).join("; ");
+}
+
 async function syncNow(source = "manual", fullHistory = false) {
   const session = await getSession();
+  const codechefCookies = await getCodeChefCookies();
   await chrome.storage.local.set({ status: "Sync running…", lastSource: source });
   const response = await chrome.runtime.sendNativeMessage("com.adilsukumar.dsasync", {
     action: fullHistory ? "fullSync" : "sync",
-    leetcodeSession: session
+    leetcodeSession: session,
+    codechefCookies
   });
   if (!response || !response.ok) {
     const err = (response && response.error) ? response.error : (chrome.runtime.lastError ? chrome.runtime.lastError.message : "Native sync failed.");

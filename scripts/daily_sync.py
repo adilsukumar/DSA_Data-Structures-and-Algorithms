@@ -122,7 +122,7 @@ def main():
     codechef_args = ["scripts/import_codechef.py", "--user", "adilsukumar"]
     if not args.full_history:
         codechef_args += ["--max-pages", "5"]
-    run("Import CodeChef", *codechef_args)
+    codechef_rc, _ = run("Import CodeChef", *codechef_args)
 
     # This is the only stage that commits and pushes. Failed explanations stay
     # in inbox/ and are retried by the next nightly run.
@@ -130,7 +130,9 @@ def main():
     attempts_rc = commit_attempts()
 
     print("\nDSA daily sync finished {0}".format(datetime.now().isoformat(timespec="seconds")))
-    return process_rc if process_rc not in (0, 1) else attempts_rc
+    if process_rc not in (0, 1):
+        return process_rc
+    return codechef_rc or attempts_rc
 
 
 if __name__ == "__main__":

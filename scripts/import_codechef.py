@@ -25,6 +25,7 @@ Usage
 """
 
 import argparse
+import os
 import re
 import sys
 import time
@@ -77,6 +78,9 @@ def session():
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "Referer": "https://www.codechef.com/",
     })
+    cookie = os.environ.get("CODECHEF_COOKIE", "").strip()
+    if cookie:
+        s.headers["Cookie"] = cookie
     return s
 
 
@@ -121,8 +125,6 @@ def parse_rows(html):
     """
     for row in ROW_RE.findall(html):
         sol = SOLUTION_RE.search(row)
-        if not sol:
-            continue                       # pagination / header row
 
         titles = TD_TITLE_RE.findall(row)
         if len(titles) < 4:
@@ -135,7 +137,7 @@ def parse_rows(html):
                 break
 
         yield {
-            "id": sol.group(1),
+            "id": sol.group(1) if sol else "",
             "problem": titles[1].strip(),
             "verdict": verdict,
             "when": parse_time(titles[0]),
@@ -242,6 +244,7 @@ def main():
     verdicts_by_problem = {}
     failed_rows = []
     accepted_rows = []
+    inaccessible_accepts = set()
     for page in range(0, max_page):
         payload = first if page == 0 else fetch_page(sess, args.user, page)
         if not payload:
@@ -250,9 +253,13 @@ def main():
             if row["problem"]:
                 verdicts_by_problem.setdefault(row["problem"], set()).add(
                     row["verdict"] or "unknown")
-            if row["problem"] and row["verdict"] and row["verdict"] != "accepted":
+            if (row["id"] and row["problem"] and row["verdict"]
+                    and row["verdict"] != "accepted"):
                 failed_rows.append(row)
             if row["verdict"] != "accepted" or not row["problem"]:
+                continue
+            if not row["id"]:
+                inaccessible_accepts.add(row["problem"])
                 continue
             accepted_rows.append(row)
             code = row["problem"]
@@ -269,15 +276,21 @@ def main():
                 page, max_page, len(best)))
         time.sleep(REQUEST_PAUSE)
 
+    accepted_codes = set(best) | inaccessible_accepts
     partial_only = sorted(
         code for code, verdicts in verdicts_by_problem.items()
         if "partially accepted" in verdicts and "accepted" not in verdicts
     )
-    attempted_only = sorted(set(verdicts_by_problem) - set(best) - set(partial_only))
-    print("\n{0} distinct problems fully accepted.".format(len(best)))
+    attempted_only = sorted(
+        set(verdicts_by_problem) - accepted_codes - set(partial_only))
+    print("\n{0} distinct problems fully accepted.".format(len(accepted_codes)))
     print("{0} distinct problems partially accepted only.".format(len(partial_only)))
     print("{0} other distinct problems attempted but never accepted.".format(
         len(attempted_only)))
+    if inaccessible_accepts:
+        print("{0} accepted problem(s) could not expose source without a logged-in "
+              "CodeChef session: {1}".format(
+                  len(inaccessible_accepts), ", ".join(sorted(inaccessible_accepts))))
     if partial_only:
         print("Partial-only codes: {0}".format(", ".join(partial_only)))
 
@@ -427,7 +440,7 @@ def main():
         if imported:
             print("\nNext:  python scripts/process_inbox.py --workers 2")
             print("(filing uses local metadata only; no model is called)")
-    return 0
+    return 2 if inaccessible_accepts else 0
 
 
 if __name__ == "__main__":

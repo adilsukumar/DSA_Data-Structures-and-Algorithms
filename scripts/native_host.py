@@ -26,11 +26,13 @@ def main():
     try:
         message = read_message()
         session = str(message.get("leetcodeSession") or "").strip()
+        codechef_cookies = str(message.get("codechefCookies") or "").strip()
         if not session:
             send_message({"ok": False, "error": "LeetCode session missing"})
             return
 
-        env = dict(os.environ, LEETCODE_SESSION=session, PYTHONIOENCODING="utf-8")
+        env = dict(os.environ, LEETCODE_SESSION=session,
+                   CODECHEF_COOKIE=codechef_cookies, PYTHONIOENCODING="utf-8")
         command = [sys.executable, str(ROOT / "scripts" / "daily_sync.py")]
         if message.get("action") == "fullSync":
             command.append("--full-history")

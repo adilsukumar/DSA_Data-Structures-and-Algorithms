@@ -7,7 +7,9 @@
   "permissions": ["alarms", "cookies", "storage", "nativeMessaging"],
   "host_permissions": [
     "https://leetcode.com/*",
-    "https://www.leetcode.com/*"
+    "https://www.leetcode.com/*",
+    "https://codechef.com/*",
+    "https://www.codechef.com/*"
   ],
   "background": { "service_worker": "background.js" },
   "action": { "default_popup": "popup.html", "default_title": "DSA Submission Sync" }
