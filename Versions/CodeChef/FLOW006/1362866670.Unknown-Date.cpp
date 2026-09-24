@@ -1,11 +1,11 @@
 /*
  * Platform: CodeChef
- * Submission: 1362279150
+ * Submission: 1362866670
  * Problem: FLOW006
  * Verdict: Accepted
- * Submitted: 2026-09-24
+ * Submitted: Unknown-Date
  * Recorded in repository: 2026-09-24
- * Variant: Brute Force (inferred from submission order)
+ * Variant: Optimized (inferred from submission order)
  * URL: https://www.codechef.com/problems/FLOW006
  *  */
 
