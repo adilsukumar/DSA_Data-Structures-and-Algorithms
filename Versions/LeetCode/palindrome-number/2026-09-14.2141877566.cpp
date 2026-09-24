@@ -5,6 +5,7 @@
  * Verdict: Accepted
  * Submitted: 2026-09-14
  * Recorded in repository: 2026-09-24
+ * Variant: Optimized (inferred from submission order)
  * URL: https://leetcode.com/problems/palindrome-number/
  *  */
 

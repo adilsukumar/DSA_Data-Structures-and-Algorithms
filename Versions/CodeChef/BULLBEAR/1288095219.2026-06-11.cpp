@@ -1,0 +1,57 @@
+/*
+ * Platform: CodeChef
+ * Submission: 1288095219
+ * Problem: BULLBEAR
+ * Verdict: Accepted
+ * Submitted: 2026-06-11
+ * Recorded in repository: 2026-09-24
+ * Variant: Optimized (inferred from submission order)
+ * URL: https://www.codechef.com/problems/BULLBEAR
+ *  */
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main() {
+
+	// your code goes here
+
+	int T, X, Y;
+
+	cin >> T;
+
+	
+
+	for(int i = 0; i < T; i++){
+
+	    cin >> X;
+
+	    cin >> Y;
+
+	    if(Y>X){
+
+	        cout << "PROFIT" << endl;
+
+	    }
+
+	    else if(X>Y){
+
+	        cout << "LOSS"<< endl;
+
+	    }
+
+	    else{
+
+	        cout << "NEUTRAL" << endl;
+
+	    }
+
+	}
+
+	return 0;
+
+}
+

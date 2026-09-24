@@ -5,7 +5,7 @@
  * Verdict: Accepted
  * Submitted: 2026-09-23
  * Recorded in repository: 2026-09-24
- * Variant: Brute Force (inferred from submission order)
+ * Variant: Improved Approach 2 (inferred from submission order)
  * URL: https://leetcode.com/problems/two-sum/
  *  */
 
