@@ -31,8 +31,11 @@ def main():
             return
 
         env = dict(os.environ, LEETCODE_SESSION=session, PYTHONIOENCODING="utf-8")
+        command = [sys.executable, str(ROOT / "scripts" / "daily_sync.py")]
+        if message.get("action") == "fullSync":
+            command.append("--full-history")
         proc = subprocess.run(
-            [sys.executable, str(ROOT / "scripts" / "daily_sync.py")],
+            command,
             cwd=str(ROOT), env=env, capture_output=True, text=True,
             encoding="utf-8", errors="replace", timeout=3600,
         )

@@ -40,6 +40,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "inbox"
 ATTEMPTS = ROOT / "Attempts" / "CodeChef"
+VERSIONS = ROOT / "Versions" / "CodeChef"
 
 RECENT_URL = "https://www.codechef.com/recent/user"
 CODE_URL = "https://www.codechef.com/api/submission-code/{0}"
@@ -240,6 +241,7 @@ def main():
     best = {}
     verdicts_by_problem = {}
     failed_rows = []
+    accepted_rows = []
     for page in range(0, max_page):
         payload = first if page == 0 else fetch_page(sess, args.user, page)
         if not payload:
@@ -252,6 +254,7 @@ def main():
                 failed_rows.append(row)
             if row["verdict"] != "accepted" or not row["problem"]:
                 continue
+            accepted_rows.append(row)
             code = row["problem"]
             entry = best.setdefault(code, {
                 "id": row["id"], "lang": row["lang"],
@@ -312,6 +315,50 @@ def main():
             target.write_text(header + source, encoding="utf-8")
         archived += 1
 
+    versions = 0
+    for row in accepted_rows:
+        submitted = row["when"].strftime("%Y-%m-%d") if row["when"] else "Unknown-Date"
+        target_dir = VERSIONS / row["problem"]
+        if target_dir.exists() and list(target_dir.glob(row["id"] + ".*")):
+            continue
+        source, lang_info = fetch_code(sess, row["id"])
+        time.sleep(REQUEST_PAUSE)
+        if not source.strip():
+            continue
+        ext = "." + (lang_info.get("extension") or "").lstrip(".") \
+            if lang_info.get("extension") else LANG_EXT.get(
+                (row["lang"] or "").lower(), ".txt")
+        target = target_dir / (row["id"] + "." + submitted + ext)
+        duplicate_source = False
+        if target_dir.exists():
+            for old in target_dir.iterdir():
+                if not old.is_file():
+                    continue
+                saved = old.read_text(encoding="utf-8", errors="replace")
+                marker = '\"\"\"\n\n' if old.suffix == ".py" else "*/\n\n"
+                saved_source = saved.partition(marker)[2].replace("\r\n", "\n").replace("\r", "\n").strip()
+                new_source = source.replace("\r\n", "\n").replace("\r", "\n").strip()
+                if saved_source == new_source:
+                    duplicate_source = True
+                    break
+        if duplicate_source:
+            continue
+        print("  = accepted version {0} {1}".format(row["id"], row["problem"]))
+        if not args.dry_run:
+            target_dir.mkdir(parents=True, exist_ok=True)
+            lines = [
+                "Platform: CodeChef", "Submission: " + row["id"],
+                "Problem: " + row["problem"], "Verdict: Accepted",
+                "Submitted: " + submitted,
+                "Recorded in repository: " + datetime.now().strftime("%Y-%m-%d"),
+                "URL: https://www.codechef.com/problems/" + row["problem"], "",
+            ]
+            header = "/*\n" + "\n".join(" * " + line for line in lines) + " */\n\n"
+            if ext == ".py":
+                header = '\"\"\"\n' + "\n".join(lines) + '\"\"\"\n\n'
+            target.write_text(header + source, encoding="utf-8")
+        versions += 1
+
     already = existing_titles()
     imported, skipped = 0, 0
 
@@ -371,11 +418,12 @@ def main():
             break
 
     if args.dry_run:
-        print("\n{0} new, {1} already filed. Nothing written (--dry-run).".format(
-            imported, skipped))
+        print("\n{0} new problem(s), {1} accepted version(s), {2} already filed. "
+              "Nothing written (--dry-run).".format(imported, versions, skipped))
     else:
-        print("\n{0} new problem(s) written to inbox/, {1} attempt(s) archived, "
-              "{2} already filed.".format(imported, archived, skipped))
+        print("\n{0} new problem(s) written to inbox/, {1} accepted version(s), "
+              "{2} failed attempt(s) archived, {3} already filed.".format(
+                  imported, versions, archived, skipped))
         if imported:
             print("\nNext:  python scripts/process_inbox.py --workers 2")
             print("(filing uses local metadata only; no model is called)")

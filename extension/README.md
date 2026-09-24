@@ -16,3 +16,7 @@ triggers a catch-up sync.
 Routine syncs scan the newest five history pages on each platform (about 100
 recent submissions). The standalone importers still support full historical
 scans.
+
+Use **Backfill all versions** once after installing this update to preserve all
+available historical accepted submissions. Normal **Sync now** and the 11:45 PM
+schedule then archive only recent revisions and remain fast.

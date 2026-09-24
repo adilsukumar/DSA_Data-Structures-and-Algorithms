@@ -6,7 +6,8 @@
     body { width: 290px; padding: 16px; font: 14px system-ui; color: #202124; }
     h1 { font-size: 17px; margin: 0 0 8px; }
     p { line-height: 1.4; }
-    button { width: 100%; padding: 9px; border: 0; border-radius: 6px; background: #1a73e8; color: white; font-weight: 600; cursor: pointer; }
+    button { width: 100%; padding: 9px; margin-top: 7px; border: 0; border-radius: 6px; background: #1a73e8; color: white; font-weight: 600; cursor: pointer; }
+    button.secondary { background: #5f6368; }
     button:disabled { opacity: .6; cursor: wait; }
     #status { overflow-wrap: anywhere; }
     .small { color: #5f6368; font-size: 12px; }
@@ -16,6 +17,7 @@
   <h1>DSA Submission Sync</h1>
   <p id="status">Ready.</p>
   <button id="sync">Sync now</button>
+  <button id="full-sync" class="secondary">Backfill all versions</button>
   <p class="small">Automatic sync: daily at 11:45 PM local time, while Chrome is running.</p>
   <script src="popup.js"></script>
 </body>

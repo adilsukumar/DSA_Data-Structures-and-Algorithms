@@ -1,0 +1,24 @@
+/*
+ * Platform: CodeChef
+ * Submission: 1285839812
+ * Problem: CWC23QUALIF
+ * Verdict: Accepted
+ * Submitted: 2026-06-04
+ * Recorded in repository: 2026-09-24
+ * URL: https://www.codechef.com/problems/CWC23QUALIF
+ *  */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int X;
+	cin >> X;
+	if(X >= 12){
+	    cout << "YES";
+	}
+	else{
+	    cout << "NO";
+	}
+	
+}

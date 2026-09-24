@@ -7,6 +7,7 @@ processed. Raw files remain gitignored in inbox/ until process_inbox.py has
 successfully documented and filed them.
 """
 
+import argparse
 import os
 import subprocess
 import sys
@@ -78,25 +79,29 @@ def update_leetcode_status(returncode, output):
 
 
 def commit_attempts():
-    """Commit only the archived attempts and their README counter."""
+    """Commit submission archives without changing solved-problem counts."""
     attempts = ROOT / "Attempts"
     if not attempts.exists():
         return 0
     subprocess.run([PYTHON, "scripts/update_stats.py"], cwd=str(ROOT), check=True)
-    subprocess.run(["git", "add", "--", "Attempts", "README.md"],
+    subprocess.run(["git", "add", "--", "Attempts", "Versions", "README.md"],
                    cwd=str(ROOT), check=True)
     staged = subprocess.run(["git", "diff", "--staged", "--quiet"], cwd=str(ROOT))
     if staged.returncode == 0:
-        print("No new attempts to commit.")
+        print("No new submission archives to commit.")
         return 0
     day = datetime.now().strftime("%d %b %Y")
-    subprocess.run(["git", "commit", "-m", "attempts: " + day],
+    subprocess.run(["git", "commit", "-m", "archive: submissions " + day],
                    cwd=str(ROOT), check=True)
     pushed = subprocess.run(["git", "push"], cwd=str(ROOT))
     return pushed.returncode
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Import, file, commit and push submissions.")
+    parser.add_argument("--full-history", action="store_true",
+                        help="scan complete platform histories instead of recent pages")
+    args = parser.parse_args()
     STATUS_DIR.mkdir(exist_ok=True)
     print("DSA daily sync started {0}".format(datetime.now().isoformat(timespec="seconds")))
 
@@ -104,16 +109,20 @@ def main():
     # this stage reports the error and the rest of the sync still runs.
     # Five pages covers roughly the latest 100 submissions. The standalone
     # importer retains its full-history default for deliberate backfills.
-    leetcode_rc, leetcode_output = run(
-        "Import LeetCode", "scripts/import_leetcode.py", "--max-pages", "5")
+    leetcode_args = ["scripts/import_leetcode.py"]
+    if not args.full_history:
+        leetcode_args += ["--max-pages", "5"]
+    leetcode_rc, leetcode_output = run("Import LeetCode", *leetcode_args)
     update_leetcode_status(leetcode_rc, leetcode_output)
 
     # CodeChef's public history/code APIs require no login cookie.
     # Historical backfill is already complete. Daily runs only need the newest
     # submissions; five pages covers roughly the latest 100 attempts and keeps
     # the extension response comfortably short.
-    run("Import CodeChef", "scripts/import_codechef.py", "--user", "adilsukumar",
-        "--max-pages", "5")
+    codechef_args = ["scripts/import_codechef.py", "--user", "adilsukumar"]
+    if not args.full_history:
+        codechef_args += ["--max-pages", "5"]
+    run("Import CodeChef", *codechef_args)
 
     # This is the only stage that commits and pushes. Failed explanations stay
     # in inbox/ and are retried by the next nightly run.

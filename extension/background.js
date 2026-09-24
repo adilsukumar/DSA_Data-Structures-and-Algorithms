@@ -29,11 +29,11 @@ async function getSession() {
   return cookie.value;
 }
 
-async function syncNow(source = "manual") {
+async function syncNow(source = "manual", fullHistory = false) {
   const session = await getSession();
   await chrome.storage.local.set({ status: "Sync running…", lastSource: source });
   const response = await chrome.runtime.sendNativeMessage("com.adilsukumar.dsasync", {
-    action: "sync",
+    action: fullHistory ? "fullSync" : "sync",
     leetcodeSession: session
   });
   if (!response || !response.ok) {
@@ -54,8 +54,9 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   });
 });
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-  if (message?.action !== "sync") return;
-  syncNow("manual").then(sendResponse).catch(async (error) => {
+  if (message?.action !== "sync" && message?.action !== "fullSync") return;
+  const fullHistory = message.action === "fullSync";
+  syncNow(fullHistory ? "full-history" : "manual", fullHistory).then(sendResponse).catch(async (error) => {
     const status = "Sync failed: " + error.message;
     await chrome.storage.local.set({ status });
     sendResponse({ ok: false, error: error.message });

@@ -56,6 +56,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "inbox"
 ATTEMPTS = ROOT / "Attempts" / "LeetCode"
+VERSIONS = ROOT / "Versions" / "LeetCode"
 ENV_FILE = ROOT / ".env"
 
 SUBMISSIONS_URL = "https://leetcode.com/api/submissions/"
@@ -331,6 +332,48 @@ def archive_attempt(sub, dry_run=False):
     return True
 
 
+def archive_accepted_version(sub, dry_run=False):
+    """Preserve each accepted submission, even for an existing problem."""
+    sid = str(sub.get("id") or sub.get("submission_id") or "").strip()
+    code = sub.get("code") or ""
+    if not sid or not code.strip():
+        return False
+    stamp = int(sub.get("timestamp") or 0)
+    submitted = time.strftime("%Y-%m-%d", time.localtime(stamp)) if stamp else "Unknown-Date"
+    recorded = time.strftime("%Y-%m-%d")
+    title = sub.get("title") or sub.get("title_slug") or "Unknown Problem"
+    slug = sub.get("title_slug") or slugify(title)
+    ext = LANG_EXT.get(sub.get("lang", ""), ".txt")
+    target = VERSIONS / slug / (submitted + "." + sid + ext)
+    if target.exists():
+        return False
+    if target.parent.exists():
+        for old in target.parent.iterdir():
+            if not old.is_file():
+                continue
+            saved = old.read_text(encoding="utf-8", errors="replace")
+            marker = '\"\"\"\n\n' if old.suffix == ".py" else "*/\n\n"
+            saved_source = saved.partition(marker)[2].replace("\r\n", "\n").replace("\r", "\n").strip()
+            new_source = code.replace("\r\n", "\n").replace("\r", "\n").strip()
+            if saved_source == new_source:
+                return False
+    print("  = accepted version {0} {1}".format(sid, title))
+    if dry_run:
+        return True
+    target.parent.mkdir(parents=True, exist_ok=True)
+    lines = [
+        "Platform: LeetCode", "Submission: " + sid, "Problem: " + title,
+        "Verdict: Accepted", "Submitted: " + submitted,
+        "Recorded in repository: " + recorded,
+        "URL: https://leetcode.com/problems/{0}/".format(slug), "",
+    ]
+    header = "/*\n" + "\n".join(" * " + line for line in lines) + " */\n\n"
+    if ext == ".py":
+        header = '\"\"\"\n' + "\n".join(lines) + '\"\"\"\n\n'
+    target.write_text(header + code, encoding="utf-8")
+    return True
+
+
 def main():
     parser = argparse.ArgumentParser(description="Backfill LeetCode solutions into inbox/.")
     parser.add_argument("--limit", type=int, default=0,
@@ -356,7 +399,7 @@ def main():
 
     INBOX.mkdir(exist_ok=True)
 
-    imported, attempts, skipped, seen_slugs = 0, 0, 0, set()
+    imported, attempts, versions, skipped, seen_slugs = 0, 0, 0, 0, set()
     stopped_early = ""
 
     try:
@@ -364,6 +407,8 @@ def main():
         if sub.get("status_display") != "Accepted":
             attempts += int(archive_attempt(sub, args.dry_run))
             continue
+
+        versions += int(archive_accepted_version(sub, args.dry_run))
 
         slug = sub.get("title_slug") or ""
         if not slug or slug in seen_slugs:
@@ -428,11 +473,13 @@ def main():
         print("few minutes and re-run; filed problems are skipped.")
 
     if args.dry_run:
-        print("\n{0} new problem(s) found, {1} already in the repo. "
-              "Nothing was written (--dry-run).".format(imported, skipped))
+        print("\n{0} new problem(s), {1} accepted version(s), {2} already in the repo. "
+              "Nothing was written (--dry-run).".format(
+                  imported, versions, skipped))
     else:
-        print("\n{0} new problem(s) written to inbox/, {1} attempt(s) archived, "
-              "{2} already present.".format(imported, attempts, skipped))
+        print("\n{0} new problem(s) written to inbox/, {1} accepted version(s), "
+              "{2} failed attempt(s) archived, {3} already present.".format(
+                  imported, versions, attempts, skipped))
         if imported:
             print("\nNext:  python scripts/process_inbox.py")
             print("(filing uses local metadata only; no model is called)")
