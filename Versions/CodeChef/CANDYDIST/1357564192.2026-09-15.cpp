@@ -5,6 +5,7 @@
  * Verdict: Accepted
  * Submitted: 2026-09-15
  * Recorded in repository: 2026-09-24
+ * Variant: Optimized (inferred from submission order)
  * URL: https://www.codechef.com/problems/CANDYDIST
  *  */
 

@@ -8,7 +8,12 @@ main repository statistics.
 Each archived file records both when the platform submission happened and when
 that exact version was added to this repository.
 
-Versions are never labelled as brute force or optimized by inference. The
-archive contains only code actually submitted by the repository owner; one
-distinct submitted implementation produces one version, while later changed
-accepted code produces an additional dated version.
+The archive contains only code actually submitted by the repository owner.
+One distinct submitted implementation produces one version, while later
+changed accepted code produces an additional dated version.
+
+Variant labels are added only when a problem has two or more distinct accepted
+implementations. Based on submission order, the earliest is labelled **Brute
+Force**, the latest **Optimized**, and any versions between them **Improved
+Approach 1**, **Improved Approach 2**, and so on. A problem with only one
+implementation receives no inferred variant label.

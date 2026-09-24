@@ -5,6 +5,7 @@
  * Verdict: Accepted
  * Submitted: 2026-07-27
  * Recorded in repository: 2026-09-24
+ * Variant: Brute Force (inferred from submission order)
  * URL: https://www.codechef.com/problems/BULLET
  *  */
 

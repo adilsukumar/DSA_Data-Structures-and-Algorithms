@@ -5,6 +5,7 @@
  * Verdict: Accepted
  * Submitted: 2026-09-07
  * Recorded in repository: 2026-09-24
+ * Variant: Improved Approach 7 (inferred from submission order)
  * URL: https://www.codechef.com/problems/OFFICE
  *  */
 

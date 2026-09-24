@@ -83,6 +83,7 @@ def commit_attempts():
     attempts = ROOT / "Attempts"
     if not attempts.exists():
         return 0
+    subprocess.run([PYTHON, "scripts/label_versions.py"], cwd=str(ROOT), check=True)
     subprocess.run([PYTHON, "scripts/update_stats.py"], cwd=str(ROOT), check=True)
     subprocess.run(["git", "add", "--", "Attempts", "Versions", "README.md"],
                    cwd=str(ROOT), check=True)
