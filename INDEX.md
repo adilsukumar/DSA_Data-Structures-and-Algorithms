@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**118 problems solved** - **CodeChef** 85 / **LeetCode** 33
+**119 problems solved** - **CodeChef** 86 / **LeetCode** 33
 
 
 ---
@@ -92,6 +92,7 @@
 | SUBSCRIBE_ | [Subscriptions](https://www.codechef.com/problems/SUBSCRIBE_) | CodeChef | 🔹 504 | Basic Math, Implementation | Ceiling Division | C++ | 2026-06-08 | [code](CodeChef/500_to_1000_Difficulty_Rating/33.Subscriptions.cpp) |
 | SUGARCANE | [Sugarcane Juice Business](https://www.codechef.com/problems/SUGARCANE) | CodeChef | 🔹 563 | Basic Math | Unit Profit | C++ | 2026-06-16 | [code](CodeChef/500_to_1000_Difficulty_Rating/34.Sugarcane_Juice_Business.cpp) |
 | SUMM | [Sum it](https://www.codechef.com/problems/SUMM) | CodeChef | 🔹 308 | Basic Programming Concepts | Condition Check | C++ | 2026-09-16 | [code](CodeChef/500_Difficulty_Rating/41.Sum_it.cpp) |
+| FLOW006 | [Sum of Digits](https://www.codechef.com/problems/FLOW006) | CodeChef | 🔹 455 | Basic Math, Implementation | Arithmetic Iteration | C++ | 2026-09-24 | [code](CodeChef/500_Difficulty_Rating/42.Sum_of_Digits.cpp) |
 | CHEFSCORE | [Test Score](https://www.codechef.com/problems/CHEFSCORE) | CodeChef | 🔹 610 | Math, Basic Programming | Divisibility + Range Check | C++ | 2026-06-30 | [code](CodeChef/500_to_1000_Difficulty_Rating/7.Test_Score.cpp) |
 | THREETOPICS | [The Three Topics](https://www.codechef.com/problems/THREETOPICS) | CodeChef | 🔹 573 | Conditional Statements | Membership Among Three | C++ | 2026-06-20 | [code](CodeChef/500_to_1000_Difficulty_Rating/35.The_Three_Topics.cpp) |
 | JERRYCHASE | [Tom And Jerry Chase](https://www.codechef.com/problems/JERRYCHASE) | CodeChef | 🔹 298 | Conditional Statements, Implementation, Basic Programming | Single strict inequality per query | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/22.Tom_And_Jerry_Chase.cpp) |
@@ -142,7 +143,7 @@ The same problems grouped by the data structure or technique they
 exercise. Use this to drill one pattern instead of working in ID order.
 
 
-### Implementation (54)
+### Implementation (55)
 
 - **CodeChef 1** - [Cricket World Cup Qualifier](https://www.codechef.com/practice) (🔹 500, C++) -> [code](CodeChef/500_Difficulty_Rating/1.Cricket_World_Cup_Qualifier.cpp)
 - **CodeChef ERROR404** - [404 Not Found](https://www.codechef.com/problems/ERROR404) (🔹 267, C++) -> [code](CodeChef/500_Difficulty_Rating/19.404_Not_Found.cpp)
@@ -195,11 +196,12 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef FLOW007** - [Reverse The Number](https://www.codechef.com/problems/FLOW007) (🔹 588, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/15.Reverse_The_Number.cpp)
 - **CodeChef MINHEIGHT** - [Roller Coaster](https://www.codechef.com/problems/MINHEIGHT) (🔹 285, C++) -> [code](CodeChef/500_Difficulty_Rating/26.Roller_Coaster.cpp)
 - **CodeChef SUBSCRIBE_** - [Subscriptions](https://www.codechef.com/problems/SUBSCRIBE_) (🔹 504, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/33.Subscriptions.cpp)
+- **CodeChef FLOW006** - [Sum of Digits](https://www.codechef.com/problems/FLOW006) (🔹 455, C++) -> [code](CodeChef/500_Difficulty_Rating/42.Sum_of_Digits.cpp)
 - **CodeChef JERRYCHASE** - [Tom And Jerry Chase](https://www.codechef.com/problems/JERRYCHASE) (🔹 298, C++) -> [code](CodeChef/500_Difficulty_Rating/22.Tom_And_Jerry_Chase.cpp)
 - **CodeChef PRIZEPOOL** - [Total Prize Money](https://www.codechef.com/problems/PRIZEPOOL) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/31.Total_Prize_Money.cpp)
 - **CodeChef MOVIE2X** - [Watching Movies At 2x](https://www.codechef.com/problems/MOVIE2X) (🔹 628, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/23.Watching_Movies_At_2x.cpp)
 
-### Basic Math (32)
+### Basic Math (33)
 
 - **CodeChef RIP2000** - [2000](https://www.codechef.com/problems/RIP2000) (🔹 284, C++) -> [code](CodeChef/500_Difficulty_Rating/34.2000.cpp)
 - **CodeChef AGEING** - [Ageing](https://www.codechef.com/problems/AGEING) (🔹 299, C++) -> [code](CodeChef/500_Difficulty_Rating/4.Ageing.cpp)
@@ -232,6 +234,7 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef TAXSAVING** - [Saving Taxes](https://www.codechef.com/problems/TAXSAVING) (🔹 252, C++) -> [code](CodeChef/500_Difficulty_Rating/37.Saving_Taxes.cpp)
 - **CodeChef SUBSCRIBE_** - [Subscriptions](https://www.codechef.com/problems/SUBSCRIBE_) (🔹 504, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/33.Subscriptions.cpp)
 - **CodeChef SUGARCANE** - [Sugarcane Juice Business](https://www.codechef.com/problems/SUGARCANE) (🔹 563, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/34.Sugarcane_Juice_Business.cpp)
+- **CodeChef FLOW006** - [Sum of Digits](https://www.codechef.com/problems/FLOW006) (🔹 455, C++) -> [code](CodeChef/500_Difficulty_Rating/42.Sum_of_Digits.cpp)
 - **CodeChef PRIZEPOOL** - [Total Prize Money](https://www.codechef.com/problems/PRIZEPOOL) (🔹 296, C++) -> [code](CodeChef/500_Difficulty_Rating/31.Total_Prize_Money.cpp)
 
 ### Math (29)
