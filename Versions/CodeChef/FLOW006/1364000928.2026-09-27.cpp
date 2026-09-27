@@ -1,11 +1,11 @@
 /*
  * Platform: CodeChef
- * Submission: 1363701745
+ * Submission: 1364000928
  * Problem: FLOW006
  * Verdict: Accepted
- * Submitted: Unknown-Date
- * Recorded in repository: 2026-09-26
- * Variant: Improved Approach 3 (inferred from submission order)
+ * Submitted: 2026-09-27
+ * Recorded in repository: 2026-09-27
+ * Variant: Optimized (inferred from submission order)
  * URL: https://www.codechef.com/problems/FLOW006
  *  */
 
