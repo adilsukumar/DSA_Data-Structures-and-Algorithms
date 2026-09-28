@@ -5,6 +5,7 @@ Problem: Best Time to Buy and Sell Stock
 Verdict: Accepted
 Submitted: 2026-06-22
 Recorded in repository: 2026-09-24
+Variant: Brute Force (inferred from submission order)
 URL: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 """
 
