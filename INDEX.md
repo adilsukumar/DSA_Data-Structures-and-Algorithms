@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**119 problems solved** - **CodeChef** 86 / **LeetCode** 33
+**120 problems solved** - **CodeChef** 87 / **LeetCode** 33
 
 
 ---
@@ -49,6 +49,7 @@
 | DISCUS | [Discus Throw](https://www.codechef.com/problems/DISCUS) | CodeChef | 🔹 622 | Conditional Statements, Basic Programming, Implementation | Max of Three via If/Else | C++ | 2026-07-19 | [code](CodeChef/500_to_1000_Difficulty_Rating/9.Discus_Throw.cpp) |
 | DONDRIVE | [Donation Drive](https://www.codechef.com/problems/DONDRIVE) | CodeChef | 🔹 272 | Basic Math, Implementation | Direct Subtraction | C++ | 2026-06-06 | [code](CodeChef/500_Difficulty_Rating/17.Donation_Drive.cpp) |
 | DOUBLERENT | [Double Rent](https://www.codechef.com/problems/DOUBLERENT) | CodeChef | 🔹 234 | Math, Implementation | O(1) Arithmetic (multiply by 2) | C++ | 2026-06-05 | [code](CodeChef/500_Difficulty_Rating/18.Double_Rent.cpp) |
+| EZSPEAK | [Easy Pronunciation](https://www.codechef.com/problems/EZSPEAK) | CodeChef | 🔹 1000 | String, Loops | Linear Scan | C++ | 2026-09-29 | [code](CodeChef/500_to_1000_Difficulty_Rating/45.Easy_Pronunciation.cpp) |
 | ELECTN | [Elections In Chefland](https://www.codechef.com/problems/ELECTN) | CodeChef | 🔹 604 | Implementation, Loops, Conditional Statements | Single-pass threshold counting | C++ | 2026-06-28 | [code](CodeChef/500_to_1000_Difficulty_Rating/10.Elections_In_Chefland.cpp) |
 | EXAMCHEF | [Exams](https://www.codechef.com/problems/EXAMCHEF) | CodeChef | 🔹 519 | Math, Implementation | Half-of-total threshold check | C++ | 2026-06-09 | [code](CodeChef/500_to_1000_Difficulty_Rating/12.Exams.cpp) |
 | EXPERT | [Expert Setter](https://www.codechef.com/problems/EXPERT) | CodeChef | 🔹 561 | Basic Math, Implementation | Constant-time inequality check | C++ | 2026-06-15 | [code](CodeChef/500_to_1000_Difficulty_Rating/11.Expert_Setter.cpp) |
@@ -326,8 +327,9 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **CodeChef THREETOPICS** - [The Three Topics](https://www.codechef.com/problems/THREETOPICS) (🔹 573, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/35.The_Three_Topics.cpp)
 - **CodeChef JERRYCHASE** - [Tom And Jerry Chase](https://www.codechef.com/problems/JERRYCHASE) (🔹 298, C++) -> [code](CodeChef/500_Difficulty_Rating/22.Tom_And_Jerry_Chase.cpp)
 
-### String (11)
+### String (12)
 
+- **CodeChef EZSPEAK** - [Easy Pronunciation](https://www.codechef.com/problems/EZSPEAK) (🔹 1000, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/45.Easy_Pronunciation.cpp)
 - **LeetCode 13** - [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (🟢 Easy, C++) -> [code](LeetCode/Easy/13.Roman_to_Integer.cpp)
 - **LeetCode 14** - [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) (🟢 Easy, Python) -> [code](LeetCode/Easy/14.Longest_Common_Prefix.py)
 - **LeetCode 20** - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (🟢 Easy, C++) -> [code](LeetCode/Easy/20.Valid_Parentheses.cpp)
@@ -420,6 +422,11 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 136** - [Single Number](https://leetcode.com/problems/single-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/136.Single_Number.cpp)
 - **LeetCode 1342** - [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1342.Number_of_Steps_to_Reduce_a_Number_to_Zero.cpp)
 
+### Loops (2)
+
+- **CodeChef EZSPEAK** - [Easy Pronunciation](https://www.codechef.com/problems/EZSPEAK) (🔹 1000, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/45.Easy_Pronunciation.cpp)
+- **CodeChef ELECTN** - [Elections In Chefland](https://www.codechef.com/problems/ELECTN) (🔹 604, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/10.Elections_In_Chefland.cpp)
+
 ### Mathematics (2)
 
 - **CodeChef C_RATING** - [Chess Ratings](https://www.codechef.com/problems/C_RATING) (🔹 651, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/41.Chess_Ratings.cpp)
@@ -473,10 +480,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 ### Inbuilt functions (1)
 
 - **CodeChef CHEFBOTTLE** - [Chef and Water Bottles](https://www.codechef.com/problems/CHEFBOTTLE) (🔹 662, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/42.Chef_and_Water_Bottles.cpp)
-
-### Loops (1)
-
-- **CodeChef ELECTN** - [Elections In Chefland](https://www.codechef.com/problems/ELECTN) (🔹 604, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/10.Elections_In_Chefland.cpp)
 
 ### Matrix (1)
 
