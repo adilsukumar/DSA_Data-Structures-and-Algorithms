@@ -4,7 +4,7 @@
 > every solution file. Do not edit by hand - changes are overwritten.
 
 
-**120 problems solved** - **CodeChef** 87 / **LeetCode** 33
+**121 problems solved** - **CodeChef** 88 / **LeetCode** 33
 
 
 ---
@@ -54,6 +54,7 @@
 | EXAMCHEF | [Exams](https://www.codechef.com/problems/EXAMCHEF) | CodeChef | 🔹 519 | Math, Implementation | Half-of-total threshold check | C++ | 2026-06-09 | [code](CodeChef/500_to_1000_Difficulty_Rating/12.Exams.cpp) |
 | EXPERT | [Expert Setter](https://www.codechef.com/problems/EXPERT) | CodeChef | 🔹 561 | Basic Math, Implementation | Constant-time inequality check | C++ | 2026-06-15 | [code](CodeChef/500_to_1000_Difficulty_Rating/11.Expert_Setter.cpp) |
 | FINDSHOES | [Finding Shoes](https://www.codechef.com/problems/FINDSHOES) | CodeChef | 🔹 646 | Arithmetic, Inbuilt Functions | Closed-form arithmetic per query | C++ | 2026-07-25 | [code](CodeChef/500_to_1000_Difficulty_Rating/13.Finding_Shoes.cpp) |
+| FSQRT | [Finding Square Roots](https://www.codechef.com/problems/FSQRT) | CodeChef | 🔹 668 | Inbuilt functions | Direct Calculation | C++ | 2026-09-30 | [code](CodeChef/500_to_1000_Difficulty_Rating/46.Finding_Square_Roots.cpp) |
 | FLIPCARDS | [Flip The Cards](https://www.codechef.com/problems/FLIPCARDS) | CodeChef | 🔹 641 | Math, Ad-hoc | Answer = min(X, N-X) | C++ | 2026-07-26 | [code](CodeChef/500_to_1000_Difficulty_Rating/14.Flip_The_Cards.cpp) |
 | FOURTICKETS | [Four Tickets](https://www.codechef.com/problems/FOURTICKETS) | CodeChef | 🔹 302 | Basic Math, Implementation | Direct arithmetic comparison | C++ | 2026-06-10 | [code](CodeChef/500_Difficulty_Rating/20.Four_Tickets.cpp) |
 | SUBSCRIBE | [Get Subscription](https://www.codechef.com/problems/SUBSCRIBE) | CodeChef | 🔹 315 | Implementation | Conditional Logic | C++ | 2026-09-16 | [code](CodeChef/500_Difficulty_Rating/40.Get_Subscription.cpp) |
@@ -422,6 +423,11 @@ exercise. Use this to drill one pattern instead of working in ID order.
 - **LeetCode 136** - [Single Number](https://leetcode.com/problems/single-number/) (🟢 Easy, C++) -> [code](LeetCode/Easy/136.Single_Number.cpp)
 - **LeetCode 1342** - [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) (🟢 Easy, C++) -> [code](LeetCode/Easy/1342.Number_of_Steps_to_Reduce_a_Number_to_Zero.cpp)
 
+### Inbuilt functions (2)
+
+- **CodeChef CHEFBOTTLE** - [Chef and Water Bottles](https://www.codechef.com/problems/CHEFBOTTLE) (🔹 662, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/42.Chef_and_Water_Bottles.cpp)
+- **CodeChef FSQRT** - [Finding Square Roots](https://www.codechef.com/problems/FSQRT) (🔹 668, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/46.Finding_Square_Roots.cpp)
+
 ### Loops (2)
 
 - **CodeChef EZSPEAK** - [Easy Pronunciation](https://www.codechef.com/problems/EZSPEAK) (🔹 1000, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/45.Easy_Pronunciation.cpp)
@@ -476,10 +482,6 @@ exercise. Use this to drill one pattern instead of working in ID order.
 ### Inbuilt Functions (1)
 
 - **CodeChef FINDSHOES** - [Finding Shoes](https://www.codechef.com/problems/FINDSHOES) (🔹 646, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/13.Finding_Shoes.cpp)
-
-### Inbuilt functions (1)
-
-- **CodeChef CHEFBOTTLE** - [Chef and Water Bottles](https://www.codechef.com/problems/CHEFBOTTLE) (🔹 662, C++) -> [code](CodeChef/500_to_1000_Difficulty_Rating/42.Chef_and_Water_Bottles.cpp)
 
 ### Matrix (1)
 
